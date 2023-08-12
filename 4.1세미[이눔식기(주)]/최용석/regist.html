@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    div{box-sizing: border-box;}
+    input{
+        border: none;
+        border-radius: 5px;
+        height: 30px;
+        width: 100%;
+    }
+    input[type="file"]{
+        margin-left: 25px;
+        margin-top: 11px;
+    }
+    button{
+        display: block;
+        width: 20%;
+        height: 50px;
+        margin-top: 55px;
+        background-color: rgb(171, 187, 199);
+        border: none;
+        border-radius: 5px;
+        font-size: 15px;
+        font-weight: bold;
+        margin: auto;
+        margin-top: 50px;
+    }
+    tr{
+        height: 50px;
+    }
+    td{
+        padding: 0px;
+        font-size: 15px;
+        font-weight: bold;
+    }
+    table{
+        width: 50%;
+    }
+    #container{
+        display: flex;
+    }
+    .custom-file-input {
+    visibility: hidden; /* 기본 파일 선택 버튼 숨김 */
+    width: 0;
+    height: 0;
+    position: absolute;
+    }
+
+  .custom-file-label {
+    background-color:#ABBBC7;
+    border:none;
+    padding: 6px 12px;
+    display: inline-block;
+    cursor: pointer;
+    font-weight: bold;
+    border-radius: 5px;
+    margin-top: 11px;
+    margin-left: 76px;
+    }
+    #imageDisplay{
+        margin-left: 76px;
+        margin-top: 20px;
+        width: 300px;
+        height: 292px;
+        background-color: white;
+        position: relative;
+        border-radius: 5px;
+    }
+    img{
+        display: block;
+        width: 300px;
+        height: 292px;
+        border-radius: 5px;
+    }
+    #text{
+        text-align: center;
+        top:109px;
+        left:110px;
+        position:absolute;
+    }
+  </style>
+</head>
+<body>
+  <h2 style="margin-bottom: 62px;">상품등록</h2>
+  <form action="" method="post">
+    <div id="container">
+        <table>
+            <tr>
+                <td>제목</td>
+                <td>
+                    <input type="text" name="title" id="title">
+                </td>
+            </tr>
+            <tr>
+                <td>장소</td>
+                <td>
+                    <input type="text" name="place" id="place">
+                </td>
+            </tr>
+            <tr>
+                <td>관람시간(분)</td>
+                <td>
+                    <input type="number" name="time" id="time">
+                </td>
+            </tr>
+            <tr>
+                <td>기간</td>
+                <td>
+                    <input type="text" name="date" id="date">
+                </td>
+            </tr>
+            <tr>
+                <td>관람등급</td>
+                <td>
+                    <input type="text" name="rank" id="rank">
+                </td>
+            </tr>
+            <tr>
+                <td>가격</td>
+                <td>
+                    <input type="text" name="price" id="price">
+                </td>
+            </tr>
+            <tr>
+                <td>할인</td>
+                <td>
+                    <input type="text" name="discount" id="discount">
+                </td>
+            </tr>
+        </table>
+        <div>
+            <label class="custom-file-label" for="customFile">
+                포스터
+            </label>
+            <input type="file" id="customFile" class="custom-file-input">
+            <div id="imageDisplay">
+                <h2 id="text">이미지</h2>
+            </div>
+        </div>
+    </div>
+    
+    <button type="submit">등록</button>
+
+    <script>
+        const imageInput = document.getElementById('customFile');
+        const imageDisplay = document.getElementById('imageDisplay');
+
+        imageInput.addEventListener('change', (event) => {
+            const selectedFile = event.target.files[0];
+
+            if (selectedFile) {
+                const reader = new FileReader();
+
+                reader.onload = (e) => {
+                    const imageSrc = e.target.result;
+                    imageDisplay.innerHTML = `<img src="${imageSrc}" alt="선택한 이미지">`;
+                };
+
+                reader.readAsDataURL(selectedFile);
+            } else {
+                imageDisplay.innerHTML = '';
+            }
+        });
+    </script>
+</form>
+</body>
+</html>

@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+  <title>관리자 페이지</title>
+  <style>
+    div{
+      box-sizing: border-box;
+      border: 1px solid #C9D9E6;
+      text-align: center;
+    }
+    .wrapper{
+        width: 1200px;
+        height: 800px;
+        margin: auto;
+    }  
+    .container1{
+      height: 100%;
+      width: 15%;
+    }
+    .container2{
+      height: 100%;
+      width: 85%;
+    }
+    .wrapper{
+      display: flex;
+    }
+    .content1{
+      width: 100%;
+      height: 15%;
+    }
+    .content2{
+      width: 100%;
+      height: 85%;
+    }
+    .container1>div{
+      border: 1px solid #C9D9E6;
+      width: 100%;
+      height: 50px;
+      line-height: 30px;
+      text-align: center;
+      border-radius: 0;
+      cursor: pointer;
+        }
+    .container1 .box:nth-child(2){
+      border-top-left-radius: 5px;
+      border-top-right-radius: 5px;
+    }
+    .container1 .box:nth-child(19){
+      border-bottom-left-radius: 5px;
+      border-bottom-right-radius: 5px;
+    }
+    .container1>p{
+      width: 100%;
+      height: 20px;
+      border-radius: 10px;
+      margin-top: 5px;
+      padding: 10px;
+      box-sizing: border-box;
+      display: none;
+      text-align: left;
+      }
+      .wrapper{
+        border-radius: 5px;
+      }
+      .container1{
+        border-top-left-radius: 5px;
+        border-bottom-left-radius: 5px;
+      }
+      .container2{
+        border-top-right-radius: 5px;
+        border-bottom-right-radius: 5px;
+      }
+      .content1{
+        border-top-right-radius: 5px;
+        border-bottom-right-radius: 5px;
+      }
+      .content2{
+        border-top-right-radius: 5px;
+        border-bottom-right-radius: 5px;
+      }
+      iframe{
+        width: 100%;
+        height: 100%;
+      }
+  </style>
+</head>
+<body>
+  <div class="wrapper">
+    <div class="container1">
+      <h3 style="font-size: 30px; margin-top: 42px; margin-bottom: 37px;">관리자</h3>
+    
+      <div class="box" style="line-height: 3;">회원관리</div>
+      <p>회원조회</p>
+      <p>회원관심태그 조회</p>
+      <p>회원삭제</p>
+      <p>회원 등급조정</p>
+      <p>신고내역확인</p>
+
+      <div style="line-height: 3;">고객센터 관리</div>
+      <p>공지사항 조회</p>
+      <p>공지사항 수정</p>
+      <p>공지사항 삭제</p>
+      <p>Q&A 수정</p>
+
+      <div style="line-height: 3;">상품관리</div>
+      <p>상품등록</p>
+      <p>상품수정</p>
+      <p>상품삭제</p>
+      <p>리뷰조회</p>
+      <p>리뷰삭제</p>
+
+      <div class="box" style="line-height: 3;">통계</div>
+      <p>판매통계</p>
+      <p>이용자 통계</p>
+      <p>상품별 좋아요 통계</p>
+    </div>
+    <div class="container2">
+      <div class="content1"></div>
+      <div class="content2" style="background-color: rgb(237, 237, 237);">
+        <iframe src="regist.html" frameborder="0"></iframe>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    $(function(){
+        $(".container1>div").click(function(){
+          var count = 0;
+          var div1 = $(this).get(0);
+          var nextDiv = div1.nextElementSibling;
+          console.log(nextDiv);
+
+          while (nextDiv) {
+            if (nextDiv.tagName === "DIV") {
+              break; 
+            }
+            nextDiv = nextDiv.nextElementSibling;
+          }
+
+          if (nextDiv) {
+            var currentElement = div1.nextElementSibling;
+            while (currentElement && currentElement !== nextDiv) {
+              if (currentElement.nodeType === 1) { 
+                count++;
+              }
+                currentElement = currentElement.nextElementSibling;
+              }
+          } else {
+            count = 3;
+          }
+            var div = $(this);
+            var p = $(this).nextAll("p").slice(0, count);
+               
+            if(p.eq(0).css("display") == "none"){
+              div.siblings("p").slideUp();
+              p.each(function(){
+                $(this).slideDown();
+              });
+            }else{
+              p.each(function(){
+                $(this).slideUp();
+              });
+            }
+        });
+    });
+  </script>
+</body>
+</html>
