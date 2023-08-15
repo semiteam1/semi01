@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>티켓딱대</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
     <style>
         /* 기본 세팅 존 */
 
@@ -245,6 +246,7 @@
         /* 바디 시작 */
         .body{
             width: 1180px;
+            height: 3000px;
             margin: auto;
             background-color: skyblue;
         }
@@ -255,7 +257,72 @@
         /* 잘보여라@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@*/
         /* 잘보여라@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@*/
 
+        .search{
+            width: 100%;
+            height: 100%;
+            margin-top: 50px;
+        }
         
+        .search a{
+            color: black;
+        }
+
+        .search_num{
+            font-weight: bold;
+            font-size: 18px;
+        }
+        .search_num_em{
+            font-style: normal;
+            color: darkred;
+        }
+        
+        .search_tap{
+            margin-top: 50px;
+        }
+
+        .search_tap>li{
+            list-style: none;
+            border: 1px solid lightgray;
+            font-weight: bold;
+            font-size: 20px;
+            width: 370px;
+            height: 48px;
+            float: left;
+            text-align: center;
+            line-height: 48px;
+        }
+
+        .search_result{
+            width: 1000px;
+            float: left;
+        }
+
+        .search_filter{
+            width: 170px;
+            float: left;
+        }
+
+        .search_product{
+            width: 100%;
+        }
+
+        .search_product_box{
+            width: 1070px;
+            height: 200px;
+            margin: 30px 0px;
+            border: 1px solid lightgray;
+        }
+        dt{float: left;}
+
+        .search_product_box img{
+            height: 130px;
+            width: 110px;
+            float: left;
+        }
+        
+
+
+
 
 
         /* 잘보여라@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@*/
@@ -465,7 +532,73 @@
             <!--@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@-->
             <!--@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@-->
 
+                <div class="search">
+                    <p class="search_num"><em class="search_num_em">xx</em>에 대한 검색결과는 총 <em class="search_num_em">00</em>건 입니다.</p>
 
+                    <!-- 검색 분류 탭-->
+                    <ul class="search_tap">
+                        <li>
+                            <a href="">영화</a>
+                        </li>
+                        <li>
+                            <a href="">전시</a>
+                        </li>
+                        <li>
+                            <a href="">공연</a>
+                        </li>
+                    </ul>
+                    <br><br><br><br>
+
+                    <!-- 검색 결과 -->
+
+                    <h2 class="search_result">티켓 검색결과</h3>
+                    <div class="search_filter">
+                    <select name="filter" id="">
+                        <option value="reset">정렬선택</option>
+                        <option value="end_late">종료일 늦은순</option>
+                        <option value="end_first">종료일 빠른순</option>
+                        <option value="price_down">가격 내림차순</option>
+                        <option value="price_up">가격 오름차순</option>
+                    </select>
+                    </div>  
+                    <br><br><br><br>
+
+                    <!-- 정보가 보이는 검색된 상품 -->
+
+                    <div class="search_product">
+                        <div class="search_product_box">
+                            <div>
+                                <a href="" class="search_product_box2">
+                                    <span><img src="../resorces/01_공연/클래식/오페라검색결과(샘플).jpg.crdownload" alt=""></span>
+                                    <strong>2023 오페라 갈라 콘서트</strong>
+                                    <dl>
+                                        <dt>장소 : </dt>
+                                        <dd>세종문화회관 대극장</dd>
+                                        <dt>기간 : </dt>
+                                        <dd>2023.12.09 ~ 2023.12.09</dd>
+                                        <dt>관람가 : </dt>
+                                        <dd>20,000원</dd>
+                                    </dl>
+                                </a>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <hr>
+
+
+                    <!-- 페이지 컨트롤러 -->
+                    <ul class="pagination justify-content-center" style="border: 0px;">
+                        <li class="page-item"><a class="page-link" href="#">이전</a></li>
+                        <li class="page-item"><a class="page-link" href="#">1</a></li>
+                        <li class="page-item"><a class="page-link" href="#">2</a></li>
+                        <li class="page-item"><a class="page-link" href="#">3</a></li>
+                        <li class="page-item"><a class="page-link" href="#">다음</a></li>
+                      </ul>
+                    
+                    
+                </div>
                         
             <!--@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@-->
             <!--@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@-->
@@ -476,8 +609,8 @@
             <!-- 검색페이지 끝 -->
             <!-- 류지완 끝 -->
                         
-                    </div>
-                </div>
+            </div>
+        </div>
 
             <div class="footer">
                 <div id="footer_1">
