@@ -249,19 +249,19 @@
             padding-top: 100px;
         }
 
-        /* 마이페이지 시작 */
-        #myPage {
+        /* 마이상세리뷰 시작 */
+        #myReviewDetail {
             width: 600px;
             height: 500px;
             border: 1px solid red;
             background-color: lightgray;
             margin: auto;
         }
-        #myPageTitle {
+        #myReviewDetailTitle {
             font-weight: bold;
             margin: 20px;
         }
-        /* //마이페이지 끝 */
+        /* //마이상세리뷰 끝 */
 
         /* 바디 끝 */
         /* 푸터 시작 */
@@ -452,97 +452,39 @@
 
             <div class="body">
 
-                <div id="myPage" align="center">
-                    <div id="myPageTitle">
-                        마이페이지
+                <div id="myReviewDetail" align="center">
+                    <div id="myReviewDetailTitle">
+                        마이상세리뷰
                     </div>
+
                     <form action="">
-                        <table id="myPageForm">
+                        
+                        <table border="1">
                             <tr>
-                                <th>*아이디</th>
-                                <td><input type="text" name="userId" required value="user01" readonly></td>
+                                <th>공연명</th>
+                                <td colspan="3">콘크리트 유토피아</td>
                             </tr>
                             <tr>
-                                <th>비밀번호</th>
-                                <td><input type="password" name="userPwd" required value="pass01"></td>
+                                <th>작성자</th>
+                                <td>윤관현</td>
+                                <th>작성일</th>
+                                <td>23.08.13</td>
                             </tr>
                             <tr>
-                                <th>*이름</th>
-                                <td><input type="text" name="userName" required value="차은우" readonly></td>
-                            </tr>
-                            <tr>
-                                <th>전화번호</th>
-                                <td><input type="text" name="phone" value="010-1234-5678"></td>
-                            </tr>
-                            <tr>
-                                <th>이메일</th>
-                                <td><input type="email" name="email" value="user01@gmail.com"></td>
-                            </tr>
-                            <tr>
-                                <th>*생년월일</th>
-                                <td><input type="number" name="birth" value="990101" readonly></td>
-                            </tr>
-                            <tr>
-                                <th>*등급</th>
-                                <td><input type="text" name="level" value="새싹" readonly></td>
-                            </tr>
-                            <tr>
-                                <th>관심있는 태그</th>
-                                <td>
-                                    <input type="checkbox" name="interest" id="movieRomance" value="로맨스영화">
-                                    <label for="movieRomance">로맨스영화</label>
-
-                                    <input type="checkbox" name="interest" id="movieScared" value="공포영화">
-                                    <label for="movieScared">공포영화</label>
-
-                                    <br>
-
-                                    <input type="checkbox" name="interest" id="movieComedy" value="코미디영화">
-                                    <label for="movieComedy">코미디영화</label>
-
-                                    <input type="checkbox" name="interest" id="movieAction" value="액션영화">
-                                    <label for="movieAction">액션영화</label>
-
-                                    <br><br>
-
-                                    <input type="checkbox" name="interest" id="picture" value="그림전시">
-                                    <label for="picture">그림전시</label>
-
-                                    <input type="checkbox" name="interest" id="art" value="작품전시">
-                                    <label for="art">작품전시</label>
-                                    
-                                    <br>
-                                    
-                                    <input type="checkbox" name="interest" id="photo" value="사진전시">
-                                    <label for="photo">사진전시</label>
-                                    
-                                    <input type="checkbox" name="interest" id="experience" value="체험전시">
-                                    <label for="experience">체험전시</label>
-
-                                    <br><br>
-
-                                    <input type="checkbox" name="interest" id="musical" value="뮤지컬">
-                                    <label for="musical">뮤지컬</label>
-
-                                    <input type="checkbox" name="interest" id="play" value="연극">
-                                    <label for="play">연극</label>
-
-                                    <br>
-
-                                    <input type="checkbox" name="interest" id="classic" value="클래식">
-                                    <label for="classic">클래식</label>
-
-                                    <input type="checkbox" name="interest" id="concert" value="콘서트">
-                                    <label for="concert">콘서트</label>
+                                <th>한줄평</th>
+                                <td colspan="3">
+                                    <textarea name="review" rows="5" style="resize: none;" required>올 여름에 봤던 영화 중에 가장 재밌었던 영화입니다.
+                                        안 보신 분들께 강추드립니다!!</textarea>
                                 </td>
                             </tr>
                         </table>
-                        
-                        <button type="submit">정보변경</button>
-                        <button type="button">비밀번호 변경</button>
-                        <button type="button">회원탈퇴</button>
+
+                        <button type="submit">한줄평 수정</button>
+                        <button type="button">한줄평 삭제</button>
                     </form>
+
                 </div>
+
 
             </div>
 
