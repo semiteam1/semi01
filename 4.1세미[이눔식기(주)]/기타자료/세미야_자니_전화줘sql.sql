@@ -1,0 +1,1 @@
+INSERT INTO USER_INFO VALUES (SEQ_UNO.NEXTVAL, 'admin', '1234', '°ü¸®ÀÚ', '990101', '1', '2', '3');

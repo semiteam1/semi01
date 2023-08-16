@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>티켓딱대 로그인</title>
+    <style>
+        .head_logo{
+            /* border: 1px solid; */
+            width: 458px;
+            height: 70px;
+            margin: auto;
+            margin-top: 100px;
+        }
+        .logo{width: 155px;height: 100%;margin: auto;}
+        .logo *{width: 100%;height: 100%;}
+        .body{width: 458px;height: 300px; margin: auto; margin-top: 40px; border: 1px solid rgba(128, 128, 128, 0.603); border-radius: 8px;}
+        .body_input{
+            border: 1px solid rgba(128, 128, 128, 0.603);
+            width: 402px;
+            height: 95px;
+            margin: auto;
+            margin-top: 25px;
+            border-radius: 5px;
+        }
+        .body_input>div{width: 100%;height: 50%;}
+        .pass{border-top: 1px solid rgba(128, 128, 128, 0.603);}
+        #login_img{width: 20px;height: 20px; margin-top: 13px; margin-left: 13px;}
+        
+    </style>
+</head>
+<body>
+    <head>
+        <div class="head_logo">
+            <div class="logo"><a href="<%=contextPath %>"><img src="../resorces/로고/png.png" alt=""></a></div>
+        </div>
+    </head>
+    <body>
+        <div class="body">
+            <div class="body_input">
+                <div class="id">
+                    <img src="../resorces/이미지자료/로그인.png" id="login_img">
+                    <input type="text" id="userId" name="userId" placeholder="아이디">
+                </div>
+                <div class="pass"></div>
+            </div>
+        </div>
+    </body>
+
+</body>
+</html>
