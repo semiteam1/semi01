@@ -401,21 +401,18 @@
         /* 잘보여라@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@*/
         /* 탭메뉴 파트 시작 */
 
-        /* Reset some default styles */
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
 
-        /* Styles for tab container */
         .tab-container {
-            display: flex; /* Use flex display for horizontal arrangement */
-            justify-content: center; /* Center the buttons horizontally */
+            display: flex;
+            justify-content: center;
             margin-top: 20px;
         }
 
-        /* Styles for tab buttons */
         .tab-button {
             background-color: white;
             border: 1px solid lightgray;
@@ -434,14 +431,12 @@
             background-color: white;
         }
 
-            /* Active tab button styles */
             .active.tab-button {
             border: 1px solid black;
             border-bottom: white;
             font-weight: bolder;
         }
 
-        /* Styles for tab content */
         .tab-content {
             display: none;
             padding: 20px;
@@ -449,7 +444,6 @@
             margin-top: 20px;
         }
 
-        /* Show the active tab content */
         .active {
             display: block;
         }
@@ -468,6 +462,8 @@
             width: 70px;
             height: 50px;
             border-radius: 10%;
+            border: 0;
+            cursor: pointer;
         }
 
         .review_form{
@@ -823,7 +819,7 @@
                     </div>
                     <br>
                     <div class="review_content">
-                        <button type="submit" class="review_btn">등록</button>
+                        <button type="submit" class="review_btn" style="background-color: black; color: white;">등록</button>
                     </div>
                     <br>
                 </form>
@@ -844,7 +840,7 @@
                     </div>
                     <br>
                     <div class="review_content">
-                        <button type="submit" class="review_btn">등록</button>
+                        <button type="submit" class="review_btn" style="background-color: black; color: white;">등록</button>
                     </div>
                     <br>
                 </form>
