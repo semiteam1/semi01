@@ -202,7 +202,8 @@
             background-color: white;
         }
         /* 네비 끝 */
-        
+
+        /* 검색 시작 */
         
         .header_search_box {
             /* border: 1px solid red; */
@@ -243,25 +244,103 @@
 
 
         /* 바디 시작 */
+        /* 바디 기본 */
         .body{
-            height: 1000px;
-            background-color: skyblue;
-            padding-top: 100px;
+            /* height: 2000px;  */
+            /* 높이 임의 */
+            /* background-color: skyblue; */
         }
 
-        /* 마이페이지 시작 */
-        #myPage {
-            width: 600px;
-            height: 500px;
+        .page_heading{
+            /* border: 1px solid; */
+
+            margin: auto;
+            width: 1120px;
+            height: 65px;
+            margin-top: 80px;
+        }
+        .page_heading>*{
+            float: left;
+            height: 100%;
+            box-sizing: border-box;
+        }
+        .page_title{
+            /* border: 2px solid pink; */
+            width: 10%;
+            flex: none;
+            background: none;
+            font-size: 40px;
+            font-weight: 700;
+            line-height: 40px;
+            letter-spacing: -0.05em;
+            color: #242428;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+          
+        }
+        /* 바디 기본 */
+        /* 버튼 */
+        .common_tab_list{
+            width: 500px;
+            
+        }
+        .common_tab_list *{
+        float: left;
+        list-style: none;
+        }
+        .common_tab.type_underline, .common_tab_btn {
+        position: relative;
+        padding: 7px 10px;
+        min-height: 40px;
+        font-size: 20px;
+        font-weight: 500;
+        line-height: 26px;
+        color: #878d95;
+        background-color: white;
+        font-weight: 800;
+        border: 0;
+        }
+        .common_tab.type_underline, .common_tab_btn[aria-selected="true"]::before {
+        position: absolute;
+        bottom: 4px;
+        left: 10px;
+        right: 10px;
+        height: 2px;
+        background: #242428;
+        content: '';
+        }
+        .common_tab_btn[aria-selected="false"]:hover{
+            color: black;
+            cursor: pointer;
+            font-size: 22px;
+        }
+        .common_tab.type_underline, .common_tab_btn[aria-selected="true"] {
+         color: #242428;
+        }
+
+        .common_tab_area{
+            width: 25%;
+            height: 70%;
+            margin-top: 20px;
+            margin-left: 700px;
+        }
+        /* 버튼 끝 */
+        /* 바디 메인 */
+        .원하는데로_바꾸세요{
             border: 1px solid red;
             background-color: lightgray;
-            margin: auto;
+            height: 700px;
+            width: 100%;
         }
-        #myPageTitle {
-            font-weight: bold;
-            margin: 20px;
-        }
-        /* //마이페이지 끝 */
+
+
+
+
+
+
+
+        /* 바디 메인 */
 
         /* 바디 끝 */
         /* 푸터 시작 */
@@ -378,10 +457,10 @@
                 </div>
                 <div class="header_main_mid"> <!-- 대카테고리-->
                     <a href="#" class="category"  >
-                        <p  class="header_nav_link" >영화/전시/공연</p></a>
+                        <p  class="header_nav_link" >공연/전시/영화</p></a>
                     <a href="#" class="category" onclick="not();">
-                        <p class="header_nav_link"  style="width: 10%; color: #979797;" >항공</p>
-                        <p class="header_nav_link" style=" color: #979797;">스포츠</p></a>
+                        <p class="header_nav_link"  style="width: 10%;">항공</p>
+                        <p class="header_nav_link" >스포츠</p></a>
                 </div>
 
                 <script>
@@ -397,12 +476,12 @@
             <div class="header_gnb">  <!-- 해더 네비게이터 -->
                 <div id="navigator"> <!-- 네비게이터 기본 틀-->
                     <ul id="navi" > <!-- 카테고리-->
-                        <li><a href="#" style="color: red;">홈</a>
+                        <li><a href="#" >홈</a>
                         </li>
-                        <li><a href="#">영화</a>
+                        <li><a href="#" style="color: red;">영화</a>
                             <ul>
-                                <li><a href="#">로맨스</a></li>
-                                <li><a href="#">공포/스릴러</a></li>
+                                <li><a href="#">로멘스</a></li>
+                                <li><a href="#">공포·스릴러</a></li>
                                 <li><a href="#">코미디</a></li>
                                 <li><a href="#">액션</a></li>
                             </ul>
@@ -411,36 +490,21 @@
                         <li><a href="#">전시</a>
                             <ul>
                                 <li><a href="#">그림전시</a></li>
-                                <li><a href="#">작품전시</a></li>
                                 <li><a href="#">사진전시</a></li>
+                                <li><a href="#">작품전시</a></li>
                                 <li><a href="#">체험전시</a></li>
                             </ul>
                         </li>
                         <li><a href="#">공연</a>
                             <ul>
-                                <li><a href="#">뮤지컬</a></li>
+                                <li><a href="#">뮤직컬</a></li>
                                 <li><a href="#">연극</a></li>
                                 <li><a href="#">클래식</a></li>
                                 <li><a href="#">콘서트</a></li>
                             </ul>
-                        </li>
-                        <li  style="width: 2px; height: 20px; margin-top: 8px; background-color: #515155;"></li>
-                        <li><a href="#">랭킹</a></li>
-                        <li><a href="#">지역</a>
-                            <ul class="local">
-                                <li><a href="#">서울</a></li>
-                                <li><a href="#">경기/이천</a></li>
-                                <li><a href="#">충청/강원</a></li>
-                                <li><a href="#">대구/경북</a></li>
-                                <li><a href="#">부산/경남</a></li>
-                                <li><a href="#">광주/전라</a></li>
-                                <li><a href="#">제주</a></li>
-                            </ul>
-                        </li>
-                        <!-- 랭킹 & 지역 -->
-                       
-
                         
+                        </li>
+
                     </ul>
                     <div class="header_search_box" > <!-- 검색 -->
                         <input type="search" name="search" id="search" class="header_search_input" placeholder="검색어를 입력해 주세요" value="">
@@ -452,62 +516,56 @@
 
             <div class="body">
 
-                <div id="myPage" align="center">
-                    <div id="myPageTitle">
-                        마이페이지
-                    </div>
-                    <form action="">
-                        <table id="myPageForm">
-                            <tr>
-                                <th>*아이디</th>
-                                <td colspan="2"><input type="text" name="userId" required value="user01" readonly></td>
-                            </tr>
-                            <tr>
-                                <th>비밀번호</th>
-                                <td colspan="2"><input type="password" name="userPwd" required value="pass01"></td>
-                            </tr>
-                            <tr>
-                                <th>*이름</th>
-                                <td colspan="2"><input type="text" name="userName" required value="차은우" readonly></td>
-                            </tr>
-                            <tr>
-                                <th>전화번호</th>
-                                <td colspan="2"><input type="text" name="phone" value="010-1234-5678"></td>
-                            </tr>
-                            <tr>
-                                <th>이메일</th>
-                                <td colspan="2"><input type="email" name="email" value="user01@gmail.com"></td>
-                            </tr>
-                            <tr>
-                                <th>*생년월일</th>
-                                <td colspan="2"><input type="number" name="birth" value="990101" readonly></td>
-                            </tr>
-                            <tr>
-                                <th>*등급</th>
-                                <td colspan="2"><input type="text" name="level" value="새싹" readonly></td>
-                            </tr>
-                            <tr>
-                                <th>관심있는 태그</th>
-                                <td>
-                                    영화
-                                </td>
-                                <td>
-                                    <select name="interest_movie">
-                                        <option value="1">로맨스</option>
-                                        <option value="2">공포/스릴러</option>
-                                        <option value="3">코미디</option>
-                                        <option value="4">액션</option>
-                                    </select>
-                                </td>
-                            </tr>
-                        </table>
-                        
-                        <button type="submit">정보변경</button>
-                        <button type="button">비밀번호 변경</button>
-                        <button type="button">회원탈퇴</button>
-                    </form>
-                </div>
+                <div class="page_heading">
+                    <h1 class="page_title">
+                        전시
+                    </h1>
+                    <div class="common_tab_area">
 
+                        <ul class="common_tab_list" role="tablist">
+                                <li class="common_tab_item" role="none">
+                                    <button type="button" class="common_tab_btn" role="tab" aria-selected="true">전체</button>
+                                </li>
+                                <li class="common_tab_item" role="none">
+                                    <button type="button" class="common_tab_btn" role="tab" aria-selected="false">로멘스</button>
+                                    </li>
+                                <li class="common_tab_item" role="none">
+                                    <button type="button" class="common_tab_btn" role="tab" aria-selected="false">공포</button>
+                                    </li>
+                                <li class="common_tab_item" role="none">
+                                    <button type="button" class="common_tab_btn" role="tab" aria-selected="false">코미디</button>
+                                </li>
+                                <li class="common_tab_item" role="none">
+                                    <button type="button" class="common_tab_btn" role="tab" aria-selected="false">액션</button>
+                                </li>
+                        </ul>
+                        </div>
+                           
+                </div> <!-- 버튼 끝 -->
+                <!-- 내용 넣을 수 있는 구간 시작 -->
+
+                <div class="원하는데로_바꾸세요">
+                    <div>
+                        <div>
+
+                        </div>
+                        <div>그림2</div>
+                        <div>그림3</div>
+                        <div>그림4</div>
+                        <div>그림5</div>
+                    </div>
+                    <div>
+
+                    </div>
+                    <div>
+
+                    </div>
+                    <div>
+
+                    </div>
+                </div>
+                <!-- 내용물 넣을 수 있는 구간 끝 -->
+                    <!-- 바디 끝 -->
             </div>
 
             <div class="footer">
