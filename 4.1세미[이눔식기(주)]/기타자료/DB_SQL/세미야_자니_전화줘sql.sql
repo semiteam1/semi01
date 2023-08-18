@@ -23,6 +23,7 @@ INSERT INTO CATEGORY_INFO VALUES (12, '콘서트');
 INSERT INTO USER_INFO VALUES (SEQ_UNO.NEXTVAL, 'admin', '1234', '관리자', '990101', 2, 6, 11, null, null, 5,'Y');
 INSERT INTO USER_INFO VALUES (SEQ_UNO.NEXTVAL, 'ID', '1234', '이지은', '930412', 1, 5, 12, null, null, 5,'Y');
 INSERT INTO USER_INFO VALUES (SEQ_UNO.NEXTVAL, 'SUZI', '1234', '숯지', '940505', 3, 8, 10, null, null, 5,'Y');
+
 -- 관람등급 등록
 INSERT INTO LEVEL_INFO VALUES (1, '전체 관람가');
 INSERT INTO LEVEL_INFO VALUES (2, '7세 관람가');
@@ -30,6 +31,13 @@ INSERT INTO LEVEL_INFO VALUES (3, '12세 관람가');
 INSERT INTO LEVEL_INFO VALUES (4, '15세 관람가');
 INSERT INTO LEVEL_INFO VALUES (5, '19세 관람가');
 
+-- 지역정보 등록
+INSERT INTO LOCAL_INFO VALUES (1,'서울');
+INSERT INTO LOCAL_INFO VALUES (2,'경기/인천');
+INSERT INTO LOCAL_INFO VALUES (3,'충청/강원');
+INSERT INTO LOCAL_INFO VALUES (4,'대구/경북');
+INSERT INTO LOCAL_INFO VALUES (5,'광주/전라');
+INSERT INTO LOCAL_INFO VALUES (6,'제주');
 
 
 -- 상품등록
@@ -48,13 +56,7 @@ INSERT INTO BOOKED_INFO VALUES(seq_dno.nextval, 1,3,'23/08/16', '23/08/17');
 INSERT INTO BOOKED_INFO VALUES(seq_dno.nextval, 2,2,'23/08/16', '23/08/17');
 INSERT INTO BOOKED_INFO VALUES(seq_dno.nextval, 3,1,'23/08/16', '23/08/17');
 
--- 지역정보 등록
-INSERT INTO LOCAL_INFO VALUES (1,'서울');
-INSERT INTO LOCAL_INFO VALUES (2,'경기/인천');
-INSERT INTO LOCAL_INFO VALUES (3,'충청/강원');
-INSERT INTO LOCAL_INFO VALUES (4,'대구/경북');
-INSERT INTO LOCAL_INFO VALUES (5,'광주/전라');
-INSERT INTO LOCAL_INFO VALUES (6,'제주');
+
 
 -- 공지사항 등록
 INSERT INTO NOTICE VALUES(seq_nno.nextval,'티켓딱대 오픈기념 행사안내','드디어 고대하던 티켓딱대가 오픈을 하게 되었습니다. 여러분의 기대에 부응할 수 있도록 하겠습니다. 특별 이벤트로 황금티켓을 잡아라 이벤트가 진행중이오니 많은 이용 바랍니다.',DEFAULT,DEFAULT );
