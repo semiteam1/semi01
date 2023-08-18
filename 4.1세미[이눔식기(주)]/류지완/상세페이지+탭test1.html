@@ -1,0 +1,1036 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>티켓딱대</title>
+    <style>
+        /* 기본 세팅 존 */
+
+        /* 모든 마진 패딩 지우 */
+        body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, p, table, th, td, form, fieldset, legend, textarea, input, select, textarea, button, article, aside, dialog, footer, header, section, footer, nav, figure, main {
+        margin: 0;
+        padding: 0;
+        } 
+
+        /* 폰트 옵션 */
+        body, input, select, textarea, button, pre {
+        font-family: 'Notosans', -apple-system, BlinkMacSystemFont, Apple SD Gothic Neo, 'Malgun Gothic', Arial, sans-serif;
+        font-size: 14px;
+        letter-spacing: -0.03em;
+        color: #242428;
+        }
+        
+        a{
+            text-decoration: none;
+        }
+
+        /* 기본세팅 끝 */
+
+        /* 헤더 */
+
+        /* 배경 옵션*/
+        .warp{
+            /* border: 1px solid plum; */
+            display: flex;
+            flex-direction: column;
+            position: relative;
+            min-width: 1180px;
+            min-height: 100%;
+            }
+
+        /* 유틸란 */
+        .util {
+            flex-direction: column;
+            position: relative;
+            min-width: 1180px;
+            margin: 0 auto;
+            width: 100%;
+            height: 37px;
+        
+            background-color: rgb(241, 241, 241);
+            }
+               
+        .util_inner{ /* 배경색 주기위한 디브*/
+            /* border: 1px solid yellow; */
+           
+            margin: auto;
+            width: 1120px;
+            height: 37px;
+        }
+        /* 유틸난 나누는 디브 */
+        .util_inner>div{
+            /* border: 1px solid blue; */
+            height: 37px;
+            box-sizing: border-box;
+            float: left;
+        }
+        .left{
+            width: 65%;
+        }
+        .right{
+            width: 35%;
+        }
+        /* 오른쪽 내용물 */
+        .right>div{
+            /* border: 1px solid blue; */
+            height: 100%;
+            float: left;
+            box-sizing: border-box;
+        }
+        .login,.sin,.contact{
+            width: 23.5%;
+        }
+        .check{
+            width: 29.5%;
+        }
+        /* 유틸란 링크 사이즈 */
+        .header_util_link {
+        display: flex;
+        align-items: center; /* Center vertically */
+        justify-content: center; /* Center horizontally */
+        margin-top: 8px;
+        font-size: 15px;
+        line-height: 18px;
+        color: #878d95;
+        }
+        /* 유틸 끝 */
+
+        /* 메인 시작 */
+        .header_main {
+        /* border: 1px solid ; */
+        display: flex;
+        align-items: center;
+        margin: 0 auto;
+        width: 1120px;
+        height: 88px;
+        }
+        .header_main>div{
+            /* border: 1px solid yellowgreen; */
+            height: 100%;
+        }
+        .header_main_left{
+            width: 13%;
+        }
+        .header_main_mid{
+            width: 67%;
+        }
+        .header_main_right{
+            width: 20%;
+        }
+        /* 메인 미드 로고 */
+        #logo_main{
+            width: 100%;
+            height: 100%;
+        }
+        /* 메인 미드  케테고리 */
+        .header_nav_link {
+        /* border: 1px solid; */
+        width: 30%;
+        font-size: 30px;
+        font-weight: 700;
+        line-height: 34px;
+        letter-spacing: -0.04em;
+        color: #242428;
+        margin-left: 25px;
+        margin-top:  35px; 
+        float: left;       
+        }
+        /* 메인 미드 끝 */
+
+        /* 네비게이터 */
+
+        .header_gnb { /* 내비게이터 배경 */
+        /* border: 1px solid orangered; */
+        position: relative;
+        border-top: 1px solid #ecedf2;
+        border-bottom: 1px solid #242428;
+        width: 100%;
+        height: 58px;
+        margin: auto;
+        }
+        #navigator{
+            width: 1120px;
+            height: 40px; 
+            margin: auto;
+            padding-top: 10px;
+        }
+        #navi{
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+            height: 100%;
+            width: 70%;
+            /* border: 1px solid black; */
+            float: left;
+            box-sizing: border-box;
+        }
+        #navi>li{
+            float: left;
+            /* border: 1px solid blue; */
+            width: 8%;
+            height: 100%;
+            text-align: center;
+        }
+        #navi a{
+            /* border: 1px solid orange; */
+            text-decoration: none;
+            color: #242428;
+            /* color: orange; */
+            font-size: 18px;
+            font-weight: 900;
+            width: 100%;
+            height: 100%;
+            display: block;
+            line-height: 35px;
+            transform: scale(1);
+        }
+        #navi a:hover{
+            color: orangered;
+        }
+        #navi>li>ul{
+            list-style-type: none;
+            padding: 0;
+            display: none;
+            border: 1px solid;
+            width: 150%;
+        }
+        #navi>li>ul a{font-size: 18px;}
+        #navi>li>a:hover+ul{display: block;}
+        #navi>li>ul:hover{display: block;}
+        #navi>li>ul>li{
+            background-color: white;
+        }
+        /* 네비 끝 */
+        
+        
+        .header_search_box {
+            /* border: 1px solid red; */
+            width: 30%;
+            height: 100%;
+            float: left;
+            box-sizing: border-box;   
+        }
+        .header_search_input {
+        width: 240px;
+        padding: 7px 55px 7px 18px;
+        border: 1px solid #dcdde1;
+        border-radius: 38px;
+        background: #fff;
+        font-size: 14px;
+        line-height: 22px;
+        color: #242428;
+        box-sizing: border-box;
+        outline: none;
+        caret-color: #fa2828;
+        float: left;
+        }
+        #btnImg{
+            width: 35px;
+            height: 35px;
+            /* border:  2px solid red; */
+            /* margin-top: 10px; */
+            border: 0;
+            background-color: white;
+        }
+        #btn_Img{
+            width: 100%;
+            height: 100%;
+        }
+        
+        /* 검색 끝 */
+        /* 헤더 끝 */
+
+
+        /* 바디 시작 */
+        .body{
+            width: 1180px;
+            margin: auto;
+            /* background-color: skyblue; */
+            padding-bottom: 10px;
+        }
+
+        /* 류지완 시작 @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@*/
+        /* 상세페이지 시작 @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@*/
+        /* 잘보여라@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@*/
+        /* 잘보여라@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@*/
+        /* 잘보여라@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@*/
+
+        .product_img_info{
+            /* border: 2px solid blue; */
+            width: 100%;
+            height: 600px;
+            padding: 40px 30px;
+        }
+
+        #product_img{
+            /* border: 2px solid red; */
+            width: 405px;
+            height: 500px;
+            float: left;
+        }
+
+        #product_img>img{
+            width: 405px;
+            height: 500px;
+            border-radius: 15px;
+        }
+
+        #product_info{
+            /* border: 2px solid white; */
+            width: 675px;
+            height: 500px;
+            padding-left: 20px;
+            padding-top: 20px;
+            float: right;
+        }
+
+        #product_info_ul{
+            padding: 20px 0px 20px 0px;
+            font-weight: bold;
+            list-style: none;
+        }
+
+        #product_info_li{
+            padding: 7px 0px 6px;
+            width: 300px;
+            float: left;
+        }
+        #product_info_li_span1{
+            size: 40px;
+            padding-right: 30px;
+            float: left;
+            font-size: 15px;
+        }
+
+        #product_info_li>div{
+            width: 300px;
+        }
+
+        #product_info_2, #product_info_2_1{
+            list-style: none;
+        }
+
+        #product_info_2_span{
+            size: 40px;
+            padding-right: 30px;
+            float: left;
+            height: 120px;
+            font-weight: bold;
+        }
+
+        #product_info_2_1>li{
+            font-weight: bold;
+        }
+
+        #product_info_2>li{
+            height: 130px;
+            width: 300px;
+            line-height: 30px;
+            float: left;
+        }
+        /* 잘보여라@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@*/
+        /* 예매파트 시작 */
+        .booked{
+            border: 1px solid black;
+            width: 600px;
+            height: 300px;
+            border-radius: 20px;
+            margin-left: 550px;
+        }
+
+        .booked_part1{
+            /* border: 1px solid yellow; */
+            background-color: rgb(243, 236, 236);
+            height: 100%;
+            width: 180px;
+            padding-left: 10px;
+            float: right;
+            border-radius: 0px 20px 20px 0px;
+        }
+
+        .booked_part2{
+            /* border: 5px solid; */
+            height: 100%;
+            width: 410px;
+            float: right;
+        }
+
+        .booked_btn_form{
+            /* border: 1px solid red; */
+            width: 100%;
+            height: 90px;
+            float: right;
+        }
+
+        .booked_btn{
+            background-color: red;
+            color: white;
+            width: 250px;
+            height: 50px;
+            margin-top: 15px;
+            margin-right: 30px;
+            font-weight: bolder;
+            float: right;
+            border-radius: 10px;
+        }
+
+        .booked_part2_calender1{
+            /* border: 5px solid blue; */
+            height: 100%;
+            width: 30%;
+            float: left;
+
+            font-size: 15px;
+            font-weight: 900;
+            text-align: center;
+        }
+
+        .booked_part2_calender2{
+            /* border: 1px solid red; */
+            height: 100%;
+            width: 70%;
+            float: right;
+        }
+
+        .booked_part1_b{
+            padding-right: 10px;
+            float: right;
+        }
+
+        /* 잘보여라@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@*/
+        /* 탭메뉴 파트 시작 */
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .tab-container {
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+        }
+
+        .tab-button {
+            background-color: white;
+            border: 1px solid lightgray;
+            border-bottom: 1px solid black;
+            padding: 10px 15px;
+            width: 20%;
+            font-size: 20px;
+            color: #333;
+            text-align: center;
+            text-decoration: none;
+            cursor: pointer;
+            transition: background-color 0.3s, border 0.3s, color 0.3s;
+        }
+
+        .tab-button:hover {
+            background-color: white;
+        }
+
+            .active.tab-button {
+            border: 1px solid black;
+            border-bottom: white;
+            font-weight: bolder;
+        }
+
+        .tab-content {
+            display: none;
+            padding: 20px;
+            /* background-color: gray; */
+            margin-top: 20px;
+        }
+
+        .active {
+            display: block;
+        }
+
+        /* 잘보여라@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@*/
+        /* 리뷰파트 시작 */
+        .review{
+            width: 100%;
+            height: 50px;
+            padding-top: 10px;
+            color: black;
+        }
+
+        .review_btn{
+            float: right;
+            width: 70px;
+            height: 50px;
+            border-radius: 10%;
+            border: 0;
+            cursor: pointer;
+        }
+
+        .review_form{
+            height: 270px;
+        }
+
+
+        /* 잘보여라@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@*/
+        /* 추천상품 */
+
+        .div_img{
+            width: 20%;
+            float: left;
+            padding-left: 10px;
+            padding-right: 10px;
+            padding-bottom: 30px;
+        }
+
+        .div_img img {
+            border-radius: 20px;
+        }
+
+        /* 잘보여라@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@*/
+        /* 상품상세정보 시작 */
+
+        .product_detail{
+            /* border: 5px solid; */
+            width: 100%;
+        }
+
+        .product_detail>img{
+            width: 80%;
+            display: block;
+            margin: auto;
+        }
+
+
+        /* 잘보여라@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@*/
+        /* 잘보여라@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@*/
+        /* 잘보여라@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@*/
+        /* 잘보여라@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@*/
+        /* 잘보여라@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@*/
+        /* 잘보여라@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@*/
+        /* 상세페이지 끝 */
+        /* 류지완 끝 */
+
+
+
+        /* 바디 끝 */
+        /* 푸터 시작 */
+        div{
+            /* border: 1px solid pink; */
+            box-sizing: border-box;
+            
+        }
+        .footer{
+            border-top: 1px solid black ;
+        }
+        #footer>div{width: 100%;}
+
+
+        #footer_1{
+            width: 1120px;
+            height: 30px;  
+            border-top: 1px; 
+            margin: auto; 
+            margin-top: 10px;
+            /* border: 1px solid red; */
+        } 
+        #footer_1>a{
+            text-decoration: none;
+            color: black;
+            font-size: 13px;
+            font-weight: 500;
+            margin: 15px; 
+        }
+        #footer_2{
+            height: 80%;
+            border-top: 2px solid rgba(212, 212, 212, 0.459);
+        }
+
+        #p1{
+            width: 1120px; 
+            height: 80%;
+            /* margin: auto;  */
+            padding: 5px 15px; 
+            /* background-color: #878d95; */
+        }
+        
+        #footer_2>p{
+            /* width: 100%; */
+            /* border: 1px solid blueviolet; */
+            box-sizing: border-box;
+            margin: auto;
+            font-size: 12px;
+            /* color:rgb(58, 58, 58); */
+            
+        }
+        #p2{
+            height: 20%; 
+            text-align: center; 
+            padding-bottom: 15px;
+            padding-top: 10px; 
+            color: rgba(184, 184, 184, 0.747);
+            font-weight: 800;
+        }
+
+       
+        /* 푸터 끝 */
+        /* top버튼 */
+        #backToTopBtn {
+        display: none;
+        position: fixed;
+        bottom: 20px;
+        right: 200px;
+        width: 60px;
+        height: 40px;
+        background-color: white;
+        color: rgb(253, 103, 103);
+        border: 1px solid rgba(206, 206, 206, 0.671);
+        border-radius: 5px;
+        font-size: 20px;
+        font-weight: 600;
+        cursor: pointer;
+        border-radius: 38px;
+        line-height: 0;
+        
+    }
+    </style>
+</head>
+<body>
+   
+
+    <div class="warp"> <!-- 기본 배경-->
+
+        <div class="header"> <!-- 헤더-->
+
+            <div class="util"> <!-- 유틸 부분 (로긴..)-->
+                <div class="util_inner">
+                    <div class="left"></div>
+                    <div class="right" >
+                        <div class="login">
+                            <a href="#" class="header_util_link" >로그인</a>
+                        </div>
+                        <div class="check">
+                            <a href="#" class="header_util_link">예매확인/취소</a>
+                        </div>
+                        <div class="sin">
+                            <a href="#" class="header_util_link">회원가입</a>
+                        </div>
+                        <div class="contact">
+                            <a href="#" class="header_util_link">고객센터</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="header_main"> <!-- 헤더 메인 (로고, 대카테고리)-->
+                <div class="header_main_left"> <!-- 로고-->
+                    <a href="#" class="logo"><img src="../resorces/로고/png.png" id="logo_main" alt=""></a>
+                </div>
+                <div class="header_main_mid"> <!-- 대카테고리-->
+                    <a href="#" class="category"  >
+                        <p  class="header_nav_link" >공연/전시/영화</p></a>
+                    <a href="#" class="category" onclick="not();">
+                        <p class="header_nav_link"  style="width: 10%; color: #979797;" >항공</p>
+                        <p class="header_nav_link" style=" color: #979797;">스포츠</p></a>
+                </div>
+
+                <script>
+                    function not() {
+                        alert("준비중입니다.")
+                    }
+                </script>
+
+
+                <div class="header_main_right"></div> <!-- 로고공백 -->
+            </div>
+
+            <div class="header_gnb">  <!-- 해더 네비게이터 -->
+                <div id="navigator"> <!-- 네비게이터 기본 틀-->
+                    <ul id="navi" > <!-- 카테고리-->
+                        <li><a href="#" style="color: red;">홈</a>
+                        </li>
+                        <li><a href="#">영화</a>
+                            <ul>
+                                <li><a href="#">로멘스</a></li>
+                                <li><a href="#">공포·스릴러</a></li>
+                                <li><a href="#">코미디</a></li>
+                                <li><a href="#">액션</a></li>
+                            </ul>
+                        
+                        </li>
+                        <li><a href="#">전시</a>
+                            <ul>
+                                <li><a href="#">그림전시</a></li>
+                                <li><a href="#">작품전시</a></li>
+                                <li><a href="#">사진전시</a></li>
+                                <li><a href="#">체험전시</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#">공연</a>
+                            <ul>
+                                <li><a href="#">뮤직컬</a></li>
+                                <li><a href="#">연극</a></li>
+                                <li><a href="#">클래식</a></li>
+                                <li><a href="#">콘서트</a></li>
+                            </ul>
+                        </li>
+                        <li  style="width: 2px; height: 20px; margin-top: 8px; background-color: #515155;"></li>
+                        <li><a href="#">랭킹</a></li>
+                        <li><a href="#">지역</a>
+                            <ul class="local">
+                                <li><a href="#">서울</a></li>
+                                <li><a href="#">경기/이천</a></li>
+                                <li><a href="#">충청/강원</a></li>
+                                <li><a href="#">대구/경북</a></li>
+                                <li><a href="#">부산/경남</a></li>
+                                <li><a href="#">광주/전라</a></li>
+                                <li><a href="#">제주</a></li>
+                            </ul>
+                        </li>
+                        <!-- 랭킹 & 지역 -->
+                       
+
+                        
+                    </ul>
+                    <div class="header_search_box" > <!-- 검색 -->
+                        <input type="search" name="search" id="search" class="header_search_input" placeholder="검색어를 입력해 주세요" value="">
+                        <button id="btnImg"><img src="../resorces/search.png" id="btn_Img" alt=""></button>
+                    </div>           
+                </div>
+
+            </div>
+
+            <div class="body">
+
+            <!-- 류지완 시작 -->
+            <!-- 상세페이지 시작 -->
+            <!--@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@-->
+            <!--@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@-->
+            <!--@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@-->
+            <!--@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@-->
+
+            <div class="product_img_info">
+                <div id="product_img"><img src="../resorces/이미지자료/01_공연/클래식/디즈니 지브리 포스터.jpg" alt="액션_가오갤3"></div>
+                <div id="product_info">
+                    <div><h1>[디즈니 VS 지브리] 애니메이션 첼로 페스티벌</h1></div>
+                    <hr style="border: 1px solid black;">
+                    <ul id="product_info_ul">
+                        <li id="product_info_li">
+                            <span id="product_info_li_span1">장소</span>
+                            <div>성남아트센터 콘서트홀</div>
+                        </li>
+                        <li id="product_info_li">
+                            <span id="product_info_li_span1">관람시간</span>
+                            <div>300분</div>
+                        </li>
+                        <li id="product_info_li">
+                            <span id="product_info_li_span1">기간</span>
+                            <div>2023.08.10 ~ 2023.11.31</div>
+                        </li>
+                        <li id="product_info_li">
+                            <span id="product_info_li_span1">관람등급</span>
+                            <div>전체 이용가</div>
+                        </li>
+                    <br>
+                    </ul>
+
+                    <br>
+                    <br>
+                    <hr>
+                    
+                    <ul id="product_info_2">
+                        <li>
+                            <span id="product_info_2_span">가격</span>
+                            <div>
+                                <ul id="product_info_2_1" >
+                                    <li>성인 <em>40000</em>원</li>
+                                    <li>청소년 <em>20000</em>원</li>
+                                    <li>어린이 <em>10000</em>원</li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li>
+                            <span id="product_info_2_span">할인</span>
+                            <div>
+                                <ul id="product_info_2_1">
+                                    <li>얼리버드 성인 50%<em>20000</em>원</li>
+                                    <li>얼리버드 청소년 50%<em>10000</em>원</li>
+                                    <li>얼리버드 어린이 50%<em>5000</em>원</li>
+                                </ul>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!--@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@-->
+            <!-- 예매 파트 -->
+            <form action="">
+                <div class="booked">
+                    <div class="booked_part1">
+                        <br><br>
+                        <b>예매 가능 티켓 수</b>
+                        <br><br><br><br>
+                        <b class="booked_part1_b">20매</b>
+
+                    </div>
+                    <div class="booked_part2">
+                        <div class="booked_part2_calender1">
+                            <br><br>
+                            날짜 선택
+                        </div>
+
+                        <div class="booked_part2_calender2">
+                            달력
+                        </div>
+                    </div>
+                </div>
+                    <div class="booked_btn_form">
+                        <button type="submit" class="booked_btn">예매하기</button>
+                    </div>
+            </form>
+            <br><br><br><br>
+
+            <!--@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@-->
+            <!-- 탭메뉴 파트 -->
+            <div class="tab-container">
+                <button class="tab-button" onclick="openTab(event, 'tab1')">상세정보</button>
+                <button class="tab-button" onclick="openTab(event, 'tab2')">관람후기</button>
+                <button class="tab-button" onclick="openTab(event, 'tab3')">기대평</button>
+                <button class="tab-button" onclick="openTab(event, 'tab4')">장소정보</button>
+                <button class="tab-button" onclick="openTab(event, 'tab5')">예매/취소안내</button>
+              </div>
+              
+              <div id="tab1" class="tab-content">
+                <img src="../resorces/이미지자료/01_공연/클래식/그린국악 상세정보.jpg" alt="">
+              </div>
+              
+              <div id="tab2" class="tab-content">
+                <!--@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@-->
+                <!-- 리뷰 파트 -->
+                <h1 style="padding-top: 20px;" align="left">관람후기</h1>
+                <br>
+                <hr style="border: 1px solid black;">
+                <div class="review" align="left">
+                    <h4>게시판 운영규정에 맞지 않는 글은 사전 통보없이 삭제될 수 있습니다.</h4>
+                </div>
+                <form action="" class="review_form">
+                    <div class="review_content">
+                        <textarea name="" cols="160" rows="10" style="resize: none;"></textarea>
+                    </div>
+                    <br>
+                    <div class="review_content">
+                        <button type="submit" class="review_btn" style="background-color: black; color: white;">등록</button>
+                    </div>
+                    <br>
+                </form>
+              </div>
+              
+              <div id="tab3" class="tab-content">
+                <!--@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@-->
+                <!-- 기대평 파트 -->
+                <h1 style="padding-top: 20px;" align="left">기대평</h1>
+                <br>
+                <hr style="border: 1px solid black;">
+                <div class="review" align="left">
+                    <h4>게시판 운영규정에 맞지 않는 글은 사전 통보없이 삭제될 수 있습니다.</h4>
+                </div>
+                <form action="" class="review_form">
+                    <div class="review_content">
+                        <textarea name="" cols="160" rows="10" style="resize: none;"></textarea>
+                    </div>
+                    <br>
+                    <div class="review_content">
+                        <button type="submit" class="review_btn" style="background-color: black; color: white;">등록</button>
+                    </div>
+                    <br>
+                </form>
+              </div>
+
+              <div id="tab4" class="tab-content">
+                <!--@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@-->
+                <!-- 장소 정보 파트 -->
+                <h1 style="padding-top: 20px;" align="left">공연장 정보</h1>
+                <br>
+                <hr style="border: 1px solid black;">
+                <br>
+                <img src="../류지완/공연장정보 샘플.PNG">
+              </div>
+
+              <div id="tab5" class="tab-content">
+                <!--@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@-->
+                <!-- 예매/취소안내 파트 -->
+                <h1 style="padding-top: 20px;" align="left">예매/취소안내</h1>
+                <br>
+                <hr style="border: 1px solid black;">
+                <br>
+                <img src="../류지완/예매,취소안내 이미지1.PNG" alt="">
+                <img src="../류지완/예매,취소안내 이미지2.PNG" alt="">
+              </div>
+              
+              <script>
+              function openTab(event, tabName) {
+                const tabContents = document.getElementsByClassName("tab-content");
+                for (const content of tabContents) {
+                  content.style.display = "none";
+                }
+              
+                const tabButtons = document.getElementsByClassName("tab-button");
+                for (const button of tabButtons) {
+                  button.classList.remove("active");
+                }
+              
+                document.getElementById(tabName).style.display = "block";
+                event.currentTarget.classList.add("active");
+              }
+              
+              document.getElementById("tab1").style.display = "block";
+              document.getElementsByClassName("tab-button")[0].classList.add("active");
+              </script>
+
+
+
+            <!--@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@-->
+            <!-- 제일 하단 추천상품 -->
+            <span style="font-weight: bold; font-size: 25px;">공포영화 랭킹</span>
+                      <hr>
+
+                      <div class="recommend_img">
+                        
+                            <div class="div_img">
+                              <a href="https://img.cgv.co.kr/Movie/Thumbnail/StillCut/000087/87034/87034214832_727.jpg" target="_blank">
+                                <img src="https://img.cgv.co.kr/Movie/Thumbnail/StillCut/000087/87034/87034214832_727.jpg" alt="Fjords" style="width:100%">
+                                <div class="caption">
+                                  <p>Lorem ipsum donec id elit non mi porta gravida at eget metus.</p>
+                                </div>
+                              </a>
+                            </div>
+                        
+                        
+                            <div class="div_img">
+                              <a href="https://img.cgv.co.kr/Movie/Thumbnail/StillCut/000087/87034/87034214832_727.jpg" target="_blank">
+                                <img src="https://img.cgv.co.kr/Movie/Thumbnail/StillCut/000087/87034/87034214832_727.jpg" alt="Fjords" style="width:100%">
+                                <div class="caption">
+                                  <p>Lorem ipsum donec id elit non mi porta gravida at eget metus.</p>
+                                </div>
+                              </a>
+                            </div>
+                        
+                        
+                            <div class="div_img">
+                              <a href="https://img.cgv.co.kr/Movie/Thumbnail/StillCut/000087/87034/87034214832_727.jpg" target="_blank">
+                                <img src="https://img.cgv.co.kr/Movie/Thumbnail/StillCut/000087/87034/87034214832_727.jpg" alt="Fjords" style="width:100%">
+                                <div class="caption">
+                                  <p>Lorem ipsum donec id elit non mi porta gravida at eget metus.</p>
+                                </div>
+                              </a>
+                            </div>
+                        
+                            <div class="div_img">
+                              <a href="https://img.cgv.co.kr/Movie/Thumbnail/StillCut/000087/87034/87034214832_727.jpg" target="_blank">
+                                <img src="https://img.cgv.co.kr/Movie/Thumbnail/StillCut/000087/87034/87034214832_727.jpg" alt="Fjords" style="width:100%">
+                                <div class="caption">
+                                  <p>Lorem ipsum donec id elit non mi porta gravida at eget metus.</p>
+                                </div>
+                              </a>
+                            </div>
+                        
+                            <div class="div_img">
+                              <a href="https://img.cgv.co.kr/Movie/Thumbnail/StillCut/000087/87034/87034214832_727.jpg" target="_blank">
+                                <img src="https://img.cgv.co.kr/Movie/Thumbnail/StillCut/000087/87034/87034214832_727.jpg" alt="Fjords" style="width:100%">
+                                <div class="caption">
+                                  <p>Lorem ipsum donec id elit non mi porta gravida at eget metus.</p>
+                                </div>
+                              </a>
+                            </div>
+                        </div>
+                        <hr>
+                        <br><br>
+
+                        
+                        <!--@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@-->
+                        <!-- 상세정보 -->
+                        
+                        <div class="product_detail">
+                            <img src="../resorces/01_공연/클래식/디즈니 지브리 상세정보.jpg" alt="">
+                        </div>
+                        
+                        <!--@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@-->
+                        <!-- 상품관련정보 -->
+                        
+                        
+                        
+                        
+                        
+                        
+                        <!--@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@-->
+                        <!--@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@-->
+                        <!--@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@-->
+                        <!--@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@-->
+                        <!--@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@-->
+                        
+                        <!-- 상세페이지 끝 -->
+                        <!-- 류지완 끝 -->
+                        
+                    </div>
+                </div>
+
+            <div class="footer">
+                <div id="footer_1">
+                    <a href="#">이용약관</a>|
+                    <a href="#">개인정보취급방침</a>|
+                    <a href="#">인재채용</a>|
+                    <a href="#">고객센터</a>
+                </div>
+                <div id="footer_2">
+                    <P id="p1">
+                        <br>
+                        이눔식기 주식회사 <br><br>
+                        
+                        주소 :  서울특별시 강남구 테헤란로14길 6 남도빌딩 3F H-class | 대표이사 : 김시연 | 사업자등록번호 : 없떵<br>
+                        010-2646-7652 | @naver.com | 개발자코스 : 종일반 | 사업자정보확인 | 개인정보보호책임자 : 김시연
+                    </P>
+                    <p id="p2">
+                        Copyright © 1998-2023 KH Information Educational Institute All Right Reserved
+                    </p>
+                </div>
+                
+                
+            </div>        
+            <!-- Back to top button -->
+            <button id="backToTopBtn">Top</button>
+            
+    <!-- Anchor element representing the top of the page -->
+    <a href="#top" id="topAnchor"></a>
+    
+    <!-- Your script files can go here -->
+    
+    <script>
+        // When the page is fully loaded
+        window.onload = function () {
+            var backToTopBtn = document.getElementById("backToTopBtn");
+            var topAnchor = document.getElementById("topAnchor");
+            
+            // Show/hide the back-to-top button based on scroll position
+            window.onscroll = function () {
+                if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                    backToTopBtn.style.display = "block";
+                } else {
+                    backToTopBtn.style.display = "none";
+                }
+            };
+    
+            // Scroll to the top when the button is clicked
+            backToTopBtn.onclick = function () {
+                document.documentElement.scrollTop = 0;
+            };
+        };
+    </script>
+    
+</div>
+   
+
+
+
+
+</body>
+</html>

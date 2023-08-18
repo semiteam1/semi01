@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* *{margin:0; padding:0;} */
+        .list{list-style:none; padding: 0;}
+        .tap_btn{text-decoration:none; color:#333; display: block; border: 1px solid lightgray; border-bottom: 1px solid black;}
+        .tap_wrap{padding:15px; width: 1178px;}
+        .tab_menu{position:relative;}
+        .tab_menu .list{overflow:hidden;}
+        .tab_menu .list li{float:left; height: 80px; width: 20%; text-align: center;}
+        .tab_menu .list .tap_btn{font-size: 20px;padding-bottom: 5px; padding-top: 5px;}
+        .tab_menu .list .cont{margin-top: 20px; display:none; position:absolute; top:25px; left:0; background:#555; color:#fff; text-align:center; width:1178px; line-height:100px;}
+        .tab_menu .list li.is_on .tap_btn{font-weight:bold; color:black; border: 1px solid black;  border-bottom: white;}
+        .tab_menu .list li.is_on .cont{display:block;}
+    </style>
+</head>
+<body>
+    <div class="tap_wrap">
+        <div class="tab_menu">
+          <ul class="list">
+            <li class="is_on">
+              <a href="#tab1" class="tap_btn">상세정보</a>
+              <div id="tab1" class="cont"><img src="../resorces/이미지자료/01_공연/클래식/그린국악 상세정보.jpg" alt=""></div>
+            </li>
+            <li>
+              <a href="#tab2" class="tap_btn">구매후기</a>
+              <div id="tab2" class="cont">Tab Content2</div>
+            </li>
+            <li>
+              <a href="#tab3" class="tap_btn">기대평</a>
+              <div id="tab3" class="cont">Tab Content3</div>
+            </li>
+            <li>
+                <a href="#tab4" class="tap_btn">장소</a>
+                <div id="tab4" class="cont">Tab Content4</div>
+              </li>
+              <li>
+                <a href="#tab5" class="tap_btn">예매/취소안내</a>
+                <div id="tab5" class="cont">Tab Content5</div>
+              </li>
+          </ul>
+        </div>
+      </div>
+      <script>
+        const tabList = document.querySelectorAll('.tab_menu .list li');
+        for(var i = 0; i < tabList.length; i++){
+            tabList[i].querySelector('.tap_btn').addEventListener('click', function(e){
+                e.preventDefault();
+                    for(var j = 0; j < tabList.length; j++){
+                    tabList[j].classList.remove('is_on');
+                    }
+                this.parentNode.classList.add('is_on');
+                });
+            }
+      </script>
+</body>
+</html>
+</body>
+</html>
