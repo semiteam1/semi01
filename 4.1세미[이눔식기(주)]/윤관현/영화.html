@@ -106,6 +106,7 @@
         margin: 0 auto;
         width: 1120px;
         height: 88px;
+        margin-left: 360px;
         }
         .header_main>div{
             /* border: 1px solid yellowgreen; */
@@ -156,6 +157,7 @@
             height: 40px; 
             margin: auto;
             padding-top: 10px;
+            margin-left: 340px;
         }
         #navi{
             list-style-type: none;
@@ -212,7 +214,7 @@
             width: 30%;
             height: 100%;
             float: left;
-            box-sizing: border-box;   
+            box-sizing: border-box;
         }
         .header_search_input {
         width: 240px;
@@ -235,6 +237,7 @@
             /* margin-top: 10px; */
             border: 0;
             background-color: white;
+            margin-left: 10px;
         }
         #btn_Img{
             width: 100%;
@@ -244,7 +247,7 @@
         /* 검색 끝 */
         /* 헤더 끝 */
 
-
+        
         /* 바디 시작 */
         /* 바디 기본 */
         /* .body{ */
@@ -254,7 +257,7 @@
         /* } */
 
         .page_heading{
-            /* border: 1px solid; */
+            /* border: 1px solid red; */
             margin: auto;
             width: 1120px;
             height: 65px;
@@ -279,7 +282,6 @@
             display: flex;
             justify-content: center;
             align-items: center;
-          
         }
         /* 바디 기본 */
         /* 버튼 */
@@ -325,26 +327,26 @@
             width: 25%;
             height: 70%;
             margin-top: 20px;
-            margin-left: 700px;
+            margin-left: 750px;
         }
         /* 버튼 끝 */
         /* 바디 메인 */
-
+        
         /* 윤관현_시작 */
         .gwanhyeon{
-            border: 1px solid red;
-            background-color: lightgray;
-            height: 3000px;
+            /* border: 1px solid red; */
+            /* background-color: lightgray; */
+            height: 3200px;
             width: 65%;
             margin: auto;
         }
         .gwanhyeon>div {
-            border: 1px solid red;
+            /* border: 1px solid red; */
             width: 100%;
         }
         #demo {
             height: 15%;
-            border: 1px solid blue;
+            /* border: 1px solid blue; */
         }
         .carousel-inner {
             width: 100%;
@@ -371,7 +373,7 @@
         }
 
         .thumbnail{
-            height: 400px;
+            height: 500px;
         }
 
         .movieHead {
@@ -408,10 +410,22 @@
         .col-md-5 a{
             height: 100px;
         }
-        .col-md-5>.thumbnail {
-            height: 300px;
+        .col-md-5>div {
+            height: 400px;
         }
-
+        #ad {
+            border: 1px solid rgb(156, 152, 152);
+            height: 330px;
+            border-radius: 20px;
+        }
+        #ad img {
+            box-sizing: border-box;
+            width: 100%;
+            height: 100%;
+        }
+        img {
+            cursor: pointer;
+        }
 
 
         /* 윤관현_끝 */
@@ -437,6 +451,7 @@
             border-top: 1px; 
             margin: auto; 
             margin-top: 10px;
+            margin-left: 350px;
             /* border: 1px solid red; */
         } 
         #footer_1>a{
@@ -449,21 +464,23 @@
         #footer_2{
             height: 80%;
             border-top: 2px solid rgba(212, 212, 212, 0.459);
+            /* border: 1px solid red; */
         }
-
+        
         #p1{
             width: 1120px; 
             height: 80%;
             /* margin: auto;  */
-            padding: 5px 15px; 
+            padding: 5px 15px;
             /* background-color: #878d95; */
+            margin-left: 350px;
         }
         
         #footer_2>p{
             /* width: 100%; */
             /* border: 1px solid blueviolet; */
             box-sizing: border-box;
-            margin: auto;
+            /* margin: auto; */
             font-size: 12px;
             /* color:rgb(58, 58, 58); */
             
@@ -498,7 +515,7 @@
         line-height: 0;
         
     }
-    </style>
+</style>
 </head>
 <body>
    
@@ -605,41 +622,43 @@
 
             <div class="body">
 
-                <div class="page_heading">
-                    <h1 class="page_title">
-                        영화
-                    </h1>
-                    <div class="common_tab_area">
-
-                        <ul class="common_tab_list" role="tablist">
-                                <li class="common_tab_item" role="none">
-                                    <button type="button" class="common_tab_btn" role="tab" aria-selected="true">전체</button>
-                                </li>
-                                <li class="common_tab_item" role="none">
-                                    <button type="button" class="common_tab_btn" role="tab" aria-selected="false">로맨스</button>
-                                    </li>
-                                <li class="common_tab_item" role="none">
-                                    <button type="button" class="common_tab_btn" role="tab" aria-selected="false">공포</button>
-                                    </li>
-                                <li class="common_tab_item" role="none">
-                                    <button type="button" class="common_tab_btn" role="tab" aria-selected="false">코미디</button>
-                                </li>
-                                <li class="common_tab_item" role="none">
-                                    <button type="button" class="common_tab_btn" role="tab" aria-selected="false">액션</button>
-                                </li>
-                        </ul>
-                    </div>
-                           
-                </div> <!-- 버튼 끝 -->
+                
                 <!-- 내용 넣을 수 있는 구간 시작 -->
-
+                
                 <!-- 윤관현_시작 -->
                 <div class="gwanhyeon">
 
+                    <div class="page_heading">
+                        <h1 class="page_title">
+                            영화
+                        </h1>
+                        <div class="common_tab_area">
+    
+                            <ul class="common_tab_list" role="tablist">
+                                    <li class="common_tab_item" role="none">
+                                        <button type="button" class="common_tab_btn" role="tab" aria-selected="true">전체</button>
+                                    </li>
+                                    <li class="common_tab_item" role="none">
+                                        <button type="button" class="common_tab_btn" role="tab" aria-selected="false">로맨스</button>
+                                        </li>
+                                    <li class="common_tab_item" role="none">
+                                        <button type="button" class="common_tab_btn" role="tab" aria-selected="false">공포</button>
+                                        </li>
+                                    <li class="common_tab_item" role="none">
+                                        <button type="button" class="common_tab_btn" role="tab" aria-selected="false">코미디</button>
+                                    </li>
+                                    <li class="common_tab_item" role="none">
+                                        <button type="button" class="common_tab_btn" role="tab" aria-selected="false">액션</button>
+                                    </li>
+                            </ul>
+                        </div>
+                               
+                    </div> <!-- 버튼 끝 -->
+
                     <!-- 랭킹 시작 -->
-                    <div id="ranking" class="movieHead">
-                        <a href="">랭킹딱대</a>
-                    </div>
+                    <h1 id="ranking" class="movieHead">
+                        <a href="">랭킹</a>
+                    </h1>
                     
                     <!-- 메인배너 시작 -->
                     <div id="demo" class="carousel slide" data-bs-ride="carousel">
@@ -654,7 +673,7 @@
                         
                         <!-- 이미지 시작 -->
                         <div class="carousel-inner">
-                            <div class="carousel-item active">
+                            <div class="carousel-item active" onclick="test();">
                                 <img src="https://img.cgv.co.kr/Movie/Thumbnail/StillCut/000087/87136/87136217392_727.jpg" class="d-block">
                             </div>
                             <div class="carousel-item">
@@ -664,6 +683,12 @@
                                 <img src="https://img.cgv.co.kr/Movie/Thumbnail/StillCut/000087/87181/87181216707_727.jpg" class="d-block">
                             </div>
                         </div>
+
+                        <script>
+                            function test() {
+                                
+                            }
+                        </script>
                         <!-- //이미지 끝 -->
                         
                         <!-- 좌우 버튼 시작 -->
@@ -683,9 +708,9 @@
                     <div class="container">
 
                         <!-- 전체 영화 헤드 태그 시작 -->
-                        <div class="movieHead">
+                        <h1 class="movieHead">
                             <a href="">상영 예정작</a>
-                        </div>
+                        </h1>
                         <!-- //전체 영화 헤드 태그 끝 -->
 
                         <!-- 전체 포스터 시작 -->
@@ -763,9 +788,9 @@
                     <div class="container">
 
                         <!-- 전체 영화 헤드 태그 시작 -->
-                        <div class="movieHead">
+                        <h1 class="movieHead">
                             <a href="">현재 상영작</a>
-                        </div>
+                        </h1>
                         <!-- //전체 영화 헤드 태그 끝 -->
 
                         <!-- 전체 포스터 시작 -->
@@ -933,6 +958,12 @@
 
                     </div>
                     <!-- //현재 상영작 끝 -->
+
+                    <!-- 광고 배너 시작 -->
+                    <div id="ad">
+                        <a href=""><img src="https://image.jtbcgolf.joins.com/MOBILE/images/custom/business_main_img_20200529.jpg"></a>
+                    </div>
+                    <!-- //광고 배너 끝 -->
 
                 </div>
                 <!-- //윤관현 끝 -->
