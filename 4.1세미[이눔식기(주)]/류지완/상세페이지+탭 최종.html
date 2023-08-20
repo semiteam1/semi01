@@ -333,28 +333,36 @@
         /* 예매파트 시작 */
         .booked{
             border: 1px solid black;
-            width: 1170px;
+            width: 1180px;
             height: 300px;
             border-radius: 20px;
 
         }
-
         .booked_part1{
-            /* border: 1px solid yellow; */
-            background-color: rgb(243, 236, 236);
+            /* border: 5px solid; */
             height: 100%;
-            width: 180px;
-            padding-left: 10px;
+            width: 37%;
             float: left;
-            border-radius: 0px 20px 20px 0px;
         }
 
         .booked_part2{
-            /* border: 5px solid; */
+            border-left: 1px solid lightgray;
             height: 100%;
-            width: 410px;
+            width: 37%;
             float: left;
         }
+
+        .booked_part3{
+            /* border: 1px solid yellow; */
+            background-color: rgb(243, 236, 236);
+            height: 100%;
+            width: 25%;
+            padding-left: 10px;
+            float: right;
+            border-radius: 0px 20px 20px 0px;
+            border-left: 1px solid lightgray;
+        }
+
 
         .booked_btn_form{
             /* border: 1px solid red; */
@@ -375,28 +383,72 @@
             border-radius: 10px;
         }
 
-        .booked_part2_calender1{
+        .booked_part1_calender1{
             /* border: 5px solid blue; */
             height: 100%;
-            width: 30%;
+            width: 20%;
             float: left;
-
             font-size: 15px;
             font-weight: 900;
-            text-align: center;
+            padding-left: 20px;
+        }
+        
+        .booked_part1_calender2{
+            height: 100%;
+            width: 30%;
+            
         }
 
-        .booked_part2_calender2{
+        .booked_part1_calender3{
             /* border: 1px solid red; */
             height: 100%;
             width: 70%;
             float: right;
         }
 
-        .booked_part1_b{
+        .booked_part3_b{
             padding-right: 10px;
             float: right;
         }
+
+        
+        .booked_part2_ampm1{
+            width: 20%;
+            height: 100%;
+            float: left;
+            font-weight: bolder;
+            padding-left: 20px;
+        }
+        
+        .booked_part2_ampm2{
+            width: 79%;
+            height: 100%;
+            padding-top: 30px;
+            float: right;
+        }
+        
+        .booked_part2_ampm{
+            border: 1px solid black;
+            width: 80%;
+            height: 30%;
+            margin-bottom: 20px;
+            border-radius: 10px;
+            font-size: 20px;
+        }
+
+        .booked_part2_ampm>a{
+            color: black;
+            cursor: pointer;
+            display: block;
+            width: 100%;
+            height: 100%;
+            padding-top: 20px;
+        }
+
+        .booked_part2_ampm>a:hover{
+            background-color: lightgray;
+        }
+
 
         /* 잘보여라@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@*/
         /* 탭메뉴 파트 시작 */
@@ -767,21 +819,35 @@
             <form action="">
                 <div class="booked">
                     <div class="booked_part1">
-                        <br><br>
-                        <b>예매 가능 티켓 수</b>
-                        <br><br><br><br>
-                        <b class="booked_part1_b">20매</b>
-
-                    </div>
-                    <div class="booked_part2">
-                        <div class="booked_part2_calender1">
+                        <div class="booked_part1_calender1">
                             <br><br>
                             날짜 선택
                         </div>
 
-                        <div class="booked_part2_calender2">
+                        <div class="booked_part1_calender2">
                             달력
                         </div>
+                    </div>
+                    <div class="booked_part2">
+                        <div class="booked_part2_ampm1">
+                            <br><br>
+                            회차 선택
+                        </div>
+                        <div class="booked_part2_ampm2" align="center">
+                            <div class="booked_part2_ampm" >
+                               <a href="#">오전</a> 
+                            </div>
+                            <div class="booked_part2_ampm">
+                               <a href="#">오후</a>  
+                            </div>
+                        </div>
+                    </div>
+                    <div class="booked_part3">
+                        <br><br>
+                        <b>예매 가능 티켓 수</b>
+                        <br><br><br><br>
+                        <b class="booked_part3_b">20매</b>
+
                     </div>
                 </div>
                     <div class="booked_btn_form">
