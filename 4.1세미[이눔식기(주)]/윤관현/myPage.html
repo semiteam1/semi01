@@ -460,44 +460,76 @@
                         <table id="myPageForm">
                             <tr>
                                 <th>*아이디</th>
-                                <td colspan="2"><input type="text" name="userId" required value="user01" readonly></td>
+                                <td colspan="3"><input type="text" name="userId" required value="princessrini" readonly></td>
                             </tr>
                             <tr>
                                 <th>비밀번호</th>
-                                <td colspan="2"><input type="password" name="userPwd" required value="pass01"></td>
+                                <td colspan="3"><input type="password" name="userPwd" required value="riniprincess05"></td>
                             </tr>
                             <tr>
                                 <th>*이름</th>
-                                <td colspan="2"><input type="text" name="userName" required value="차은우" readonly></td>
+                                <td colspan="3"><input type="text" name="userName" required value="이리니" readonly></td>
                             </tr>
                             <tr>
                                 <th>전화번호</th>
-                                <td colspan="2"><input type="text" name="phone" value="010-1234-5678"></td>
+                                <td colspan="3"><input type="text" name="phone" value="010-1234-5678"></td>
                             </tr>
                             <tr>
                                 <th>이메일</th>
-                                <td colspan="2"><input type="email" name="email" value="user01@gmail.com"></td>
+                                <td colspan="3"><input type="email" name="email" value="princessrini@gmail.com"></td>
                             </tr>
                             <tr>
                                 <th>*생년월일</th>
-                                <td colspan="2"><input type="number" name="birth" value="990101" readonly></td>
+                                <td colspan="3"><input type="number" name="birth" value="970505" readonly></td>
                             </tr>
                             <tr>
                                 <th>*등급</th>
-                                <td colspan="2"><input type="text" name="level" value="새싹" readonly></td>
+                                <td colspan="3"><input type="text" name="level" value="공주" readonly></td>
                             </tr>
                             <tr>
-                                <th>관심있는 태그</th>
+                                <th rowspan="3">관심있는 태그</th>
                                 <td>
-                                    영화
+                                    <td>
+                                        [영화]
+                                    </td>
+                                    <td>
+                                        <select name="interest_movie">
+                                            <option value="1">로맨스</option>
+                                            <option value="2">공포/스릴러</option>
+                                            <option value="3">코미디</option>
+                                            <option value="4">액션</option>
+                                        </select>
+                                    </td>
                                 </td>
+                            </tr>
+                            <tr>
                                 <td>
-                                    <select name="interest_movie">
-                                        <option value="1">로맨스</option>
-                                        <option value="2">공포/스릴러</option>
-                                        <option value="3">코미디</option>
-                                        <option value="4">액션</option>
-                                    </select>
+                                    <td>
+                                        [전시]
+                                    </td>
+                                    <td>
+                                        <select name="interest_display">
+                                            <option value="5">그림전시</option>
+                                            <option value="6">작품전시</option>
+                                            <option value="7">사진전시</option>
+                                            <option value="8">체험전시</option>
+                                        </select>
+                                    </td>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <td>
+                                        [공연]
+                                    </td>
+                                    <td>
+                                        <select name="interest_show">
+                                            <option value="9">뮤지컬</option>
+                                            <option value="10">연극</option>
+                                            <option value="11">클래식</option>
+                                            <option value="12">콘서트</option>
+                                        </select>
+                                    </td>
                                 </td>
                             </tr>
                         </table>
