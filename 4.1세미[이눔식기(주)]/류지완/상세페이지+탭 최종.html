@@ -333,10 +333,10 @@
         /* 예매파트 시작 */
         .booked{
             border: 1px solid black;
-            width: 600px;
+            width: 1170px;
             height: 300px;
             border-radius: 20px;
-            margin-left: 550px;
+
         }
 
         .booked_part1{
@@ -345,7 +345,7 @@
             height: 100%;
             width: 180px;
             padding-left: 10px;
-            float: right;
+            float: left;
             border-radius: 0px 20px 20px 0px;
         }
 
@@ -353,14 +353,14 @@
             /* border: 5px solid; */
             height: 100%;
             width: 410px;
-            float: right;
+            float: left;
         }
 
         .booked_btn_form{
             /* border: 1px solid red; */
             width: 100%;
             height: 90px;
-            float: right;
+            float: left;
         }
 
         .booked_btn{
@@ -399,17 +399,54 @@
         }
 
         /* 잘보여라@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@*/
-        /* 메뉴탭 파트 시작 */
-        .list{list-style:none; padding: 0;}
-        .tap_btn{text-decoration:none; color:#333; display: block; border: 1px solid lightgray; border-bottom: 1px solid black;}
-        .tap_wrap{padding:15px; width: 1178px;}
-        .tab_menu{position:relative;}
-        .tab_menu .list{overflow:hidden;}
-        .tab_menu .list li{float:left; height: 80px; width: 20%; text-align: center;}
-        .tab_menu .list .tap_btn{font-size: 20px;padding-bottom: 5px; padding-top: 5px;}
-        .tab_menu .list .cont{margin-top: 20px; display:none; position:absolute; top:25px; left:0; background:#555; color:#fff; text-align:center; width:1178px; line-height:100px;}
-        .tab_menu .list li.is_on .tap_btn{font-weight:bold; color:black; border: 1px solid black;  border-bottom: white;}
-        .tab_menu .list li.is_on .cont{display:block;}
+        /* 탭메뉴 파트 시작 */
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .tab-container {
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+        }
+
+        .tab-button {
+            background-color: white;
+            border: 1px solid lightgray;
+            border-bottom: 1px solid black;
+            padding: 10px 15px;
+            width: 20%;
+            font-size: 20px;
+            color: #333;
+            text-align: center;
+            text-decoration: none;
+            cursor: pointer;
+            transition: background-color 0.3s, border 0.3s, color 0.3s;
+        }
+
+        .tab-button:hover {
+            background-color: white;
+        }
+
+            .active.tab-button {
+            border: 1px solid black;
+            border-bottom: white;
+            font-weight: bolder;
+        }
+
+        .tab-content {
+            display: none;
+            padding: 20px;
+            /* background-color: gray; */
+            margin-top: 20px;
+        }
+
+        .active {
+            display: block;
+        }
 
         /* 잘보여라@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@*/
         /* 리뷰파트 시작 */
@@ -417,10 +454,7 @@
             width: 100%;
             height: 50px;
             padding-top: 10px;
-        }
-
-        .review_content{
-            padding: 0px 20px 0px 20px
+            color: black;
         }
 
         .review_btn{
@@ -428,6 +462,8 @@
             width: 70px;
             height: 50px;
             border-radius: 10%;
+            border: 0;
+            cursor: pointer;
         }
 
         .review_form{
@@ -673,7 +709,7 @@
             <!--@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@-->
 
             <div class="product_img_info">
-                <div id="product_img"><img src="../resorces/01_공연/클래식/디즈니 지브리 포스터.jpg" alt="액션_가오갤3"></div>
+                <div id="product_img"><img src="../resorces/이미지자료/01_공연/클래식/디즈니 지브리 포스터.jpg" alt="액션_가오갤3"></div>
                 <div id="product_info">
                     <div><h1>[디즈니 VS 지브리] 애니메이션 첼로 페스티벌</h1></div>
                     <hr style="border: 1px solid black;">
@@ -752,65 +788,106 @@
                         <button type="submit" class="booked_btn">예매하기</button>
                     </div>
             </form>
-            <!--@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@-->
-            <!-- 리뷰 파트 -->
+            <br><br><br><br>
 
-            <div class="tap_wrap">
-                <div class="tab_menu">
-                  <ul class="list">
-                    <li class="is_on">
-                      <a href="#tab1" class="tap_btn">상세정보</a>
-                      <div id="tab1" class="cont"><img src="../resorces/01_공연/클래식/그린국악 상세정보.jpg" style="width: 90%;"></div>
-                    </li>
-                    <li>
-                      <a href="#tab2" class="tap_btn">구매후기</a>
-                      <div id="tab2" class="cont">Tab Content2</div>
-                    </li>
-                    <li>
-                      <a href="#tab3" class="tap_btn">기대평</a>
-                      <div id="tab3" class="cont">Tab Content3</div>
-                    </li>
-                    <li>
-                        <a href="#tab4" class="tap_btn">장소</a>
-                        <div id="tab4" class="cont">Tab Content4</div>
-                      </li>
-                      <li>
-                        <a href="#tab5" class="tap_btn">예매/취소안내</a>
-                        <div id="tab5" class="cont">Tab Content5</div>
-                      </li>
-                  </ul>
-                </div>
+            <!--@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@-->
+            <!-- 탭메뉴 파트 -->
+            <div class="tab-container">
+                <button class="tab-button" onclick="openTab(event, 'tab1')">상세정보</button>
+                <button class="tab-button" onclick="openTab(event, 'tab2')">관람후기</button>
+                <button class="tab-button" onclick="openTab(event, 'tab3')">기대평</button>
+                <button class="tab-button" onclick="openTab(event, 'tab4')">장소정보</button>
+                <button class="tab-button" onclick="openTab(event, 'tab5')">예매/취소안내</button>
               </div>
+              
+              <div id="tab1" class="tab-content">
+                <img src="../resorces/이미지자료/01_공연/클래식/그린국악 상세정보.jpg" alt="">
+              </div>
+              
+              <div id="tab2" class="tab-content">
+                <!--@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@-->
+                <!-- 리뷰 파트 -->
+                <h1 style="padding-top: 20px;" align="left">관람후기</h1>
+                <br>
+                <hr style="border: 1px solid black;">
+                <div class="review" align="left">
+                    <h4>게시판 운영규정에 맞지 않는 글은 사전 통보없이 삭제될 수 있습니다.</h4>
+                </div>
+                <form action="" class="review_form">
+                    <div class="review_content">
+                        <textarea name="" cols="160" rows="10" style="resize: none;"></textarea>
+                    </div>
+                    <br>
+                    <div class="review_content">
+                        <button type="submit" class="review_btn" style="background-color: black; color: white;">등록</button>
+                    </div>
+                    <br>
+                </form>
+              </div>
+              
+              <div id="tab3" class="tab-content">
+                <!--@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@-->
+                <!-- 기대평 파트 -->
+                <h1 style="padding-top: 20px;" align="left">기대평</h1>
+                <br>
+                <hr style="border: 1px solid black;">
+                <div class="review" align="left">
+                    <h4>게시판 운영규정에 맞지 않는 글은 사전 통보없이 삭제될 수 있습니다.</h4>
+                </div>
+                <form action="" class="review_form">
+                    <div class="review_content">
+                        <textarea name="" cols="160" rows="10" style="resize: none;"></textarea>
+                    </div>
+                    <br>
+                    <div class="review_content">
+                        <button type="submit" class="review_btn" style="background-color: black; color: white;">등록</button>
+                    </div>
+                    <br>
+                </form>
+              </div>
+
+              <div id="tab4" class="tab-content">
+                <!--@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@-->
+                <!-- 장소 정보 파트 -->
+                <h1 style="padding-top: 20px;" align="left">공연장 정보</h1>
+                <br>
+                <hr style="border: 1px solid black;">
+                <br>
+                <img src="../류지완/공연장정보 샘플.PNG">
+              </div>
+
+              <div id="tab5" class="tab-content">
+                <!--@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@-->
+                <!-- 예매/취소안내 파트 -->
+                <h1 style="padding-top: 20px;" align="left">예매/취소안내</h1>
+                <br>
+                <hr style="border: 1px solid black;">
+                <br>
+                <img src="../류지완/예매,취소안내 이미지1.PNG" alt="">
+                <img src="../류지완/예매,취소안내 이미지2.PNG" alt="">
+              </div>
+              
               <script>
-                const tabList = document.querySelectorAll('.tab_menu .list li');
-                for(var i = 0; i < tabList.length; i++){
-                    tabList[i].querySelector('.tap_btn').addEventListener('click', function(e){
-                        e.preventDefault();
-                            for(var j = 0; j < tabList.length; j++){
-                            tabList[j].classList.remove('is_on');
-                            }
-                        this.parentNode.classList.add('is_on');
-                        });
-                    }
+              function openTab(event, tabName) {
+                const tabContents = document.getElementsByClassName("tab-content");
+                for (const content of tabContents) {
+                  content.style.display = "none";
+                }
+              
+                const tabButtons = document.getElementsByClassName("tab-button");
+                for (const button of tabButtons) {
+                  button.classList.remove("active");
+                }
+              
+                document.getElementById(tabName).style.display = "block";
+                event.currentTarget.classList.add("active");
+              }
+              
+              document.getElementById("tab1").style.display = "block";
+              document.getElementsByClassName("tab-button")[0].classList.add("active");
               </script>
 
-            <!--@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@-->
-            <!-- 리뷰 파트 -->
-            <h1 style="padding-top: 20px;">관람후기</h1>
-            <hr>
-            <div class="review">
-                <h4>게시판 운영규정에 맞지 않는 글은 사전 통보없이 삭제될 수 있습니다.</h4>
-            </div>
-            <form action="" class="review_form">
-            <div class="review_content">
-                <textarea name="" cols="160" rows="10" style="resize: none;"></textarea>
-            </div>
-            <br>
-                <div class="review_content">
-                    <button type="submit" class="review_btn">등록</button>
-                </div>
-                <br>
-            </form>
+
 
             <!--@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@-->
             <!-- 제일 하단 추천상품 -->
