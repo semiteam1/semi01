@@ -70,3 +70,8 @@ INSERT INTO review_info VALUES ( seq_rno.nextval,1,'인생영화 저도 이런 사랑 하고
 
 -- 좋아요 등록
 INSERT INTO product_like VALUES ( 3,2);
+INSERT INTO product_like VALUES ( 3,1);
+INSERT INTO product_like VALUES ( 1,3);
+
+COMMIT;
+
