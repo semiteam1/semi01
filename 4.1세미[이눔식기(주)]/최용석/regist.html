@@ -6,13 +6,13 @@
   <title>Document</title>
   <style>
     div{box-sizing: border-box;}
-    input{
+    #goodsform input[type="text"], #goodsform input[type="number"]{
         border: none;
         border-radius: 5px;
         height: 30px;
-        width: 81%;
+        width: 89%;
     }
-    button{
+    #bts3{
         display: block;
         width: 20%;
         height: 50px;
@@ -23,7 +23,11 @@
         font-size: 15px;
         font-weight: bold;
         margin: auto;
-        margin-top: 79px;
+        margin-top: 62px;
+    }
+    #bts3:hover{
+        background-color: darkgray;
+        cursor: pointer;
     }
     tr{
         height: 50px;
@@ -59,7 +63,7 @@
     text-align: center;
     line-height: 1.5;
     }
-    #filePath1, #filePath2, #filePath3, #filePath4{
+    #filePath1, #filePath2, #filePath3, #filePath4, #filePath5, #filePath6{
         display: block;
         width: 56%;
         margin-top: 11px;
@@ -91,6 +95,11 @@
     }
     input[type="date"]{
         width: 144px;
+        border: none;
+        border-radius: 5px;
+        height: 30px;
+        width: 42%;
+        font-weight: bold;
     }
     .labels{
         font-size: 13px;
@@ -106,10 +115,24 @@
   </style>
 </head>
 <body>
-  <h2 style="margin-bottom: 84px;">상품등록</h2>
-  <form action="" method="post">
-    <div id="container">
+  <form action="" method="post" id="goodsform" style="margin-left: 38px;">
+    <div id="container" style="margin-top: 13px;">
         <table>
+            <tr>
+                <td>카테고리</td>
+                <td style="display: flex; margin-top: 10px;">
+                    <select id="select1" style="margin-right: 13px;">
+                        <option value="all">영화</option>
+                        <option value="seven">전시</option>
+                        <option value="twelve">공연</option>
+                    </select>
+                    <select id="select1">
+                        <option value="all">로맨스</option>
+                        <option value="seven">액션</option>
+                        <option value="twelve">코미디</option>
+                    </select>
+                </td>
+            </tr>
             <tr>
                 <td style="width: 23%;">제목</td>
                 <td>
@@ -117,9 +140,23 @@
                 </td>
             </tr>
             <tr>
-                <td>장소</td>
+                <td>지역</td>
                 <td>
-                    <input type="text" name="place" id="place" placeholder="장소를 입력하시오">
+                    <select id="select1">
+                        <option value="all">서울</option>
+                        <option value="seven">경기/인천</option>
+                        <option value="twelve">충청/강원</option>
+                        <option value="fifteen">대구/경북</option>
+                        <option value="eighteen">부산/경남</option>
+                        <option value="eighteen">광주/전라</option>
+                        <option value="eighteen">제주</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>상세주소</td>
+                <td>
+                    <input type="text" name="place" id="place" placeholder="상세주소를 입력하시오">
                 </td>
             </tr>
             <tr>
@@ -137,6 +174,16 @@
                 </td>
             </tr>
             <tr>
+                <td>시간</td>
+                <td>
+                    <select id="select1">
+                        <option>오전</option>
+                        <option>오후</option>
+                        <option>전체</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
                 <td>관람등급</td>
                 <td>
                     <select id="select1">
@@ -151,43 +198,63 @@
             <tr>
                 <td>가격</td>
                 <td>
-                    <input type="text" name="price" id="price" placeholder="가격을 입력하시오">
+                    <input type="number" name="price" id="price" placeholder="가격을 입력하시오">
+                </td>
+            </tr>
+            <tr>
+                <td>좌석수</td>
+                <td>
+                    <input type="number" name="price" id="price" placeholder="좌석수를 입력하시오">
                 </td>
             </tr>
         </table>
-        <div style="width: 50%;">
+        <div style="width: 50%; margin-top: 52px;">
             <div style="display: flex;">
                 <label class="custom-file-label" for="customFile1">
                     포스터
                 </label>
                 <input type="file" id="customFile1" class="custom-file-input">
-                <input type="text" id="filePath1" placeholder="사진을 선택하시오">
+                <input type="text" id="filePath1" placeholder="사진을 선택하시오" style="width: 68%;">
             </div>
             <div style="display: flex; margin-top: 8px;">
                 <label class="custom-file-label" for="customFile2">
                     상세1
                 </label>
                 <input type="file" id="customFile2" class="custom-file-input">
-                <input type="text" id="filePath2" placeholder="사진을 선택하시오">
+                <input type="text" id="filePath2" placeholder="사진을 선택하시오" style="width: 68%;">
             </div>
             <div style="display: flex; margin-top: 8px;">
                 <label class="custom-file-label" for="customFile3">
                     상세2
                 </label>
                 <input type="file" id="customFile3" class="custom-file-input">
-                <input type="text" id="filePath3" placeholder="사진을 선택하시오">
+                <input type="text" id="filePath3" placeholder="사진을 선택하시오" style="width: 68%;">
             </div>
             <div style="display: flex; margin-top: 8px;">
                 <label class="custom-file-label" for="customFile4">
                     상세3
                 </label>
                 <input type="file" id="customFile4" class="custom-file-input">
-                <input type="text" id="filePath4" placeholder="사진을 선택하시오">
+                <input type="text" id="filePath4" placeholder="사진을 선택하시오" style="width: 68%;">
+            </div>
+            <div style="display: flex; margin-top: 8px;">
+                <label class="custom-file-label" for="customFile5">
+                    상세4
+                </label>
+                <input type="file" id="customFile5" class="custom-file-input">
+                <input type="text" id="filePath5" placeholder="사진을 선택하시오" style="width: 68%;">
+            </div>
+            <div style="display: flex; margin-top: 8px;">
+                <label class="custom-file-label" for="customFile6">
+                    상세5
+                </label>
+                <input type="file" id="customFile6" class="custom-file-input">
+                <input type="text" id="filePath6" placeholder="사진을 선택하시오" style="width: 68%;">
             </div>
         </div>
     </div>
     
-    <button type="submit">등록</button>
+    <button id="bts3" type="submit">등록</button>
 </form>
 
 <script>
@@ -232,6 +299,28 @@
         if (selectedFile) {
             const fileName = selectedFile.name;
             imagePathInput4.value = fileName; // 입력란에 경로 설정
+        }
+    });
+
+    const imageInput5 = document.getElementById('customFile5');
+    const imagePathInput5 = document.getElementById('filePath5');
+
+    imageInput5.addEventListener('change', function(event) {
+    const selectedFile = event.target.files[0]; // 선택한 파일의 정보 가져오기
+        if (selectedFile) {
+            const fileName = selectedFile.name;
+            imagePathInput5.value = fileName; // 입력란에 경로 설정
+        }
+    });
+
+    const imageInput6 = document.getElementById('customFile6');
+    const imagePathInput6 = document.getElementById('filePath6');
+
+    imageInput6.addEventListener('change', function(event) {
+    const selectedFile = event.target.files[0]; // 선택한 파일의 정보 가져오기
+        if (selectedFile) {
+            const fileName = selectedFile.name;
+            imagePathInput6.value = fileName; // 입력란에 경로 설정
         }
     });
 </script>
