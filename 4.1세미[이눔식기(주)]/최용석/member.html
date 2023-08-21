@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
   <title>Document</title>
   <style>
     div{box-sizing: border-box;}
@@ -18,6 +19,8 @@
       border-bottom: 2px solid #ABBBC7;
       width: 100%;
       display: flex;
+    }
+    #tb1 tr:not(:first-child){
       cursor: pointer;
     }
     #tb1 tr th:not(:last-child){
@@ -47,7 +50,7 @@
     #buttondiv{
       width: 396px;
       margin: auto;
-      margin-top: 20px;
+      margin-top: 40px;
       display: flex;
     }
     #buttondiv>.btn2{
@@ -60,6 +63,9 @@
       background-color: #ABBBC7;
       font-weight: bold;
       cursor: pointer;
+    }
+    #buttondiv>.btn2:hover{
+      background-color: darkgray;
     }
     .modal {
     display: none;
@@ -93,7 +99,7 @@
   text-align: center;
   margin-left: 550px;
   margin-top: -7px;
-  margin-bottom: 25px;
+  margin-bottom: 2px;
   }
 .close:hover,
 .close:focus {
@@ -104,6 +110,7 @@
 #tb2{
   margin: auto;
   text-align: left;
+  margin-top: 25px;
 }
 #tb2 tr{
   height: 20px;
@@ -114,7 +121,7 @@
   border: none;
   width: 275px;
   height: 28px;
-  margin-top: 3px;
+  margin-top: 7px;
   margin-left: 21px;
 }
 #tb2 button{
@@ -124,7 +131,7 @@
   height: 30px;
   border-radius: 5px;
   font-weight: bold;
-  margin-top: 10px;
+  margin-top: 54px;
 }
 #divs{
   display: flex;
@@ -136,7 +143,117 @@
 #bts2{
   margin-left: 10px;
 }
-  </style>
+.hovered {
+  background-color: darkgray;
+  font-weight: bold;
+}
+.hovered1{
+  background-color: black;
+  font-weight: bold;
+}
+#divs button{
+  cursor: pointer;
+}
+.interest{
+  border-radius: 5px;
+  border: none;
+  width: 279px;
+  height: 28px;
+  margin-top: 3px;
+  margin-left: 21px;
+}
+#tb2 button:hover{
+  background-color: darkgray;
+  cursor: pointer;
+}
+#bta1, #bta2, #bta3{
+  background-color: white;
+}
+.scroll-container {
+  background-color: white;
+  width: 100%;
+  height: 435px;
+  overflow: auto; /* 스크롤바를 표시하도록 설정 */
+  border: 1px solid #ccc;
+  overflow-y: scroll;
+}
+#modalText #att1{
+  border-radius: 5px;
+  border: none;
+  width: 248px;
+  height: 28px;
+  margin-top: 9px;
+  margin-left: 4px;
+  margin-right: 5px;
+}
+#modalText button{
+  border: none;
+  display: block;
+  width: 70px;
+  height: 30px;
+  border-radius: 5px;
+  font-weight: bold;
+  margin-top: 9px;
+  margin-right: 5px;
+}
+#modalText button:hover{
+  background-color: darkgray;
+  cursor: pointer;
+}
+#table5{
+  width: 100%;
+}
+#th5{
+  border-right: 2px solid #ABBBC7;
+  width: 210px;
+}
+#th6{
+  border-right: 2px solid #ABBBC7;
+  width: 129px;
+}
+#th7{
+  border-right: 2px solid #ABBBC7;
+  width: 77px;
+}
+#th8{
+  padding-right: 18px;
+}
+#table6{
+  width: 100%;
+}
+#table6 tr{
+  border-bottom: 2px solid #ABBBC7;
+  display: block;
+}
+#th9{
+  width: 207px;
+  border-right: 2px solid #ABBBC7;
+  font-weight: normal;
+}
+#th10{
+  width: 129px;
+  border-right: 2px solid #ABBBC7;
+  font-weight: normal;
+}
+#th11{
+  border-right: 2px solid #ABBBC7;
+  font-weight: normal;
+  width: 77px;
+}
+#th12{
+  font-weight: normal;
+  width: 113px;
+}
+#selectbox1{
+  border-radius: 5px;
+  border: none;
+  width: 85px;
+  height: 30px;
+  margin-top: 9px;
+  margin-left: 40px;
+  font-weight: bold;
+}
+</style>
 </head>
 <body>
   <div class="outer">
@@ -169,133 +286,133 @@
         <td id="td4">lovesiyeon@naver.com</td>
         <td id="td5">010-1234-5678</td>
       </tr>
-      <tr>
+      <tr class="modal-trigger">
         <td id="td1">1</td>
         <td id="td2">siyeon</td>
         <td id="td3">김시연</td>
         <td id="td4">lovesiyeon@naver.com</td>
         <td id="td5">010-1234-5678</td>
       </tr>
-      <tr>
+      <tr class="modal-trigger">
         <td id="td1">1</td>
         <td id="td2">siyeon</td>
         <td id="td3">김시연</td>
         <td id="td4">lovesiyeon@naver.com</td>
         <td id="td5">010-1234-5678</td>
       </tr>
-      <tr>
+      <tr class="modal-trigger">
         <td id="td1">1</td>
         <td id="td2">siyeon</td>
         <td id="td3">김시연</td>
         <td id="td4">lovesiyeon@naver.com</td>
         <td id="td5">010-1234-5678</td>
       </tr>
-      <tr>
+      <tr class="modal-trigger">
         <td id="td1">1</td>
         <td id="td2">siyeon</td>
         <td id="td3">김시연</td>
         <td id="td4">lovesiyeon@naver.com</td>
         <td id="td5">010-1234-5678</td>
       </tr>
-      <tr>
+      <tr class="modal-trigger">
         <td id="td1">1</td>
         <td id="td2">siyeon</td>
         <td id="td3">김시연</td>
         <td id="td4">lovesiyeon@naver.com</td>
         <td id="td5">010-1234-5678</td>
       </tr>
-      <tr>
+      <tr class="modal-trigger">
         <td id="td1">1</td>
         <td id="td2">siyeon</td>
         <td id="td3">김시연</td>
         <td id="td4">lovesiyeon@naver.com</td>
         <td id="td5">010-1234-5678</td>
       </tr>
-      <tr>
+      <tr class="modal-trigger">
         <td id="td1">1</td>
         <td id="td2">siyeon</td>
         <td id="td3">김시연</td>
         <td id="td4">lovesiyeon@naver.com</td>
         <td id="td5">010-1234-5678</td>
       </tr>
-      <tr>
+      <tr class="modal-trigger">
         <td id="td1">1</td>
         <td id="td2">siyeon</td>
         <td id="td3">김시연</td>
         <td id="td4">lovesiyeon@naver.com</td>
         <td id="td5">010-1234-5678</td>
       </tr>
-      <tr>
+      <tr class="modal-trigger">
         <td id="td1">1</td>
         <td id="td2">siyeon</td>
         <td id="td3">김시연</td>
         <td id="td4">lovesiyeon@naver.com</td>
         <td id="td5">010-1234-5678</td>
       </tr>
-      <tr>
+      <tr class="modal-trigger">
         <td id="td1">1</td>
         <td id="td2">siyeon</td>
         <td id="td3">김시연</td>
         <td id="td4">lovesiyeon@naver.com</td>
         <td id="td5">010-1234-5678</td>
       </tr>
-      <tr>
+      <tr class="modal-trigger">
         <td id="td1">1</td>
         <td id="td2">siyeon</td>
         <td id="td3">김시연</td>
         <td id="td4">lovesiyeon@naver.com</td>
         <td id="td5">010-1234-5678</td>
       </tr>
-      <tr>
+      <tr class="modal-trigger">
         <td id="td1">1</td>
         <td id="td2">siyeon</td>
         <td id="td3">김시연</td>
         <td id="td4">lovesiyeon@naver.com</td>
         <td id="td5">010-1234-5678</td>
       </tr>
-      <tr>
+      <tr class="modal-trigger">
         <td id="td1">1</td>
         <td id="td2">siyeon</td>
         <td id="td3">김시연</td>
         <td id="td4">lovesiyeon@naver.com</td>
         <td id="td5">010-1234-5678</td>
       </tr>
-      <tr>
+      <tr class="modal-trigger">
         <td id="td1">1</td>
         <td id="td2">siyeon</td>
         <td id="td3">김시연</td>
         <td id="td4">lovesiyeon@naver.com</td>
         <td id="td5">010-1234-5678</td>
       </tr>
-      <tr>
+      <tr class="modal-trigger">
         <td id="td1">1</td>
         <td id="td2">siyeon</td>
         <td id="td3">김시연</td>
         <td id="td4">lovesiyeon@naver.com</td>
         <td id="td5">010-1234-5678</td>
       </tr>
-      <tr>
+      <tr class="modal-trigger">
         <td id="td1">1</td>
         <td id="td2">siyeon</td>
         <td id="td3">김시연</td>
         <td id="td4">lovesiyeon@naver.com</td>
         <td id="td5">010-1234-5678</td>
       </tr>
-      <tr>
+      <tr class="modal-trigger">
         <td id="td1">1</td>
         <td id="td2">siyeon</td>
         <td id="td3">김시연</td>
         <td id="td4">lovesiyeon@naver.com</td>
         <td id="td5">010-1234-5678</td>
       </tr>
-      <tr>
+      <tr class="modal-trigger">
         <td id="td1">1</td>
         <td id="td2">siyeon</td>
         <td id="td3">김시연</td>
         <td id="td4">lovesiyeon@naver.com</td>
         <td id="td5">010-1234-5678</td>
       </tr>
-      <tr>
+      <tr class="modal-trigger">
         <td id="td1">1</td>
         <td id="td2">siyeon</td>
         <td id="td3">김시연</td>
@@ -323,7 +440,7 @@
       <div class="close" id="closeButton">
         &times;
       </div>
-      <p id="modalText"></p>
+      <p id="modalText" style="margin-top: 0;"></p>
     </div>
   </div>
   <script>
@@ -359,16 +476,14 @@
         <td><input type="text"></td>
       </tr>
       <tr>
-        <th>관심영화</th>
-        <td><input type="text"></td>
-      </tr>
-      <tr>
-        <th>관심전시</th>
-        <td><input type="text"></td>
-      </tr>
-      <tr>
-        <th>관심공연</th>
-        <td><input type="text"></td>
+        <th>관심상품</th>
+        <td>
+          <div style="display: flex; margin-left: 21px;">
+            <button id="bta1" onclick="func2();" style="margin-top: 5px; margin-right: 5px; width: 90px;">영화</button>
+            <button id="bta2" onclick="func3();" style="margin-top: 5px; margin-right: 5px; width: 90px;">전시</button>
+            <button id="bta3" onclick="func4();" style="margin-top: 5px; width: 89px;">공연</button>
+          </div>
+        </td>
       </tr>
       <tr>
         <th>이메일</th>
@@ -385,15 +500,14 @@
       <tr>
         <td colspan="2" align="center">
           <div id="divs">
-            <button id="bts1">회원수정</button>
-            <button id="bts2">회원삭제</button>
+            <button id="bts1" onclick="func1();" style="margin-top: 54px;">회원수정</button>
+            <button id="bts2" style="margin-top: 54px;">회원삭제</button>
           <div>
         </td>
       </tr>
     </table>
   </div>
   `;
-    
       });
     });
 
@@ -409,6 +523,612 @@
     
     // 페이지 로딩 후 모달을 숨기는 부분 추가
     modal.style.display = "none";
+
+    function changeBackgroundColor(element) {
+      element.classList.add('hovered');
+    }
+
+    function restoreBackgroundColor(element) {
+      element.classList.remove('hovered');
+    }
+
+    function func1(){
+      document.getElementById("modalText").innerHTML = 
+      `
+        <div>
+    <table id="tb2" style="margin-top: 25px;">
+      <tr style="height: 46px;">
+        <th>회원번호</th>
+        <td><input type="number"></td>
+      </tr>
+      <tr style="height: 46px;">
+        <th>회원아이디</th>
+        <td><input type="text"></td>
+      </tr>
+      <tr style="height: 46px;">
+        <th>회원비밀번호</th>
+        <td><input type="text"></td>
+      </tr>
+      <tr style="height: 46px;">
+        <th>회원명</th>
+        <td><input type="text"></td>
+      </tr>
+      <tr style="height: 46px;">
+        <th>생년월일</th>
+        <td><input type="text"></td>
+      </tr>
+      <tr style="height: 46px;">
+        <th>이메일</th>
+        <td><input type="text"></td>
+      </tr>
+      <tr style="height: 46px;">
+        <th>전화번호</th>
+        <td><input type="text"></td>
+      </tr>
+      <tr style="height: 46px;">
+        <th>탈퇴여부</th>
+        <td><input type="text"></td>
+      </tr>
+      <tr>
+        <td colspan="2" align="center">
+          <div id="divs">
+            <button id="bts1" onclick="func1();" style="margin-left: 139px; margin-top: 37px; margin-right: 10px;">수정완료</button>
+            <button onclick="func5();" style="margin-top: 37px;">뒤로가기</button>
+          <div>
+        </td>
+      </tr>
+    </table>
+  </div>
+  `;
+    }
+
+    function func2(){
+      document.getElementById("modalText").innerHTML = 
+       `
+      <table id="table5">
+      <tr>
+        <th id="th5">영화제목</th>
+        <th id="th6">지역</th>
+        <th id="th7">관람등급</th>
+        <th id="th8">가격</th>
+      </tr>
+      </table>
+      <div class="scroll-container">
+        <table id="table6">
+          <tr>
+            <th id="th9"><a href="#">분노의질주</a></th>
+            <th id="th10">경기/인천</th>
+            <th id="th11">전체</th>
+            <th id="th12">19900원</th>
+          </tr>
+          <tr>
+            <th id="th9"><a href="#">분노의질주</a></th>
+            <th id="th10">경기/인천</th>
+            <th id="th11">전체</th>
+            <th id="th12">19900원</th>
+          </tr>
+          <tr>
+            <th id="th9"><a href="#">분노의질주</a></th>
+            <th id="th10">경기/인천</th>
+            <th id="th11">전체</th>
+            <th id="th12">19900원</th>
+          </tr>
+          <tr>
+            <th id="th9"><a href="#">분노의질주</a></th>
+            <th id="th10">경기/인천</th>
+            <th id="th11">전체</th>
+            <th id="th12">19900원</th>
+          </tr>
+          <tr>
+            <th id="th9"><a href="#">분노의질주</a></th>
+            <th id="th10">경기/인천</th>
+            <th id="th11">전체</th>
+            <th id="th12">19900원</th>
+          </tr>
+          <tr>
+            <th id="th9"><a href="#">분노의질주</a></th>
+            <th id="th10">경기/인천</th>
+            <th id="th11">전체</th>
+            <th id="th12">19900원</th>
+          </tr>
+          <tr>
+            <th id="th9"><a href="#">분노의질주</a></th>
+            <th id="th10">경기/인천</th>
+            <th id="th11">전체</th>
+            <th id="th12">19900원</th>
+          </tr>
+          <tr>
+            <th id="th9"><a href="#">분노의질주</a></th>
+            <th id="th10">경기/인천</th>
+            <th id="th11">전체</th>
+            <th id="th12">19900원</th>
+          </tr>
+          <tr>
+            <th id="th9"><a href="#">분노의질주</a></th>
+            <th id="th10">경기/인천</th>
+            <th id="th11">전체</th>
+            <th id="th12">19900원</th>
+          </tr>
+          <tr>
+            <th id="th9"><a href="#">분노의질주</a></th>
+            <th id="th10">경기/인천</th>
+            <th id="th11">전체</th>
+            <th id="th12">19900원</th>
+          </tr>
+          <tr>
+            <th id="th9"><a href="#">분노의질주</a></th>
+            <th id="th10">경기/인천</th>
+            <th id="th11">전체</th>
+            <th id="th12">19900원</th>
+          </tr>
+          <tr>
+            <th id="th9"><a href="#">분노의질주</a></th>
+            <th id="th10">경기/인천</th>
+            <th id="th11">전체</th>
+            <th id="th12">19900원</th>
+          </tr>
+          <tr>
+            <th id="th9"><a href="#">분노의질주</a></th>
+            <th id="th10">경기/인천</th>
+            <th id="th11">전체</th>
+            <th id="th12">19900원</th>
+          </tr>
+          <tr>
+            <th id="th9"><a href="#">분노의질주</a></th>
+            <th id="th10">경기/인천</th>
+            <th id="th11">전체</th>
+            <th id="th12">19900원</th>
+          </tr>
+          <tr>
+            <th id="th9"><a href="#">분노의질주</a></th>
+            <th id="th10">경기/인천</th>
+            <th id="th11">전체</th>
+            <th id="th12">19900원</th>
+          </tr>
+          <tr>
+            <th id="th9"><a href="#">분노의질주</a></th>
+            <th id="th10">경기/인천</th>
+            <th id="th11">전체</th>
+            <th id="th12">19900원</th>
+          </tr>
+          <tr>
+            <th id="th9"><a href="#">분노의질주</a></th>
+            <th id="th10">경기/인천</th>
+            <th id="th11">전체</th>
+            <th id="th12">19900원</th>
+          </tr>
+          <tr>
+            <th id="th9"><a href="#">분노의질주</a></th>
+            <th id="th10">경기/인천</th>
+            <th id="th11">전체</th>
+            <th id="th12">19900원</th>
+          </tr>
+          <tr>
+            <th id="th9"><a href="#">분노의질주</a></th>
+            <th id="th10">경기/인천</th>
+            <th id="th11">전체</th>
+            <th id="th12">19900원</th>
+          </tr>
+        </table>
+      </div>
+      <div style="display: flex;">
+        <select id="selectbox1">
+          <option>장르전체</option>
+          <option>로맨스</option>
+          <option>코미디</option>
+          <option>공포</option>
+        </select>
+        <input id="att1" type="text" placeholder="영화제목을 입력하시오">
+        <button>검색</button>
+        <button onclick="func6();">뒤로가기</button>
+      </div>
+    `;
+    }
+
+    function func3(){
+      document.getElementById("modalText").innerHTML = 
+      `
+      <table id="table5">
+      <tr>
+        <th id="th5">전시제목</th>
+        <th id="th6">지역</th>
+        <th id="th7">관람등급</th>
+        <th id="th8">가격</th>
+      </tr>
+      </table>
+      <div class="scroll-container">
+        <table id="table6">
+          <tr>
+            <th id="th9"><a href="#">분노의질주</a></th>
+            <th id="th10">경기/인천</th>
+            <th id="th11">전체</th>
+            <th id="th12">19900원</th>
+          </tr>
+          <tr>
+            <th id="th9"><a href="#">분노의질주</a></th>
+            <th id="th10">경기/인천</th>
+            <th id="th11">전체</th>
+            <th id="th12">19900원</th>
+          </tr>
+          <tr>
+            <th id="th9"><a href="#">분노의질주</a></th>
+            <th id="th10">경기/인천</th>
+            <th id="th11">전체</th>
+            <th id="th12">19900원</th>
+          </tr>
+          <tr>
+            <th id="th9"><a href="#">분노의질주</a></th>
+            <th id="th10">경기/인천</th>
+            <th id="th11">전체</th>
+            <th id="th12">19900원</th>
+          </tr>
+          <tr>
+            <th id="th9"><a href="#">분노의질주</a></th>
+            <th id="th10">경기/인천</th>
+            <th id="th11">전체</th>
+            <th id="th12">19900원</th>
+          </tr>
+          <tr>
+            <th id="th9"><a href="#">분노의질주</a></th>
+            <th id="th10">경기/인천</th>
+            <th id="th11">전체</th>
+            <th id="th12">19900원</th>
+          </tr>
+          <tr>
+            <th id="th9"><a href="#">분노의질주</a></th>
+            <th id="th10">경기/인천</th>
+            <th id="th11">전체</th>
+            <th id="th12">19900원</th>
+          </tr>
+          <tr>
+            <th id="th9"><a href="#">분노의질주</a></th>
+            <th id="th10">경기/인천</th>
+            <th id="th11">전체</th>
+            <th id="th12">19900원</th>
+          </tr>
+          <tr>
+            <th id="th9"><a href="#">분노의질주</a></th>
+            <th id="th10">경기/인천</th>
+            <th id="th11">전체</th>
+            <th id="th12">19900원</th>
+          </tr>
+          <tr>
+            <th id="th9"><a href="#">분노의질주</a></th>
+            <th id="th10">경기/인천</th>
+            <th id="th11">전체</th>
+            <th id="th12">19900원</th>
+          </tr>
+          <tr>
+            <th id="th9"><a href="#">분노의질주</a></th>
+            <th id="th10">경기/인천</th>
+            <th id="th11">전체</th>
+            <th id="th12">19900원</th>
+          </tr>
+          <tr>
+            <th id="th9"><a href="#">분노의질주</a></th>
+            <th id="th10">경기/인천</th>
+            <th id="th11">전체</th>
+            <th id="th12">19900원</th>
+          </tr>
+          <tr>
+            <th id="th9"><a href="#">분노의질주</a></th>
+            <th id="th10">경기/인천</th>
+            <th id="th11">전체</th>
+            <th id="th12">19900원</th>
+          </tr>
+          <tr>
+            <th id="th9"><a href="#">분노의질주</a></th>
+            <th id="th10">경기/인천</th>
+            <th id="th11">전체</th>
+            <th id="th12">19900원</th>
+          </tr>
+          <tr>
+            <th id="th9"><a href="#">분노의질주</a></th>
+            <th id="th10">경기/인천</th>
+            <th id="th11">전체</th>
+            <th id="th12">19900원</th>
+          </tr>
+          <tr>
+            <th id="th9"><a href="#">분노의질주</a></th>
+            <th id="th10">경기/인천</th>
+            <th id="th11">전체</th>
+            <th id="th12">19900원</th>
+          </tr>
+          <tr>
+            <th id="th9"><a href="#">분노의질주</a></th>
+            <th id="th10">경기/인천</th>
+            <th id="th11">전체</th>
+            <th id="th12">19900원</th>
+          </tr>
+          <tr>
+            <th id="th9"><a href="#">분노의질주</a></th>
+            <th id="th10">경기/인천</th>
+            <th id="th11">전체</th>
+            <th id="th12">19900원</th>
+          </tr>
+          <tr>
+            <th id="th9"><a href="#">분노의질주</a></th>
+            <th id="th10">경기/인천</th>
+            <th id="th11">전체</th>
+            <th id="th12">19900원</th>
+          </tr>
+        </table>
+      </div>
+      <div style="display: flex;">
+        <input id="att1" type="text" placeholder="전시제목을 입력하시오">
+        <button>검색</button>
+        <button onclick="func6();">뒤로가기</button>
+      </div>
+    `;
+    }
+
+    function func4(){
+      document.getElementById("modalText").innerHTML = 
+      `
+      <table id="table5">
+      <tr>
+        <th id="th5">공연제목</th>
+        <th id="th6">지역</th>
+        <th id="th7">관람등급</th>
+        <th id="th8">가격</th>
+      </tr>
+      </table>
+      <div class="scroll-container">
+        <table id="table6">
+          <tr>
+            <th id="th9"><a href="#">분노의질주</a></th>
+            <th id="th10">경기/인천</th>
+            <th id="th11">전체</th>
+            <th id="th12">19900원</th>
+          </tr>
+          <tr>
+            <th id="th9"><a href="#">분노의질주</a></th>
+            <th id="th10">경기/인천</th>
+            <th id="th11">전체</th>
+            <th id="th12">19900원</th>
+          </tr>
+          <tr>
+            <th id="th9"><a href="#">분노의질주</a></th>
+            <th id="th10">경기/인천</th>
+            <th id="th11">전체</th>
+            <th id="th12">19900원</th>
+          </tr>
+          <tr>
+            <th id="th9"><a href="#">분노의질주</a></th>
+            <th id="th10">경기/인천</th>
+            <th id="th11">전체</th>
+            <th id="th12">19900원</th>
+          </tr>
+          <tr>
+            <th id="th9"><a href="#">분노의질주</a></th>
+            <th id="th10">경기/인천</th>
+            <th id="th11">전체</th>
+            <th id="th12">19900원</th>
+          </tr>
+          <tr>
+            <th id="th9"><a href="#">분노의질주</a></th>
+            <th id="th10">경기/인천</th>
+            <th id="th11">전체</th>
+            <th id="th12">19900원</th>
+          </tr>
+          <tr>
+            <th id="th9"><a href="#">분노의질주</a></th>
+            <th id="th10">경기/인천</th>
+            <th id="th11">전체</th>
+            <th id="th12">19900원</th>
+          </tr>
+          <tr>
+            <th id="th9"><a href="#">분노의질주</a></th>
+            <th id="th10">경기/인천</th>
+            <th id="th11">전체</th>
+            <th id="th12">19900원</th>
+          </tr>
+          <tr>
+            <th id="th9"><a href="#">분노의질주</a></th>
+            <th id="th10">경기/인천</th>
+            <th id="th11">전체</th>
+            <th id="th12">19900원</th>
+          </tr>
+          <tr>
+            <th id="th9"><a href="#">분노의질주</a></th>
+            <th id="th10">경기/인천</th>
+            <th id="th11">전체</th>
+            <th id="th12">19900원</th>
+          </tr>
+          <tr>
+            <th id="th9"><a href="#">분노의질주</a></th>
+            <th id="th10">경기/인천</th>
+            <th id="th11">전체</th>
+            <th id="th12">19900원</th>
+          </tr>
+          <tr>
+            <th id="th9"><a href="#">분노의질주</a></th>
+            <th id="th10">경기/인천</th>
+            <th id="th11">전체</th>
+            <th id="th12">19900원</th>
+          </tr>
+          <tr>
+            <th id="th9"><a href="#">분노의질주</a></th>
+            <th id="th10">경기/인천</th>
+            <th id="th11">전체</th>
+            <th id="th12">19900원</th>
+          </tr>
+          <tr>
+            <th id="th9"><a href="#">분노의질주</a></th>
+            <th id="th10">경기/인천</th>
+            <th id="th11">전체</th>
+            <th id="th12">19900원</th>
+          </tr>
+          <tr>
+            <th id="th9"><a href="#">분노의질주</a></th>
+            <th id="th10">경기/인천</th>
+            <th id="th11">전체</th>
+            <th id="th12">19900원</th>
+          </tr>
+          <tr>
+            <th id="th9"><a href="#">분노의질주</a></th>
+            <th id="th10">경기/인천</th>
+            <th id="th11">전체</th>
+            <th id="th12">19900원</th>
+          </tr>
+          <tr>
+            <th id="th9"><a href="#">분노의질주</a></th>
+            <th id="th10">경기/인천</th>
+            <th id="th11">전체</th>
+            <th id="th12">19900원</th>
+          </tr>
+          <tr>
+            <th id="th9"><a href="#">분노의질주</a></th>
+            <th id="th10">경기/인천</th>
+            <th id="th11">전체</th>
+            <th id="th12">19900원</th>
+          </tr>
+          <tr>
+            <th id="th9"><a href="#">분노의질주</a></th>
+            <th id="th10">경기/인천</th>
+            <th id="th11">전체</th>
+            <th id="th12">19900원</th>
+          </tr>
+        </table>
+      </div>
+      <div style="display: flex;">
+        <input id="att1" type="text" placeholder="공연제목을 입력하시오">
+        <button>검색</button>
+        <button onclick="func6();">뒤로가기</button>
+      </div>
+    `;
+    }
+
+    function func5(){
+      modalText.innerHTML = `
+        <div>
+    <table id="tb2">
+      <tr>
+        <th>회원번호</th>
+        <td><input type="number"></td>
+      </tr>
+      <tr>
+        <th>회원아이디</th>
+        <td><input type="text"></td>
+      </tr>
+      <tr>
+        <th>회원비밀번호</th>
+        <td><input type="text"></td>
+      </tr>
+      <tr>
+        <th>회원명</th>
+        <td><input type="text"></td>
+      </tr>
+      <tr>
+        <th>생년월일</th>
+        <td><input type="text"></td>
+      </tr>
+      <tr>
+        <th>관심상품</th>
+        <td>
+          <div style="display: flex; margin-left: 21px;">
+            <button id="bta1" onclick="func2();" style="margin-top: 5px; margin-right: 5px; width: 90px;">영화</button>
+            <button id="bta2" onclick="func3();" style="margin-top: 5px; margin-right: 5px; width: 90px;">전시</button>
+            <button id="bta3" onclick="func4();" style="margin-top: 5px; width: 89px;">공연</button>
+          </div>
+        </td>
+      </tr>
+      <tr>
+        <th>이메일</th>
+        <td><input type="text"></td>
+      </tr>
+      <tr>
+        <th>전화번호</th>
+        <td><input type="text"></td>
+      </tr>
+      <tr>
+        <th>탈퇴여부</th>
+        <td><input type="text"></td>
+      </tr>
+      <tr>
+        <td colspan="2" align="center">
+          <div id="divs">
+            <button id="bts1" onclick="func1();" style="margin-top: 54px;">회원수정</button>
+            <button id="bts2" style="margin-top: 54px;">회원삭제</button>
+          <div>
+        </td>
+      </tr>
+    </table>
+  </div>
+  `;
+    }
+
+    function func6(){
+      modalText.innerHTML = `
+        <div>
+    <table id="tb2">
+      <tr>
+        <th>회원번호</th>
+        <td><input type="number"></td>
+      </tr>
+      <tr>
+        <th>회원아이디</th>
+        <td><input type="text"></td>
+      </tr>
+      <tr>
+        <th>회원비밀번호</th>
+        <td><input type="text"></td>
+      </tr>
+      <tr>
+        <th>회원명</th>
+        <td><input type="text"></td>
+      </tr>
+      <tr>
+        <th>생년월일</th>
+        <td><input type="text"></td>
+      </tr>
+      <tr>
+        <th>관심상품</th>
+        <td>
+          <div style="display: flex; margin-left: 21px;">
+            <button id="bta1" onclick="func2();" style="margin-top: 5px; margin-right: 5px; width: 90px;">영화</button>
+            <button id="bta2" onclick="func3();" style="margin-top: 5px; margin-right: 5px; width: 90px;">전시</button>
+            <button id="bta3" onclick="func4();" style="margin-top: 5px; width: 89px;">공연</button>
+          </div>
+        </td>
+      </tr>
+      <tr>
+        <th>이메일</th>
+        <td><input type="text"></td>
+      </tr>
+      <tr>
+        <th>전화번호</th>
+        <td><input type="text"></td>
+      </tr>
+      <tr>
+        <th>탈퇴여부</th>
+        <td><input type="text"></td>
+      </tr>
+      <tr>
+        <td colspan="2" align="center">
+          <div id="divs">
+            <button id="bts1" onclick="func1();" style="margin-top: 54px;">회원수정</button>
+            <button id="bts2" style="margin-top: 54px;">회원삭제</button>
+          <div>
+        </td>
+      </tr>
+    </table>
+  </div>
+  `;
+    }
+
+    $(function(){
+      $("#tb1 tr:not(:first-child)").hover(function(){
+        $(this).css("background-color", "darkgray");
+        $(this).find("td:not(:last-child)").css("border-right", "2px solid darkgray");
+        $(this).css("font-weight", "bold");
+      },
+      function(){
+        $(this).css("background-color", "#EDEDED");
+        $(this).find("td:not(:last-child)").css("border-right", "2px solid #ABBBC7");
+        $(this).css("font-weight", "normal");
+      });
+    });
   </script>
 </body>
 </html>

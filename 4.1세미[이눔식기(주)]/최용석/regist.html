@@ -10,7 +10,7 @@
         border: none;
         border-radius: 5px;
         height: 30px;
-        width: 81%;
+        width: 89%;
     }
     #bts3{
         display: block;
@@ -23,7 +23,11 @@
         font-size: 15px;
         font-weight: bold;
         margin: auto;
-        margin-top: 165px;
+        margin-top: 153px;
+    }
+    #bts3:hover{
+        background-color: darkgray;
+        cursor: pointer;
     }
     tr{
         height: 50px;
@@ -94,7 +98,8 @@
         border: none;
         border-radius: 5px;
         height: 30px;
-        width: 38%;
+        width: 42%;
+        font-weight: bold;
     }
     .labels{
         font-size: 13px;
@@ -110,15 +115,15 @@
   </style>
 </head>
 <body>
-  <form action="" method="post" id="goodsform">
-    <div id="container">
+  <form action="" method="post" id="goodsform" style="margin-left: 38px;">
+    <div id="container" style="margin-top: 13px;">
         <table>
             <tr>
                 <td>카테고리</td>
                 <td>
                     <select id="select1">
                         <option value="all">영화</option>
-                        <option value="seven">연극</option>
+                        <option value="seven">전시</option>
                         <option value="twelve">공연</option>
                     </select>
                 </td>
@@ -182,7 +187,7 @@
                 </td>
             </tr>
         </table>
-        <div style="width: 50%;">
+        <div style="width: 50%; margin-top: 52px;">
             <div style="display: flex;">
                 <label class="custom-file-label" for="customFile1">
                     포스터
