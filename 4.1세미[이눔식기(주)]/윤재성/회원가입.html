@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>티켓딱대 회원가입</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+    <style>
+        .logo_div{
+            /* border: 1px solid; */
+            width: 500px;
+            height: 100px;
+            margin: auto;
+        }
+        #logo{width: 95px;height: 40px;
+               margin-top: 30px;}
+        .outer{
+            /* border: 1px solid; */
+            width: 674px;
+            height: 860px;
+            margin: auto;
+            margin-top: 35px;
+        }
+        .id_pwd_input{
+            width: 100%;
+            height: 150px;
+            border: 1px solid rgba(128, 128, 128, 0.603);
+            border-radius: 10px;
+        }
+        .id_pwd_input>div{
+            width: 100%;
+            height: 50px;
+        }
+        .line{
+            border-top: 1px solid rgba(128, 128, 128, 0.603);
+            border-bottom: 1px solid rgba(128, 128, 128, 0.603);
+        }
+        #newMember_img{width: 20px;height: 20px; margin-top: 15px; margin-left: 13px; float: left;}
+        #new_user{border: none; height: 19px;  width: 342px; margin-top: 16px; margin-left: 5px; font-size: 18px; font-weight: 400; outline: none;}
+        .message{
+            width: 100%;
+            height: 40px;
+            /* border: 1px solid; */
+        }
+        .message_output{
+            width: 100%;height: 60%;
+            line-height: 40px;
+            color: red;
+        }
+        .info_input{
+            width: 100%;
+            height: 340px;
+            border: 1px solid rgba(128, 128, 128, 0.603);
+            border-radius: 10px;
+        }
+        .info_input>div{
+            width: 100%;
+            height: 50px;
+        }
+        .interest{color: rgba(66, 66, 66, 0.973); font-weight: 700; margin-top: 15px; margin-left: 15px;}
+        .interest_box{width: 100%;  line-height: 0px;
+            border-top: 2px solid rgba(87, 87, 87, 0.781);
+            border-bottom: 1px solid rgba(128, 128, 128, 0.603);
+         }
+         .tag{line-height: 50px; margin-left: 40px; font-weight: 600; color: rgba(66, 66, 66, 0.973); }
+         .choice_box{
+            /* border-top:  1px solid rgba(128, 128, 128, 0.603); */
+            /* border-bottom: 1px solid rgba(128, 128, 128, 0.603); */
+            /* border-left: 1px solid rgba(128, 128, 128, 0.603); */
+            width: 120px;
+            height: 35px;
+            margin-top: 7px ;
+            border-radius: 2px;
+         }
+
+
+         #int{
+            height: 50px;}
+         #int>div{
+            float: left;
+         }
+         #fst{
+            margin-left: 40px;
+            border-top-left-radius: 5px;
+            border-bottom-left-radius: 5px;
+            
+         }
+         #last{
+            /* border-right:  1px solid rgba(128, 128, 128, 0.603); */
+            border-top-right-radius: 5px;
+            border-bottom-right-radius: 5px;
+         }
+        .int_btn_movie{
+            width: 100%;height: 100%;
+            background-color: white;
+            border: 1px solid rgba(128, 128, 128, 0.603);
+            border-radius: 5px;
+        }
+        .int_btn_display{
+            width: 100%;height: 100%;
+            background-color: white;
+            border: 1px solid rgba(128, 128, 128, 0.603);
+            border-radius: 5px;
+        }
+        .int_btn_show{
+            width: 100%;height: 100%;
+            background-color: white;
+            border: 1px solid rgba(128, 128, 128, 0.603);
+            border-radius: 5px;
+        }
+
+
+        .active {
+            border-color: red; /* 빨간색 테두리 */
+        }
+        button:hover{
+            cursor: pointer;
+        }
+        .submit_box{
+            /* border: 1px solid rebeccapurple; */
+            border-radius: 5px;
+            background-color: red;
+            color: white;
+            width: 460px;
+            height: 50px;
+            margin: auto;
+            margin-top: 100px;
+
+        }
+        .submit_btn{
+            width: 100%;
+            height: 100%;
+            border-radius: 5px;
+            background-color: red;
+            color: white;
+            font-weight: 900;
+            font-size: 20px;
+            border: none;
+            
+        }
+    </style>
+</head>
+<body>
+    <div class="logo_div">
+        <a href="#"><img src="../resorces/로고/png.png" id="logo" alt=""></a>
+    </div>
+    <form action="#">
+        <div class="outer">
+            <div class="id_pwd_input">
+                <div class="id_input">
+                    <img src="../resorces/이미지자료/로그인.png" id="newMember_img">
+                        <input type="text" id="new_user" name="new_userId" placeholder="아이디" required>
+                </div>
+                <div class="line">
+                    <img src="../resorces/이미지자료/비밀번호.png" id="newMember_img">
+                        <input type="password" id="new_user" name="new_userPwd" placeholder="비밀번호" required>
+                </div>
+                <div class="email_input">
+                    <img src="../resorces/이미지자료/이메일2.png" id="newMember_img">
+                    <input type="email" id="new_user" name="new_userPwd" placeholder="[선택] 이메일">
+                </div>
+            </div>
+            <div class="message">
+                <div class="message_output">
+                    * 테스트 문구입니다.
+                </div>
+            </div>
+            <div class="info_input">
+                <div class="name_input">
+                    <img src="../resorces/이미지자료/로그인.png" id="newMember_img">
+                        <input type="text" id="new_user" name="new_userName" placeholder="이름" required>
+                </div>
+                <div class="line">
+                    <img src="../resorces/이미지자료/달력3.PNG" id="newMember_img">
+                        <input type="text" id="new_user" name="new_userBday" placeholder="생년월일 8자리" required>
+                </div>
+                <div class="phone_input">
+                    <img src="../resorces/이미지자료/폰.png" id="newMember_img">
+                        <input type="text" id="new_user" name="new_userPhone" placeholder="휴대폰 번호" required>
+                </div>
+                <div class="interest_box" style="height: 30px;">
+                    <p class="interest">[필수] 관심 카테고리</p>
+                </div>
+
+
+                <div class="int_box" >
+                    <div class="int_movie" id="int">
+                        <div class="tag">영화</div>
+                        <div class="choice_box" id="fst"><button type="button" class="int_btn_movie" id="movie" onclick="selectMovie('romance');">로멘스</button></div>
+                        <div class="choice_box"><button type="button" class="int_btn_movie" id="movie" onclick="selectMovie('thriller');">공포/스릴러</button></div>
+                        <div class="choice_box"><button type="button" class="int_btn_movie" id="movie" onclick="selectMovie('comedy');">코미디</button></div>
+                        <div class="choice_box" id="last"><button type="button" class="int_btn_movie" id="movie" onclick="selectMovie('action');">액션</button></div>
+                    </div>
+                    <div class="line" id="int">
+                        <div class="tag">전시</div>
+                        <div class="choice_box" id="fst"><button type="button" class="int_btn_display" id="paint" onclick="selectDisplay('paint');">그림전시</button></div>
+                        <div class="choice_box"><button type="button" class="int_btn_display" id="composition" onclick="selectDisplay('composition');">작품전시</button></div>
+                        <div class="choice_box"><button type="button" class="int_btn_display" id="photo" onclick="selectDisplay('photo');">사진전시</button></div>
+                        <div class="choice_box" id="last"><button type="button" class="int_btn_display" id="experience" onclick="selectDisplay('experience');">체험전시</button></div>
+                    </div>
+                    <div class="int_movie" id="int">
+                        <div class="tag">공연</div>
+                        <div class="choice_box" id="fst"><button type="button" class="int_btn_show" id="musical" onclick="selectShow('musical');" >뮤직컬</button></div>
+                        <div class="choice_box"><button type="button" class="int_btn_show" id="act" onclick="selectShow('act');" >연극</button></div>
+                        <div class="choice_box"><button type="button" class="int_btn_show" id="classical" onclick="selectShow('classical');" >클래식</button></div>
+                        <div class="choice_box" id="last"><button type="button" class="int_btn_show" id="concert" onclick="selectShow('concert');" >콘서트</button></div>
+                    </div> 
+                    <input type="hidden" id="select_movie_hidden" >
+                    <input type="hidden" id="select_display_hidden">
+                    <input type="hidden" id="select_show_hidden">
+                </div>
+            </div>
+            <div class="submit_box">
+                <button class="submit_btn">회원 가입</button>
+            </div>
+            </div>
+           
+        </div>
+      
+    </form>
+
+    <script>
+        function selectMovie(value){
+            $("#select_movie_hidden").attr("name", value);
+        }
+        function selectDisplay(value){
+            $("#select_display_hidden").attr("name", value);
+        }
+        function selectShow(value){
+            $("#select_show_hidden").attr("name", value);
+        }
+
+        $(document).ready(function() {
+            $(".int_btn_movie").click(function() {
+                // 모든 버튼의 테두리 색상을 원래대로 되돌립니다.
+                $(".int_btn_movie").css("border-color", "rgba(128, 128, 128, 0.603)");
+                $(".int_btn_movie").css("color", "gray");
+                // 클릭한 버튼의 테두리 색상을 빨간색으로 변경합니다.
+                $(this).css("border-color", "red");
+                $(this).css("color", "red");
+            });
+            $(".int_btn_display").click(function() {
+                // 모든 버튼의 테두리 색상을 원래대로 되돌립니다.
+                $(".int_btn_display").css("border-color", "rgba(128, 128, 128, 0.603)");
+                $(".int_btn_display").css("color", "gray");
+                // 클릭한 버튼의 테두리 색상을 빨간색으로 변경합니다.
+                $(this).css("border-color", "red");
+                $(this).css("color", "red");
+            });
+              $(".int_btn_show").click(function() {
+                // 모든 버튼의 테두리 색상을 원래대로 되돌립니다.
+                $(".int_btn_show").css("border-color", "rgba(128, 128, 128, 0.603)");
+                $(".int_btn_show").css("color", "gray");
+                // 클릭한 버튼의 테두리 색상을 빨간색으로 변경합니다.
+                $(this).css("border-color", "red");
+                $(this).css("color", "red");
+            });
+        });
+        
+    </script>
+    
+
+
+
+
+
+</body>
+</html>
