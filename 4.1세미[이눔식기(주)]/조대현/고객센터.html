@@ -250,6 +250,8 @@
             height: 700px;
             width: 100%;
         }
+
+        /* body 고객센터*/
         .servicecenter{
             border: 1px solid blue;
             background-color:black;
@@ -262,11 +264,13 @@
             color:white;
             line-height:100px;
         } 
+
+        /*body leftmenu*/
         .원하는데로_바꾸세요 .leftmenu{
             border: 1px solid red;
             width:100px;
             height: 200px;
-            margin-left: 20.8%;
+            margin-left: 23.8%;
             margin-top: 5px;
             float:left;
         }
@@ -280,9 +284,27 @@
             border: 1px solid orange;
             width: 880px;
             height:400px;
-            margin-right: 20.7%;
+            margin-right: 23.8%;
             margin-top: 5px;
             float:right;
+        }
+        #bodyright{
+            border:1px solid red;
+            width: 100%;
+            height:100%;
+            /*width:50%;
+            height:50%;
+            float:left;
+            margin:5px;*/
+        }
+        #bodyright>#son{
+            border:1px solid green;
+            width:49%;
+            height:49%;
+            float:left;
+            margin:1px;
+            text-align:center;
+            line-height: 200px;
         }
 
 
@@ -493,7 +515,22 @@
             <div>qna</div>
         </div>
         <div class="rightmenu">
-            라이트 메뉴입니다.
+            <!--<table border="1">
+                <tr>
+                    <th>QNA 보기</th>
+                    <th>공지사항보기</th>
+                </tr>
+                <tr>
+                    <th>예매상담하기</th>
+                    <th>문의하기</th>
+                </tr>
+            </table>-->
+            <div id="bodyright"> 
+                <div id="son">QNA 보기</div>
+                <div id="son">공지사항보기</div>
+                <div id="son">예매상담하기</div>
+                <div id="son">문의하기</div>
+            </div>
         </div>
     </div>
 </div>
