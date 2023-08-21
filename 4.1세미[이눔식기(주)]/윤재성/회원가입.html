@@ -63,9 +63,9 @@
          }
          .tag{line-height: 50px; margin-left: 40px; font-weight: 600; color: rgba(66, 66, 66, 0.973); }
          .choice_box{
-            border-top:  1px solid rgba(128, 128, 128, 0.603);
-            border-bottom: 1px solid rgba(128, 128, 128, 0.603);
-            border-left: 1px solid rgba(128, 128, 128, 0.603);
+            /* border-top:  1px solid rgba(128, 128, 128, 0.603); */
+            /* border-bottom: 1px solid rgba(128, 128, 128, 0.603); */
+            /* border-left: 1px solid rgba(128, 128, 128, 0.603); */
             width: 120px;
             height: 35px;
             margin-top: 7px ;
@@ -85,24 +85,21 @@
             
          }
          #last{
-            border-right:  1px solid rgba(128, 128, 128, 0.603);
+            /* border-right:  1px solid rgba(128, 128, 128, 0.603); */
             border-top-right-radius: 5px;
             border-bottom-right-radius: 5px;
          }
-         a{
-            width: 100%;
-            height: 100%;
-            text-decoration: none;
-            line-height: 35px;
-            color:  rgba(51, 51, 51, 0.753);
-            font-weight: 900;
-            
-         }
-         label{
-
-            
-
+        #int_btn{
+            width: 100%;height: 100%;
+            background-color: white;
+            border: 1px solid rgba(128, 128, 128, 0.603);;
+            border-radius: 5px;
         }
+
+
+
+
+
     </style>
 </head>
 <body>
@@ -151,24 +148,25 @@
                 <div class="int_box" >
                     <div class="int_movie" id="int">
                         <div class="tag">영화</div>
-                        <div class="choice_box" id="fst"><a href="#" name="romance" ><label for="romance">로멘스</label></a></div>
-                        <div class="choice_box"><a href="#" name="romance" ><label for="romance">공포/스릴러</label></a></div>
-                        <div class="choice_box"><a href="#" name="romance" ><label for="romance">코미디</label></a></div>
-                        <div class="choice_box" id="last"><a href="#" name="romance" ><label for="romance">액션</label></a></div>
+                        <div class="choice_box" id="fst"><button id="int_btn" name="romance">로멘스</button></div>
+                        <div class="choice_box"><button id="int_btn" name="thriller">공포/스릴러</button></div>
+                        <div class="choice_box"><button id="int_btn" name="comedy">코미디</button></div>
+                        <div class="choice_box" id="last"><button id="int_btn" name="action">액션</button></div>
                     </div>
                     <div class="line" id="int">
                         <div class="tag">전시</div>
-                        <div class="choice_box" id="fst"><a href="#" name="romance" ><label for="romance">그림전시</label></a></div>
-                        <div class="choice_box"><a href="#" name="romance" ><label for="romance">작품전시</label></a></div>
-                        <div class="choice_box"><a href="#" name="romance" ><label for="romance">사진전시</label></a></div>
-                        <div class="choice_box" id="last"><a href="#" name="romance" ><label for="romance">체험전시</label></a></div>
+                        <div class="choice_box" id="fst"><button id="int_btn" name="paint">그림전시</button></div>
+                        <div class="choice_box"><button id="int_btn" name="composition">작품전시</button></div>
+                        <div class="choice_box"><button id="int_btn" name="photo">사진전시</button></div>
+                        <div class="choice_box" id="last"><button id="int_btn" name="experience">체험전시</button></div>
                     </div>
-                    <div class="int_show" id="int">
+                    <div class="int_movie" id="int">
                         <div class="tag">공연</div>
-                        <div class="choice_box" id="fst"><a href="#" name="romance" ><label for="romance">뮤직컬</label></a></div>
-                        <div class="choice_box"><a href="#" name="romance" ><label for="romance">연극</label></a></div>
-                        <div class="choice_box"><a href="#" name="romance" ><label for="romance">클래식</label></a></div>
-                        <div class="choice_box" id="last"><a href="#" name="romance" ><label for="romance">콘서트</label></a></div>
+                        <div class="choice_box" id="fst"><button id="int_btn" name="musical">뮤직컬</button></div>
+                        <div class="choice_box"><button id="int_btn" name="act">연극</button></div>
+                        <div class="choice_box"><button id="int_btn" name="classical">클래식</button></div>
+                        <div class="choice_box" id="last"><button id="int_btn" name="concert">콘서트</button></div>
+                    </div>
                 </div>
             </div>
 
@@ -176,7 +174,10 @@
         </div>
     </form>
 
+    <script>
+        
 
+    </script>
 
 
 

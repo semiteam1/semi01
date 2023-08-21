@@ -23,7 +23,7 @@
         font-size: 15px;
         font-weight: bold;
         margin: auto;
-        margin-top: 153px;
+        margin-top: 62px;
     }
     #bts3:hover{
         background-color: darkgray;
@@ -120,11 +120,16 @@
         <table>
             <tr>
                 <td>카테고리</td>
-                <td>
-                    <select id="select1">
+                <td style="display: flex; margin-top: 10px;">
+                    <select id="select1" style="margin-right: 13px;">
                         <option value="all">영화</option>
                         <option value="seven">전시</option>
                         <option value="twelve">공연</option>
+                    </select>
+                    <select id="select1">
+                        <option value="all">로맨스</option>
+                        <option value="seven">액션</option>
+                        <option value="twelve">코미디</option>
                     </select>
                 </td>
             </tr>
@@ -169,6 +174,16 @@
                 </td>
             </tr>
             <tr>
+                <td>시간</td>
+                <td>
+                    <select id="select1">
+                        <option>오전</option>
+                        <option>오후</option>
+                        <option>전체</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
                 <td>관람등급</td>
                 <td>
                     <select id="select1">
@@ -184,6 +199,12 @@
                 <td>가격</td>
                 <td>
                     <input type="number" name="price" id="price" placeholder="가격을 입력하시오">
+                </td>
+            </tr>
+            <tr>
+                <td>좌석수</td>
+                <td>
+                    <input type="number" name="price" id="price" placeholder="좌석수를 입력하시오">
                 </td>
             </tr>
         </table>
