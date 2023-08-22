@@ -10,7 +10,7 @@
         border: none;
         border-radius: 5px;
         height: 30px;
-        width: 81%;
+        width: 89%;
     }
     #bts3{
         display: block;
@@ -23,7 +23,11 @@
         font-size: 15px;
         font-weight: bold;
         margin: auto;
-        margin-top: 165px;
+        margin-top: 62px;
+    }
+    #bts3:hover{
+        background-color: darkgray;
+        cursor: pointer;
     }
     tr{
         height: 50px;
@@ -94,7 +98,8 @@
         border: none;
         border-radius: 5px;
         height: 30px;
-        width: 38%;
+        width: 42%;
+        font-weight: bold;
     }
     .labels{
         font-size: 13px;
@@ -110,16 +115,21 @@
   </style>
 </head>
 <body>
-  <form action="" method="post" id="goodsform">
-    <div id="container">
+  <form action="" method="post" id="goodsform" style="margin-left: 38px;">
+    <div id="container" style="margin-top: 13px;">
         <table>
             <tr>
                 <td>카테고리</td>
-                <td>
-                    <select id="select1">
+                <td style="display: flex; margin-top: 10px;">
+                    <select id="select1" style="margin-right: 13px;">
                         <option value="all">영화</option>
-                        <option value="seven">연극</option>
+                        <option value="seven">전시</option>
                         <option value="twelve">공연</option>
+                    </select>
+                    <select id="select1">
+                        <option value="all">로맨스</option>
+                        <option value="seven">액션</option>
+                        <option value="twelve">코미디</option>
                     </select>
                 </td>
             </tr>
@@ -152,7 +162,7 @@
             <tr>
                 <td>관람시간(분)</td>
                 <td>
-                    <input type="number" name="time" id="time" placeholder="관람시간을 입력하시오">
+                    <input type="number" name="time" id="time" placeholder="관람시간을 입력하시오" style="width: 150px;">
                 </td>
             </tr>
             <tr>
@@ -161,6 +171,16 @@
                     <input type="date" id="date1">
                     <span id="span1">&nbsp;~&nbsp;</span>
                     <input type="date" id="date2">
+                </td>
+            </tr>
+            <tr>
+                <td>시간</td>
+                <td>
+                    <select id="select1">
+                        <option>오전</option>
+                        <option>오후</option>
+                        <option>전체</option>
+                    </select>
                 </td>
             </tr>
             <tr>
@@ -178,52 +198,58 @@
             <tr>
                 <td>가격</td>
                 <td>
-                    <input type="number" name="price" id="price" placeholder="가격을 입력하시오">
+                    <input type="number" name="price" id="price" placeholder="가격을 입력하시오" style="width: 150px;">
+                </td>
+            </tr>
+            <tr>
+                <td>좌석수</td>
+                <td>
+                    <input type="number" name="price" id="price" placeholder="좌석수를 입력하시오" style="width: 150px;">
                 </td>
             </tr>
         </table>
-        <div style="width: 50%;">
+        <div style="width: 50%; margin-top: 52px;">
             <div style="display: flex;">
-                <label class="custom-file-label" for="customFile1">
+                <label class="custom-file-label" for="customFile1" style="margin-left: 50px;">
                     포스터
                 </label>
                 <input type="file" id="customFile1" class="custom-file-input">
-                <input type="text" id="filePath1" placeholder="사진을 선택하시오" style="width: 68%;">
+                <input type="text" id="filePath1" placeholder="사진을 선택하시오" style="width: 48%;">
             </div>
             <div style="display: flex; margin-top: 8px;">
-                <label class="custom-file-label" for="customFile2">
+                <label class="custom-file-label" for="customFile2" style="margin-left: 50px;">
                     상세1
                 </label>
                 <input type="file" id="customFile2" class="custom-file-input">
-                <input type="text" id="filePath2" placeholder="사진을 선택하시오" style="width: 68%;">
+                <input type="text" id="filePath2" placeholder="사진을 선택하시오" style="width: 48%;">
             </div>
             <div style="display: flex; margin-top: 8px;">
-                <label class="custom-file-label" for="customFile3">
+                <label class="custom-file-label" for="customFile3" style="margin-left: 50px;">
                     상세2
                 </label>
                 <input type="file" id="customFile3" class="custom-file-input">
-                <input type="text" id="filePath3" placeholder="사진을 선택하시오" style="width: 68%;">
+                <input type="text" id="filePath3" placeholder="사진을 선택하시오" style="width: 48%;">
             </div>
             <div style="display: flex; margin-top: 8px;">
-                <label class="custom-file-label" for="customFile4">
+                <label class="custom-file-label" for="customFile4" style="margin-left: 50px;">
                     상세3
                 </label>
                 <input type="file" id="customFile4" class="custom-file-input">
-                <input type="text" id="filePath4" placeholder="사진을 선택하시오" style="width: 68%;">
+                <input type="text" id="filePath4" placeholder="사진을 선택하시오" style="width: 48%;">
             </div>
             <div style="display: flex; margin-top: 8px;">
-                <label class="custom-file-label" for="customFile5">
+                <label class="custom-file-label" for="customFile5" style="margin-left: 50px;">
                     상세4
                 </label>
                 <input type="file" id="customFile5" class="custom-file-input">
-                <input type="text" id="filePath5" placeholder="사진을 선택하시오" style="width: 68%;">
+                <input type="text" id="filePath5" placeholder="사진을 선택하시오" style="width: 48%;">
             </div>
             <div style="display: flex; margin-top: 8px;">
-                <label class="custom-file-label" for="customFile6">
+                <label class="custom-file-label" for="customFile6" style="margin-left: 50px;">
                     상세5
                 </label>
                 <input type="file" id="customFile6" class="custom-file-input">
-                <input type="text" id="filePath6" placeholder="사진을 선택하시오" style="width: 68%;">
+                <input type="text" id="filePath6" placeholder="사진을 선택하시오" style="width: 48%;">
             </div>
         </div>
     </div>
