@@ -143,53 +143,19 @@
       <div class="content1" style="border-bottom-right-radius: 0;">
         <iframe src="member-bar.html" frameborder="0"></iframe>
         <!-- <iframe src="regist-bar.html" frameborder="0"></iframe> -->
+        <!-- <iframe src="goodsList-bar.html" frameborder="0"></iframe> -->
       </div>
       <div class="content2" style="background-color: rgb(237, 237, 237); border-top-right-radius: 0;">
         <!-- <iframe src="regist.html" frameborder="0"></iframe> -->
         <iframe src="member.html" frameborder="0"></iframe>
+        <!-- <iframe src="goodsList.html" frameborder="0"></iframe> -->
       </div>
     </div>
   </div>
 
   <script>
     $(function(){
-        $(".container1>div").click(function(){
-          var count = 0;
-          var div1 = $(this).get(0);
-          var nextDiv = div1.nextElementSibling;
-          console.log(nextDiv);
-
-          while (nextDiv) {
-            if (nextDiv.tagName === "DIV") {
-              break; 
-            }
-            nextDiv = nextDiv.nextElementSibling;
-          }
-
-          if (nextDiv) {
-            var currentElement = div1.nextElementSibling;
-            while (currentElement && currentElement !== nextDiv) {
-              if (currentElement.nodeType === 1) { 
-                count++;
-              }
-                currentElement = currentElement.nextElementSibling;
-              }
-          } else {
-            count = 3;
-          }
-            var div = $(this);
-            var p = $(this).nextAll("p").slice(0, count);
-               
-            if(p.eq(0).css("display") == "none"){
-              p.each(function(){
-                $(this).slideDown();
-              });
-            }else{
-              p.each(function(){
-                $(this).slideUp();
-              });
-            }
-        });
+        
         $(".p1").click(function(){
           var p1content = $(this).text();
           console.log(p1content);
@@ -200,6 +166,9 @@
           }else if(p1content == "상품등록"){
             $(".content1").html(`<iframe src="regist-bar.html" frameborder="0"></iframe>`);
             $(".content2").html(`<iframe src="regist.html" frameborder="0"></iframe>`);
+          }else if(p1content == "상품조회"){
+            $(".content1").html(`<iframe src="goodsList-bar.html" frameborder="0"></iframe>`);
+            $(".content2").html(`<iframe src="goodsList.html" frameborder="0"></iframe>`);
           }
         });
     });
