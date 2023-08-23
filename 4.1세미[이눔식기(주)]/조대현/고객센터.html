@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>티켓딱대</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
     <style>
         /* 기본 세팅 존 */
 
@@ -314,22 +315,33 @@
             margin-top: 5px;
             float:right;
         }
+        /*body qna창*/
         #bson{
             border: 1px solid gold;
             width:48%;
             height:90%;
             float:left;
             margin:1%;
-            text-align:center;
-            line-height: 200px;
+            cursor:pointer;
+        }
+        #bson p{
+            box-sizing: border-box;
+            display:none;
+        }
+        #bson>#topqna{
+            border-bottom-style: solid;
+            border-bottom-color: black;
+        }
+        #bson>#qnacontent{
+            font-size: 15px;
         }
 
 
 
 
-        /* 바디 메인 */
+        
 
-        /* 바디 끝 */
+        
         /* 바디 끝 */
         /* 푸터 시작 */
         div{
@@ -525,22 +537,14 @@
     </div>
 
     <div class="servicefunction">
+        <!-- 바디의 왼쪽메뉴-->
         <div class="leftmenu">
             <div>고객센터 홈</div>
             <div>공지사항</div>
             <div>qna</div>
         </div>
+        <!-- 바디의 왼쪽메뉴-->
         <div class="rightmenu">
-            <!--<table border="1">
-                <tr>
-                    <th>QNA 보기</th>
-                    <th>공지사항보기</th>
-                </tr>
-                <tr>
-                    <th>예매상담하기</th>
-                    <th>문의하기</th>
-                </tr>
-            </table>-->
             <div id="bodyright"> 
                 <div id="son">QNA 보기</div>
                 <div id="son">공지사항보기</div>
@@ -549,11 +553,46 @@
             </div>
         </div>
     </div>
+    <!-- 바디 아래메뉴-->
     <div class="bottomfunction">
-        <div id="bson">왼쪽</div>
+        <div id="bson">
+            <div id="topqna"><h2>자주묻는 질문</h2></div>
+            
+            <div id="qnacontent">비밀</div>
+            <p>A. 기다려</p>
+            <div id="qnacontent">비밀</div>
+            <p>A. 너도 기다려</p>
+            <div id="qnacontent">비밀</div>
+            <p>A. 너도기다리자</p>
+        </div>
         <div id="bson">오른쪽</div>
     </div>
 </div>
+<script>
+    $(function(){
+        $("div").click(function(){
+            // $(this) : 클릭이벤트가 발생한 div 요소
+            // 우리는 그 요소의 뒤의 요소를 선택해야함.(같은 레벨에 있음)
+
+            // $(this).next() : 클릭이벤트가 발생한 div 요소 뒤에 있는 메소드
+            // 보여지는 상태면 사라지게 , 안보이면 나타나게
+
+            const $p = $(this).next(); // jQuery 방식으로 선택된 요소를 담아둘 때
+
+            if($p.css("display")=="none"){
+                
+                // 기존꺼는 닫히면서 지금꺼만 열리게
+                $(this).siblings("p").slideUp();
+                //보여지게끔
+                // $p.css("display","block");
+                $p.slideDown();
+            }else {
+                $p.slideUp();
+            }
+
+        })
+    })
+</script>
 <!-- 내용물 넣을 수 있는 구간 끝 -->
     <!-- 바디 끝 -->
 
