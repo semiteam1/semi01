@@ -30,17 +30,17 @@
             box-sizing: border-box;
         }
 
-        .tab-container {
+        /* .tab-container {
             width: 300px;
-            height: 50px;
+            height: 50px; */
             /* border: 1px solid; */
-            display: flex;
+            /* display: flex;
             justify-content: center;
             margin:  auto;
             margin-top: 50px;
-        }
+        } */
 
-        .tab-button {
+        /* .tab-button {
             background-color: white;
             border: 1px solid rgba(211, 211, 211, 0.397);
             background-color: rgba(128, 128, 128, 0.199);
@@ -54,19 +54,19 @@
             text-decoration: none;
             cursor: pointer;
             transition: background-color 0.3s, border 0.3s, color 0.3s;
-        }
+        } */
 
-        .tab-button:hover {
+        /* .tab-button:hover {
             background-color: white;
-        }
+        } */
 
-        .active.tab-button {
+        /* .active.tab-button {
             border:  1px solid red;
             background-color: white;
             color: red;
             border-bottom: none;
             font-weight: bolder;
-        }
+        } */
 
         .tab-content {
             display: none;
@@ -75,48 +75,21 @@
             margin-top: 200px;
         }
 
-        .active {
+        /* .active {
             display: block;
-        }
+        } */
 
 
 
-        /* 잘보여라@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@*/
-        /* 리뷰파트 시작 */
-        .review{
-            width: 100%;
-            height: 50px;
-            padding-top: 10px;
-            color: black;
-        }
-
-        .review_btn{
-            float: right;
-            width: 70px;
-            height: 50px;
-            border-radius: 10%;
-            border: 0;
-            cursor: pointer;
-        }
-
-        .review_form{
-            height: 270px;
-        }
-
-
-        /* 잘보여라@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@*/
         /* 이메일로 찾아라 */
 
         .tab-content {
             width: 300px;
             margin: auto;
             height: 250px;
-            
-            border-bottom: 1px solid red;
-            border-left:  1px solid red;
-            border-right:  1px solid red;
-            border-bottom-left-radius: 10px;
-            border-bottom-right-radius: 10px;
+            border: 1px solid red;
+            border-radius: 10px;
+            margin-top: 50px;
             /* display: none; */
             /* padding: 20px; */
             
@@ -137,6 +110,7 @@
             height: 100px;
             border: 1px solid rgba(128, 128, 128, 0.603);
             border-radius: 10px;
+            margin-top: 20px;
         }
         .id_pwd_input>div{
             width: 100%;
@@ -167,7 +141,7 @@
             border-radius: 5px;
             width: 256px;
             height: 50px;
-            margin-top: 15px;
+            margin-top: 30px;
             color: white;
             font-weight: 900;
             font-size: 15px;
@@ -200,6 +174,33 @@
             width: 100%;
             height: 100%;
         }
+        .ur_id_ment{
+            /* border: 1px solid; */
+            font-weight: 900;
+            font-size: 14px;
+            margin-top: 0px;
+        }
+        .ur_id_ment1{
+            /* border: 1px solid; */
+            font-weight: 900;
+            font-size: 14px;
+            margin-top: 20px;
+        }
+        .ur_id_info{
+            border: 2px solid red;
+            height: 50px;
+            margin-top: 30px;
+            border-radius: 5px;
+        }
+        .ur_id{
+            /* border: 1px solid; */
+            width: 80%;
+            height: 23px;
+            margin: auto;
+            margin-top: 13px;
+            font-weight: 900;
+            font-size: 15px;
+        }
     </style>
 </head>
 <body>
@@ -209,49 +210,40 @@
     <form action="#">
         <div class="outer">
 
-             <div class="tab-container" >
-                <button type="button" class="tab-button" style="border-top-left-radius: 10px;" onclick="openTab(event, 'tab1')">이메일로 찾기</button>
-                <button type="button"  class="tab-button" style="border-top-right-radius: 10px;" onclick="openTab(event, 'tab2')">휴대폰번호로 찾기</button>
-              </div>
               
-              
+              <!-- <div id="tab1" class="tab-content">
+                <div class="ur_id_ment1">
+                    고객님의 정보와 일치하는 아이디입니다.
+                </div>                
+                <div class="ur_id_info">
+                    <div class="ur_id">
+                        *테스트문구입니다.
+                    </div>
+                </div>
+                <button type="button" id="btn_email">로그인하기</button>
+              </div> -->
+
               <div id="tab1" class="tab-content">
-                <div class="id_pwd_input" >
+                <div class="ur_id_ment">
+                    변경하실 비밀번호를 입력해주세요
+                </div>         
+                <div class="id_pwd_input" style="height: 100px;" >      
                     <div class="line">
                         <img src="../resorces/이미지자료/비밀번호.png" id="newMember_img">
                             <input type="password" id="new_user" name="fine_pwd" placeholder="비밀번호" required>
                     </div>
-                    <div class="line">
-                        <img src="../resorces/이미지자료/달력2.PNG" id="newMember_img">
-                            <input type="password" id="new_user" name="fine_pwd" placeholder="생년월일" required>
-                    </div>
                     <div class="email_input">
-                        <img src="../resorces/이미지자료/이메일2.png" id="newMember_img">
-                        <input type="email" id="new_user" name="fine_email" placeholder="이메일">
-                    </div>
-                    <button type="submit" id="btn_email">아이디찾기</button>
-                </div>
-              </div>
-
-              <div id="tab2" class="tab-content">
-                <div class="id_pwd_input">
-                    <div class="line">
                         <img src="../resorces/이미지자료/비밀번호.png" id="newMember_img">
-                            <input type="password" id="new_user" name="fine_pwd" placeholder="비밀번호" required>
+                        <input type="password" id="new_user" name="fine_email" placeholder="비밀번호 확인" required>
                     </div>
-                    <div class="line">
-                        <img src="../resorces/이미지자료/달력2.PNG" id="newMember_img">
-                            <input type="password" id="new_user" name="fine_pwd" placeholder="생년월일" required>
-                    </div>
-                    <div class="email_input">
-                        <img src="../resorces/이미지자료/폰.png" id="newMember_img">
-                        <input type="email" id="new_user" name="fine_phone" placeholder="휴대폰번호">
-                    </div>
-                    
-                    <button type="submit" id="btn_email">아이디찾기</button>
-                </div>
-
+                </div> 
+                <button type="button" id="btn_email">로그인하기</button>
               </div>
+
+
+              
+
+              
                 <div class="find_id_pwd" >
                     <div class="find"><a href="">비밀번호 찾기</a></div>
                     <div class="blank"></div>
@@ -261,6 +253,14 @@
                 <div class="bener">
                     <img src="../resorces/이미지자료/배너2.png">
                 </div>
+
+
+
+
+
+
+
+
               <script>
               function openTab(event, tabName) {
                 const tabContents = document.getElementsByClassName("tab-content");
