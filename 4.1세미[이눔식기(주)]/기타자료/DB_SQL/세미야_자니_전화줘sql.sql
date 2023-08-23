@@ -46,10 +46,10 @@ INSERT INTO PRODUCT VALUES (SEQ_PNO.NEXTVAL, 8, '민속놀이체험',2,'한국민속촌', '
 INSERT INTO PRODUCT VALUES (SEQ_PNO.NEXTVAL, 12, '성시기형콘설트',1, '잠실종합운동장', '23/09/15', '23/09/15', 4, 180, 120000);
 
 -- 상영정보 등록
-INSERT INTO screening_info VALUES (1,'23/08/16',1,50);
-INSERT INTO screening_info VALUES (1,'23/08/16',2,50);
-INSERT INTO screening_info VALUES (2,'23/05/05',1,200);
-INSERT INTO screening_info VALUES (3,'23/09/15',2,2000);
+INSERT INTO screening_info VALUES (1,'23/08/16','Y','N',50,DEFAULT);
+INSERT INTO screening_info VALUES (1,'23/08/16','Y','Y',50,50);
+INSERT INTO screening_info VALUES (2,'23/05/05','Y','N',200,DEFAULT);
+INSERT INTO screening_info VALUES (3,'23/09/15','Y','Y',2000,2000);
 
 -- 예매정보 등록
 INSERT INTO BOOKED_INFO VALUES(seq_dno.nextval, 1,3,'23/08/16', '23/08/17');
