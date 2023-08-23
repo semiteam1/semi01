@@ -242,77 +242,57 @@
         /* 검색 끝 */
         /* 헤더 끝 */
 
-
+        /* @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ */
+        /* @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ */
+        /* @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ */
+        /* @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ */
+        /* @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ */
         /* 바디 시작 */
         .body{
             /* background-color: skyblue; */
             height: 2000px;
         }
 
+        /* 상단 메인 배너 */
+        /* @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ */
+
         .recommend_img{
             width: 1180px;
-            margin: auto;
+            margin-left: 370px;
+            margin-right: 50px;
+            float: left;
         }
 
-            /* Custom styles for custom image buttons */
-    .custom-carousel-buttons {
-      position: absolute;
-      bottom: 15px;
-      left: 50%;
-      transform: translateX(-50%);
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      margin-bottom: 60px;
-    }
+        .custom-carousel-buttons {
+            position: absolute;
+            bottom: 15px;
+            left: 30%;
+            display: flex;
+            margin-bottom: 60px;
+        }
 
+        .custom-carousel-buttons .button-image {
+            width: 30px;
+            height: 30px;
+            margin: 0 20px;
+            cursor: pointer;
+            /* border-radius: 10px; */
+        }
 
-    .custom-carousel-buttons .button-image {
-      width: 30px;
-      height: 30px;
-      margin: 0 20px;
-      cursor: pointer;
-      border-radius: 10px;
-    }
+        .button-image>img:hover{
+            border: 1px solid black;
+        }
 
-    .button-image>img:hover{
-        border: 1px solid black;
-    }
-
-    /* Set container width to 100% */
-    .container {
-      width: 1920px;
-      height: auto;
-      margin: 0px;
-      padding: 0;
-      height: 560px;
-    }
-    
-    /* Make images fill the container width */
-    .carousel-inner {
-        width: 1920px;
-      overflow: hidden;
-    }
-
-    .carousel-inner img {
-        width: 100%;
-    }
-
-    .carousel-inner div{
-        width: 100%;
+        .container {
+            width: 100%;
+            margin: 0px;
+            padding: 0;
+        }
         
-    }
-
-    .carousel slide{
-        width: 100%;
-        
-    } 
-
-    .carousel-control-next {
-    right: 0;
-    left: auto;
-    transform: translate(50%, -50%);
-     }
+        .carousel-inner {
+            width: 1920px;
+            overflow: hidden;
+        }
         
           /* 잘보여라@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@*/
         /* 추천상품 */
@@ -329,7 +309,35 @@
             border-radius: 20px;
         }
 
+        /* @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ */
+        /* 사이드바 */
+        .sticky_outer {
+            width: 200px;
+            height: 1400px;
+            float: left;
+        }
+
+        /* 배너 이미지 사이즈조정 */
+        .sidebar {
+        width: 80%;
+        height: 450px;
+        }
+
+        .sidebar {
+        position: -webkit-sticky;
+        position: sticky;
+        top: 0;
+        }
+
+
+
         /* 바디 끝 */
+        /* @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ */
+        /* @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ */
+        /* @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ */
+        /* @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ */
+        /* @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ */
+
         /* 푸터 시작 */
         div{
             /* border: 1px solid pink; */
@@ -516,6 +524,12 @@
 
             </div>
 
+<!-- @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ -->
+<!-- @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ -->
+<!-- @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ -->
+<!-- @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ -->
+<!-- @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ -->
+
             <div class="body">
 
                 <div class="container">
@@ -557,14 +571,8 @@
                                 <img src="../resorces/이미지자료/홈화면 메인배너 이미지 샘플 2.jpg" alt="Button Image 5" style="border-radius: 10px;">
                             </div>
                           </div>
+                          <br>
                           
-                          <!-- Controls
-                            <a class="carousel-control-prev" href="#myCarousel" data-slide="prev">
-                            <span class="carousel-control-prev-icon"></span>
-                        </a>
-                        <a class="carousel-control-next" href="#myCarousel" data-slide="next">
-                            <span class="carousel-control-next-icon"></span>
-                        </a> -->
                         </div>
                     </div>
                       
@@ -576,119 +584,132 @@
                             $('#myCarousel').carousel(slideIndex);
                         }
                     </script>
-                        <div class="recommend_img">
-                            <span style="font-weight: bold; font-size: 25px;">전체 랭킹</span>
-                            <br>
-                            <hr>
-                            
-                            
-                            <div class="div_img">
-                                <a href="https://img.cgv.co.kr/Movie/Thumbnail/StillCut/000087/87034/87034214832_727.jpg" target="_blank">
-                                    <img src="https://img.cgv.co.kr/Movie/Thumbnail/StillCut/000087/87034/87034214832_727.jpg" alt="Fjords" style="width:100%">
-                                    <div class="caption">
-                                        <p>Lorem ipsum donec id elit non mi porta gravida at eget metus.</p>
-                                    </div>
-                                </a>
-                            </div>
-                            
-                            
-                            <div class="div_img">
-                                <a href="https://img.cgv.co.kr/Movie/Thumbnail/StillCut/000087/87034/87034214832_727.jpg" target="_blank">
-                                    <img src="https://img.cgv.co.kr/Movie/Thumbnail/StillCut/000087/87034/87034214832_727.jpg" alt="Fjords" style="width:100%">
-                                    <div class="caption">
-                                        <p>Lorem ipsum donec id elit non mi porta gravida at eget metus.</p>
-                                    </div>
-                                </a>
-                            </div>
-                            
-                            
-                            <div class="div_img">
-                                <a href="https://img.cgv.co.kr/Movie/Thumbnail/StillCut/000087/87034/87034214832_727.jpg" target="_blank">
-                                    <img src="https://img.cgv.co.kr/Movie/Thumbnail/StillCut/000087/87034/87034214832_727.jpg" alt="Fjords" style="width:100%">
-                                    <div class="caption">
-                                        <p>Lorem ipsum donec id elit non mi porta gravida at eget metus.</p>
-                                    </div>
-                                    </a>
-                                </div>
-                            
-                                <div class="div_img">
-                                    <a href="https://img.cgv.co.kr/Movie/Thumbnail/StillCut/000087/87034/87034214832_727.jpg" target="_blank">
-                                    <img src="https://img.cgv.co.kr/Movie/Thumbnail/StillCut/000087/87034/87034214832_727.jpg" alt="Fjords" style="width:100%">
-                                    <div class="caption">
-                                        <p>Lorem ipsum donec id elit non mi porta gravida at eget metus.</p>
-                                    </div>
-                                    </a>
-                                </div>
-                            
-                                <div class="div_img">
-                                    <a href="https://img.cgv.co.kr/Movie/Thumbnail/StillCut/000087/87034/87034214832_727.jpg" target="_blank">
-                                    <img src="https://img.cgv.co.kr/Movie/Thumbnail/StillCut/000087/87034/87034214832_727.jpg" alt="Fjords" style="width:100%">
-                                    <div class="caption">
-                                        <p>Lorem ipsum donec id elit non mi porta gravida at eget metus.</p>
-                                    </div>
-                                    </a>
-                                </div>
-                                <br><br>
-                                <img src="../resorces/이미지자료/페이딱.png" style="width: 100%;">
-                                <br><br><br>
 
-                                <span style="font-weight: bold; font-size: 25px;">공포영화 랭킹</span>
-                                <br>
-                                <hr>
-                                
-                                
-                                <div class="div_img">
-                                    <a href="https://img.cgv.co.kr/Movie/Thumbnail/StillCut/000087/87034/87034214832_727.jpg" target="_blank">
-                                        <img src="https://img.cgv.co.kr/Movie/Thumbnail/StillCut/000087/87034/87034214832_727.jpg" alt="Fjords" style="width:100%">
-                                        <div class="caption">
-                                            <p>Lorem ipsum donec id elit non mi porta gravida at eget metus.</p>
-                                        </div>
-                                    </a>
+<!-- @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ -->
+<!-- 랭킹 추천 -->
+                <div class="recommend_img">
+                    <span style="font-weight: bold; font-size: 25px;">전체랭킹 딱대</span>
+                    <br>
+                    <hr>
+                    
+                    
+                    <div class="div_img">
+                        <a href="https://img.cgv.co.kr/Movie/Thumbnail/StillCut/000087/87034/87034214832_727.jpg" target="_blank">
+                            <img src="https://img.cgv.co.kr/Movie/Thumbnail/StillCut/000087/87034/87034214832_727.jpg" alt="Fjords" style="width:100%">
+                            <div class="caption">
+                                <p>Lorem ipsum donec id elit non mi porta gravida at eget metus.</p>
+                            </div>
+                        </a>
+                    </div>
+                    
+                    
+                    <div class="div_img">
+                        <a href="https://img.cgv.co.kr/Movie/Thumbnail/StillCut/000087/87034/87034214832_727.jpg" target="_blank">
+                            <img src="https://img.cgv.co.kr/Movie/Thumbnail/StillCut/000087/87034/87034214832_727.jpg" alt="Fjords" style="width:100%">
+                            <div class="caption">
+                                <p>Lorem ipsum donec id elit non mi porta gravida at eget metus.</p>
+                            </div>
+                        </a>
+                    </div>
+                    
+                    
+                    <div class="div_img">
+                        <a href="https://img.cgv.co.kr/Movie/Thumbnail/StillCut/000087/87034/87034214832_727.jpg" target="_blank">
+                            <img src="https://img.cgv.co.kr/Movie/Thumbnail/StillCut/000087/87034/87034214832_727.jpg" alt="Fjords" style="width:100%">
+                            <div class="caption">
+                                <p>Lorem ipsum donec id elit non mi porta gravida at eget metus.</p>
+                            </div>
+                            </a>
+                        </div>
+                    
+                        <div class="div_img">
+                            <a href="https://img.cgv.co.kr/Movie/Thumbnail/StillCut/000087/87034/87034214832_727.jpg" target="_blank">
+                            <img src="https://img.cgv.co.kr/Movie/Thumbnail/StillCut/000087/87034/87034214832_727.jpg" alt="Fjords" style="width:100%">
+                            <div class="caption">
+                                <p>Lorem ipsum donec id elit non mi porta gravida at eget metus.</p>
+                            </div>
+                            </a>
+                        </div>
+                    
+                        <div class="div_img">
+                            <a href="https://img.cgv.co.kr/Movie/Thumbnail/StillCut/000087/87034/87034214832_727.jpg" target="_blank">
+                            <img src="https://img.cgv.co.kr/Movie/Thumbnail/StillCut/000087/87034/87034214832_727.jpg" alt="Fjords" style="width:100%">
+                            <div class="caption">
+                                <p>Lorem ipsum donec id elit non mi porta gravida at eget metus.</p>
+                            </div>
+                            </a>
+                        </div>
+                        <br><br>
+                        <img src="../resorces/이미지자료/페이딱.png" style="width: 100%;">
+                        <br><br><br>
+
+                        <span style="font-weight: bold; font-size: 25px;">관심사 랭킹 딱대</span>
+                        <br>
+                        <hr>
+                        
+                        
+                        <div class="div_img">
+                            <a href="https://img.cgv.co.kr/Movie/Thumbnail/StillCut/000087/87034/87034214832_727.jpg" target="_blank">
+                                <img src="https://img.cgv.co.kr/Movie/Thumbnail/StillCut/000087/87034/87034214832_727.jpg" alt="Fjords" style="width:100%">
+                                <div class="caption">
+                                    <p>Lorem ipsum donec id elit non mi porta gravida at eget metus.</p>
                                 </div>
-                                
-                                
-                                <div class="div_img">
-                                    <a href="https://img.cgv.co.kr/Movie/Thumbnail/StillCut/000087/87034/87034214832_727.jpg" target="_blank">
-                                        <img src="https://img.cgv.co.kr/Movie/Thumbnail/StillCut/000087/87034/87034214832_727.jpg" alt="Fjords" style="width:100%">
-                                        <div class="caption">
-                                            <p>Lorem ipsum donec id elit non mi porta gravida at eget metus.</p>
-                                        </div>
-                                    </a>
+                            </a>
+                        </div>
+                        
+                        
+                        <div class="div_img">
+                            <a href="https://img.cgv.co.kr/Movie/Thumbnail/StillCut/000087/87034/87034214832_727.jpg" target="_blank">
+                                <img src="https://img.cgv.co.kr/Movie/Thumbnail/StillCut/000087/87034/87034214832_727.jpg" alt="Fjords" style="width:100%">
+                                <div class="caption">
+                                    <p>Lorem ipsum donec id elit non mi porta gravida at eget metus.</p>
                                 </div>
-                                
-                                
-                                <div class="div_img">
-                                    <a href="https://img.cgv.co.kr/Movie/Thumbnail/StillCut/000087/87034/87034214832_727.jpg" target="_blank">
-                                        <img src="https://img.cgv.co.kr/Movie/Thumbnail/StillCut/000087/87034/87034214832_727.jpg" alt="Fjords" style="width:100%">
-                                        <div class="caption">
-                                            <p>Lorem ipsum donec id elit non mi porta gravida at eget metus.</p>
-                                        </div>
-                                        </a>
-                                    </div>
-                                
-                                    <div class="div_img">
-                                        <a href="https://img.cgv.co.kr/Movie/Thumbnail/StillCut/000087/87034/87034214832_727.jpg" target="_blank">
-                                        <img src="https://img.cgv.co.kr/Movie/Thumbnail/StillCut/000087/87034/87034214832_727.jpg" alt="Fjords" style="width:100%">
-                                        <div class="caption">
-                                            <p>Lorem ipsum donec id elit non mi porta gravida at eget metus.</p>
-                                        </div>
-                                        </a>
-                                    </div>
-                                
-                                    <div class="div_img">
-                                        <a href="https://img.cgv.co.kr/Movie/Thumbnail/StillCut/000087/87034/87034214832_727.jpg" target="_blank">
-                                        <img src="https://img.cgv.co.kr/Movie/Thumbnail/StillCut/000087/87034/87034214832_727.jpg" alt="Fjords" style="width:100%">
-                                        <div class="caption">
-                                            <p>Lorem ipsum donec id elit non mi porta gravida at eget metus.</p>
-                                        </div>
-                                        </a>
-                                    </div>
-                                    
+                            </a>
+                        </div>
+                        
+                        
+                        <div class="div_img">
+                            <a href="https://img.cgv.co.kr/Movie/Thumbnail/StillCut/000087/87034/87034214832_727.jpg" target="_blank">
+                                <img src="https://img.cgv.co.kr/Movie/Thumbnail/StillCut/000087/87034/87034214832_727.jpg" alt="Fjords" style="width:100%">
+                                <div class="caption">
+                                    <p>Lorem ipsum donec id elit non mi porta gravida at eget metus.</p>
+                                </div>
+                                </a>
+                            </div>
+                        
+                            <div class="div_img">
+                                <a href="https://img.cgv.co.kr/Movie/Thumbnail/StillCut/000087/87034/87034214832_727.jpg" target="_blank">
+                                <img src="https://img.cgv.co.kr/Movie/Thumbnail/StillCut/000087/87034/87034214832_727.jpg" alt="Fjords" style="width:100%">
+                                <div class="caption">
+                                    <p>Lorem ipsum donec id elit non mi porta gravida at eget metus.</p>
+                                </div>
+                                </a>
+                            </div>
+                        
+                            <div class="div_img">
+                                <a href="https://img.cgv.co.kr/Movie/Thumbnail/StillCut/000087/87034/87034214832_727.jpg" target="_blank">
+                                <img src="https://img.cgv.co.kr/Movie/Thumbnail/StillCut/000087/87034/87034214832_727.jpg" alt="Fjords" style="width:100%">
+                                <div class="caption">
+                                    <p>Lorem ipsum donec id elit non mi porta gravida at eget metus.</p>
+                                </div>
+                                </a>
                             </div>
                             
-                            <br><br>
+                    </div>
+<!-- @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ -->
+<!-- 사이드바 -->
+                    <div class="sticky_outer">
+                        <img src="../류지완/새로배너.PNG" class="sidebar">
+                    </div>
+                    <br><br>
 
             </div>
+
+<!-- @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ -->
+<!-- @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ -->
+<!-- @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ -->
+<!-- @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ -->
+
 
             <div class="footer">
                 <div id="footer_1">

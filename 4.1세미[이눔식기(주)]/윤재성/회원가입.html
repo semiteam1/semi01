@@ -157,7 +157,7 @@
                 </div>
                 <div class="email_input">
                     <img src="../resorces/이미지자료/이메일2.png" id="newMember_img">
-                    <input type="email" id="new_user" name="new_userPwd" placeholder="[선택] 이메일">
+                    <input type="email" id="new_user" name="new_userEmail" placeholder="[선택] 이메일">
                 </div>
             </div>
             <div class="message">
@@ -205,9 +205,9 @@
                         <div class="choice_box"><button type="button" class="int_btn_show" id="classical" onclick="selectShow('classical');" >클래식</button></div>
                         <div class="choice_box" id="last"><button type="button" class="int_btn_show" id="concert" onclick="selectShow('concert');" >콘서트</button></div>
                     </div> 
-                    <input type="hidden" id="select_movie_hidden" >
-                    <input type="hidden" id="select_display_hidden">
-                    <input type="hidden" id="select_show_hidden">
+                    <input type="hidden" name="select_movie_hidden" >
+                    <input type="hidden" name="select_display_hidden">
+                    <input type="hidden" name="select_show_hidden">
                 </div>
             </div>
             <div class="submit_box">
@@ -221,13 +221,13 @@
 
     <script>
         function selectMovie(value){
-            $("#select_movie_hidden").attr("name", value);
+            $("#select_movie_hidden").attr("value", value);
         }
         function selectDisplay(value){
-            $("#select_display_hidden").attr("name", value);
+            $("#select_display_hidden").attr("value", value);
         }
         function selectShow(value){
-            $("#select_show_hidden").attr("name", value);
+            $("#select_show_hidden").attr("value", value);
         }
 
         $(document).ready(function() {
