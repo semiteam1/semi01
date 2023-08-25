@@ -134,24 +134,25 @@
       -->
       <div class="box style1" style="line-height: 3; border-bottom: 2px solid #ABBBC7;">통계</div>
       <p class="p1" style="padding-bottom: 32px; margin: 0; height: 35px; border-radius: 0; border-right: 1px solid #ABBBC7; border-left: 1px solid #ABBBC7; border-radius: 0;">판매통계</p>
-      <p class="p1" style="margin: 0; height: 35px; border-radius: 0; border-right: 1px solid #ABBBC7; border-left: 1px solid #ABBBC7; border-bottom: 1px solid #ABBBC7; padding-bottom: 32px; border-radius: 0;">이용자 통계</p>
+      <p class="p1" style="margin: 0; height: 35px; border-radius: 0; border-right: 1px solid #ABBBC7; border-left: 1px solid #ABBBC7; padding-bottom: 32px; border-radius: 0;">이용자 통계</p>
+      <p class="p1" style="margin: 0; height: 35px; border-radius: 0; border-right: 1px solid #ABBBC7; border-left: 1px solid #ABBBC7; border-bottom: 1px solid #ABBBC7; padding-bottom: 32px; border-radius: 0;">카테고리 통계</p>
       <!--
       <p class="p1" style="margin: 0; height: 35px; border-right: 1px solid #ABBBC7; border-left: 1px solid #ABBBC7; border-bottom: 1px solid #ABBBC7; padding-bottom: 32px; border-radius: 0;">상품별 좋아요 통계</p>
       -->
     </div>
     <div class="container2">
       <div class="content1" style="border-bottom-right-radius: 0;">
-        <iframe src="member-bar.html" frameborder="0"></iframe>
+        <!-- <iframe src="member-bar.html" frameborder="0"></iframe> -->
         <!-- <iframe src="regist-bar.html" frameborder="0"></iframe> -->
         <!-- <iframe src="goodsList-bar.html" frameborder="0"></iframe> -->
-        <!-- <iframe src="salesStatitics-bar.html" frameborder="0"></iframe> -->
+        <iframe src="salesStatitics-bar.html" frameborder="0"></iframe>
         <!-- <iframe src="userStatitics-bar.html" frameborder="0"></iframe> -->
       </div>
       <div class="content2" style="background-color: rgb(237, 237, 237); border-top-right-radius: 0;">
         <!-- <iframe src="regist.html" frameborder="0"></iframe> -->
-        <iframe src="member.html" frameborder="0"></iframe>
+        <!-- <iframe src="member.html" frameborder="0"></iframe> -->
         <!-- <iframe src="goodsList.html" frameborder="0"></iframe> -->
-        <!-- <iframe src="salesStatitics-1.html" frameborder="0"></iframe> -->
+        <iframe src="salesStatitics-1.html" frameborder="0"></iframe>
         <!-- <iframe src="salesStatitics-2.html" frameborder="0"></iframe> -->
         <!-- <iframe src="userStatitics.html" frameborder="0"></iframe> -->
       </div>
@@ -179,6 +180,9 @@
           }else if(p1content == "이용자 통계"){
             $(".content1").html(`<iframe src="userStatitics-bar.html" frameborder="0"></iframe>`);
             $(".content2").html(`<iframe src="userStatitics.html" frameborder="0"></iframe>`);
+          }else if(p1content == "카테고리 통계"){
+            $(".content1").html(`<iframe src="categoryStatitics-bar.html" frameborder="0"></iframe>`);
+            $(".content2").html(`<iframe src="salesStatitics-2.html" frameborder="0"></iframe>`);
           }
         });
     });
