@@ -53,31 +53,46 @@
     #buttondiv{
         width: 396px;
         margin: auto;
-        margin-top: 28px;
+        margin-top: 23px;
         display: flex;
-      }
-      #buttondiv>.btn2{
-        width: 31px;
-        height: 31px;
-        display: block;
-        margin-right: 2px;
-        border-radius: 5px;
-        border: none;
-        background-color: #ABBBC7;
-        font-weight: bold;
-        cursor: pointer;
-      }
-      #buttondiv>.btn2:hover{
-        background-color: darkgray;
-      }
-      #tables3 tr:not(:first-child):hover{
-        background-color: darkgray;
-        font-weight: bold;
-      }
+    }
+    #buttondiv>.btn2{
+      width: 31px;
+      height: 31px;
+      display: block;
+      margin-right: 2px;
+      border-radius: 5px;
+      border: none;
+      background-color: #ABBBC7;
+      font-weight: bold;
+      cursor: pointer;
+    }
+    #buttondiv>.btn2:hover{
+      background-color: darkgray;
+    }
+    #tables3 tr:not(:first-child):hover{
+      background-color: darkgray;
+      font-weight: bold;
+    }
+    #category3{
+      border: none;
+      border-radius: 5px;
+      background-color: white;
+      font-weight: bold;
+      display: block;
+      width: 120px;
+      height: 30px;
+    }
+    #category3:hover{
+      background-color: darkgray;
+      cursor: pointer;
+    }
     </style>
 </head>
 <body>
     <div class="outer">
+        <button id="category3" style="margin-left: 876px; margin-bottom: 9px;">카테고리 통계</button>
+        <hr>
         <table id="tables3">
           <tr style="font-weight: bold;">
             <td id="tbs1">제품명</td>
@@ -255,23 +270,7 @@
             <td id="tbs5">361</td>
             <td id="tbs6">4324</td>
           </tr>
-          <tr>
-            <td id="tbs1">분노의질주</td>
-            <td id="tbs2">영화</td>
-            <td id="tbs3">액션</td>
-            <td id="tbs4">02</td>
-            <td id="tbs5">361</td>
-            <td id="tbs6">4324</td>
-          </tr>
-          <tr>
-            <td id="tbs1">분노의질주</td>
-            <td id="tbs2">영화</td>
-            <td id="tbs3">액션</td>
-            <td id="tbs4">02</td>
-            <td id="tbs5">361</td>
-            <td id="tbs6">4324</td>
-          </tr>
-    
+          
         </table>
         <div id="buttondiv">
           <button class="btn2"><</button>
@@ -302,6 +301,36 @@
                 $(this).css("font-weight", "normal");
             });
         });
+
+        document.addEventListener("DOMContentLoaded", function() {
+        const openButton = document.getElementById("category3");
+
+        openButton.addEventListener("click", function() {
+            // 새 창 크기 설정
+            const newWindowWidth = 600;
+            const newWindowHeight = 400;
+            
+            // 새 창 열기
+            const screenWidth = window.screen.width;
+            const screenHeight = window.screen.height;
+            const newWindowLeft = (screenWidth - newWindowWidth) / 2;
+            const newWindowTop = (screenHeight - newWindowHeight) / 2;
+
+            const newWindow = window.open("", "_blank", `width=${newWindowWidth},height=${newWindowHeight},left=${newWindowLeft},top=${newWindowTop}`);
+
+            // 새 창에 내용 로드
+            const newWindowDocument = newWindow.document;
+            newWindowDocument.open();
+            
+            // 템플릿에서 내용 가져오기
+            fetch("salesStatitics-2.html")
+                .then(response => response.text())
+                .then(content => {
+                    newWindowDocument.write(content);
+                    newWindowDocument.close();
+                });
+        });
+    });
       </script>
 </body>
 </html>

@@ -43,7 +43,7 @@
         }
     </style>
 </head>
-<body>
+<body style="background-color: #C9D9E6;">
     <div class="outer1">
         <table id="tables4" align="center">
           <tr style="font-weight: bold;">
@@ -113,19 +113,5 @@
           </tr>
         </table>
     </div>
-    <script>
-        $(function(){
-            $("#tables4 tr:not(:first-child)").hover(function(){
-                $(this).css("background-color", "darkgray");
-                $(this).find("td:not(:last-child)").css("border-right", "2px solid darkgray");
-                $(this).css("font-weight", "bold");
-            },
-            function(){
-                $(this).css("background-color", "#EDEDED");
-                $(this).find("td:not(:last-child)").css("border-right", "2px solid #ABBBC7");
-                $(this).css("font-weight", "normal");
-            });
-        });
-    </script>
 </body>
 </html>
