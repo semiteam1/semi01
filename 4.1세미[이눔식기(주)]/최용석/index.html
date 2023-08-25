@@ -144,13 +144,16 @@
         <!-- <iframe src="member-bar.html" frameborder="0"></iframe> -->
         <!-- <iframe src="regist-bar.html" frameborder="0"></iframe> -->
         <!-- <iframe src="goodsList-bar.html" frameborder="0"></iframe> -->
-        <iframe src="salesStatitics-bar.html" frameborder="0"></iframe>
+        <!-- <iframe src="salesStatitics-bar.html" frameborder="0"></iframe> -->
+        <iframe src="userStatitics-bar.html" frameborder="0"></iframe>
       </div>
       <div class="content2" style="background-color: rgb(237, 237, 237); border-top-right-radius: 0;">
         <!-- <iframe src="regist.html" frameborder="0"></iframe> -->
         <!-- <iframe src="member.html" frameborder="0"></iframe> -->
         <!-- <iframe src="goodsList.html" frameborder="0"></iframe> -->
-        <iframe src="salesStatitics.html" frameborder="0"></iframe>
+        <!-- <iframe src="salesStatitics-1.html" frameborder="0"></iframe> -->
+        <!-- <iframe src="salesStatitics-2.html" frameborder="0"></iframe> -->
+        <iframe src="userStatitics.html" frameborder="0"></iframe>
       </div>
     </div>
   </div>
@@ -172,7 +175,10 @@
             $(".content2").html(`<iframe src="goodsList.html" frameborder="0"></iframe>`);
           }else if(p1content == "판매통계"){
             $(".content1").html(`<iframe src="salesStatitics-bar.html" frameborder="0"></iframe>`);
-            $(".content2").html(`<iframe src="salesStatitics.html" frameborder="0"></iframe>`);
+            $(".content2").html(`<iframe src="salesStatitics-1.html" frameborder="0"></iframe>`);
+          }else if(p1content == "이용자 통계"){
+            $(".content1").html(`<iframe src="userStatitics-bar.html" frameborder="0"></iframe>`);
+            $(".content2").html(`<iframe src="userStatitics.html" frameborder="0"></iframe>`);
           }
         });
     });
