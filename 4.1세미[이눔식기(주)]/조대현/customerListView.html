@@ -298,6 +298,7 @@
             float:left;
             margin:5px;*/
         }
+        /* body 오른쪽 메뉴*/
         #bodyright>#son{
             background-color: white;
             border:1px solid green;
@@ -308,6 +309,17 @@
             margin:1%;
             text-align:center;
             line-height: 200px;
+        }
+        /* body 오른쪽 메뉴 이미지*/
+        #qnalogomain{
+            width: 100%;
+            height: 100%;
+            border-radius: 20px;
+        }
+        #reservelogomain{
+            width: 100%;
+            height: 100%;
+            border-radius: 20px;
         }
         .bottomfunction{
             border: 1px solid blue;
@@ -548,8 +560,12 @@
         <!-- 바디의 오른쪽메뉴-->
         <div class="rightmenu">
             <div id="bodyright"> 
-                <div id="son">QNA 보기</div>
-                <div id="son">공지사항보기</div>
+                <div id="son">
+                    <a href="#" class="qnalogo"><img src="../resorces/이미지자료/customer/qna.png" id="qnalogomain" alt=""></a>
+                </div>
+                <div id="son">
+                    <a href="#" class="reservelogo"><img src="../resorces/이미지자료/customer/reserve.png" id="reservelogomain" alt=""></a>
+                </div>
                 <div id="son">예매상담하기</div>
                 <div id="son">문의하기</div>
             </div>
