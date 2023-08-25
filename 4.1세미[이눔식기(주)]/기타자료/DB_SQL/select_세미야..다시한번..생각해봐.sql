@@ -6,3 +6,26 @@ JOIN CATEGORY_INFO E ON (INTEREST_SHOW = E.CATEGORY_TYPE);
 
 SELECT PRODUCT_NO, PRODUCT_TITLE, LOCAL_NO
 from product
+;
+
+-- ·Î±×ÀÎ ¸â¹ö ¸Í±×·ç 
+SELECT
+       USER_NO
+     , USER_ID
+     , USER_PWD
+     , USER_NAME
+     , USER_BIRTH
+     , INTEREST_MOVIE
+     , INTEREST_DISPLAY
+     , INTEREST_SHOW
+     , EMAIL
+     , PHONE
+     , GRADE_NO
+     , STATUS
+  FROM USER_INFO
+ WHERE USER_ID = ?
+   AND USER_PWD =?
+   AND STATUS = 'Y'
+   
+   
+;
