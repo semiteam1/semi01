@@ -246,7 +246,7 @@
         /* 바디 시작 */
                /* 바디 메인 */
                .원하는데로_바꾸세요{
-            border: 1px solid red;
+            border: 1px solid lightgray;
             background-color: lightgray;
             height: 900px;
             width: 100%;
@@ -254,35 +254,37 @@
 
         /* body 고객센터*/
         .servicecenter{
-            border: 1px solid blue;
             background-color:black;
             height: 100px;
-            width: 1000px;
+            width: 1050px;
             margin:auto;
+            margin-right: 23.8%;
             margin-top:50px;            
         }
-        .servicecenter>h2{
+        .servicecenter>h1{
             color:white;
             line-height:100px;
         } 
 
         /*body leftmenu*/
         .원하는데로_바꾸세요 .leftmenu{
-            border: 1px solid red;
-            width:100px;
-            height: 200px;
-            margin-left: 23.8%;
+            background-color: white;
+            font-size: 19px;
+            text-align:center;
+            line-height: 100px;
+            width: 160px;
+            height: 300px;
+            margin-left: 21%;
             margin-top: 5px;
             float:left;
         }
         .원하는데로_바꾸세요 .leftmenu div{
-            width:100px;
-            height: 33%;
-            border: 1px solid black;
+            width:100%;
+            height: 33.3%;
+            border: 1px solid gray;
         }
         /*바디의 오른쪽 메뉴*/
         .원하는데로_바꾸세요 .rightmenu{
-            border: 1px solid orange;
             width: 880px;
             height:400px;
             margin-right: 23.8%;
@@ -290,7 +292,6 @@
             float:right;
         }
         #bodyright{
-            border:1px solid red;
             width: 100%;
             height:100%;
             /*width:50%;
@@ -301,7 +302,6 @@
         /* body 오른쪽 메뉴*/
         #bodyright>#son{
             background-color: white;
-            border:1px solid green;
             border-radius: 20px;
             width:48%;
             height:46%;
@@ -321,8 +321,17 @@
             height: 100%;
             border-radius: 20px;
         }
+        #noticelogomain{
+            width: 100%;
+            height: 100%;
+            border-radius: 20px;
+        }
+        #questionlogomain{
+            width: 100%;
+            height: 100%;
+            border-radius: 20px;
+        }
         .bottomfunction{
-            border: 1px solid blue;
             width:880px;
             height:200px;
             margin-right:23.8%;
@@ -331,12 +340,14 @@
         }
         /*body qna창*/
         #bson{
-            border: 1px solid gold;
+            border: 1px solid white;
+            border-radius: 10px;
             width: 98%;
             height:90%;
             float:left;
             margin:1%;
             cursor:pointer;
+            font-size: 16px;
         }
         #bson>p{
             box-sizing: border-box;
@@ -349,7 +360,11 @@
         #bson>#qnacontent{
             font-size: 15px;
         }
-
+        #bson>div{
+            border-bottom-style: solid;
+            border-color: black;
+            border-width: 1px;
+        }
 
 
 
@@ -547,7 +562,7 @@
 
 <div class="원하는데로_바꾸세요">
     <div class="servicecenter">
-        <h2 align="center">고객센터</h2>
+        <h1 align="center">고객센터</h1>
     </div>
 
     <div class="servicefunction">
@@ -566,8 +581,12 @@
                 <div id="son">
                     <a href="#" class="reservelogo"><img src="../resorces/이미지자료/customer/reserve.png" id="reservelogomain" alt=""></a>
                 </div>
-                <div id="son">예매상담하기</div>
-                <div id="son">문의하기</div>
+                <div id="son">
+                    <a href="#" class="noticelog"><img src="../resorces/이미지자료/customer/notice.png" id="noticelogomain" alt=""></a>
+                </div>
+                <div id="son">
+                    <a href="#" class="questionlog"><img src="../resorces/이미지자료/customer/question.png" id="questionlogomain" alt=""></a>
+                </div>
             </div>
         </div>
     </div>
@@ -576,17 +595,18 @@
     <div class="bottomfunction">
         <div id="bson">
             <h2 align="center">자주묻는 질문</h2>
-            <div>비밀</div>
+            <div>비밀번호를 변경하고 싶어요</div>
             <p>A. 기다려</p>
-            <div>비밀</div>
+            <div>내 정보를 변경하고 싶어요</div>
             <p>A. 너도 기다려</p>
-            <div>비밀</div>
+            <div>할인이 되는 신용카드는?</div>
             <p>A. 너도기다리자</p>
         </div>
         
     </div>
     <script>
         $(function(){
+            $(".leftmenu").hover().css("cursor","pointer");
             $("#bson>div").click(function(){
                 // $(this) : 클릭이벤트가 발생한 div 요소
                 // 우리는 그 요소의 뒤의 요소를 선택해야함.(같은 레벨에 있음)
