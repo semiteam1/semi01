@@ -34,13 +34,24 @@ SELECT
    
 ;
 
--- 랭킹
+-- 좋아요 기본
+        SELECT
+               PRODUCT_NO
+             , COUNT(USER_NO) AS "좋아요_수"
+         FROM
+            PRODUCT_LIKE
+        GROUP BY
+            PRODUCT_NO
+        ORDER BY
+            좋아요_수 DESC
+;
+-- 랭킹 최종
 SELECT 
        PRODUCT_NO
      , CATEGORY_NAME
      , PRODUCT_TITLE
      , LOCAL_TITLE
-     , PRODUCT_PLACE
+     , ADDRESS
      , START_PERIOD
      , END_PERIOD
      , LEVEL_NAME
@@ -64,19 +75,136 @@ SELECT
              좋아요_수 DESC))
 -- AND ROWNUM = 1
 ;
-  
-  
-  
-  
-SELECT PRODUCT_NO
-  FROM (
-        SELECT
-               PRODUCT_NO
-             , COUNT(USER_NO) AS "좋아요_수"
-         FROM
-            PRODUCT_LIKE
-        GROUP BY
-            PRODUCT_NO
-        ORDER BY
-            좋아요_수 DESC
-      );
+
+-- 카테고리별 좋아요
+SELECT 
+       PRODUCT_NO
+     , CATEGORY_NAME
+     , PRODUCT_TITLE
+     , LOCAL_TITLE
+     , ADDRESS
+     , START_PERIOD
+     , END_PERIOD
+     , LEVEL_NAME
+     , RUN_TIME
+     , PRICE
+  FROM PRODUCT P
+  JOIN CATEGORY_INFO USING(CATEGORY_TYPE)
+  JOIN LOCAL_INFO USING (LOCAL_NO)
+  JOIN LEVEL_INFO USING (PRODUCT_LEVEL)
+ WHERE PRODUCT_NO 
+    IN (
+       SELECT PRODUCT_NO
+         FROM (
+       SELECT
+              PRODUCT_NO
+            , COUNT(USER_NO) AS "좋아요_수"
+        FROM PRODUCT_LIKE
+       GROUP BY
+             PRODUCT_NO
+       ORDER BY
+             좋아요_수 DESC))
+ AND ROWNUM <3
+ 
+ ;
+ 
+-- 유저 영화카테고리 추천 2개 쿼리
+ SELECT PRODUCT_NO
+     , CATEGORY_NAME
+     , PRODUCT_TITLE
+     , LOCAL_TITLE
+     , ADDRESS
+     , START_PERIOD
+     , END_PERIOD
+     , LEVEL_NAME
+     , RUN_TIME
+     , PRICE
+ FROM (
+    SELECT *
+      FROM PRODUCT P
+      JOIN CATEGORY_INFO USING(CATEGORY_TYPE)
+      JOIN LOCAL_INFO USING (LOCAL_NO)
+      JOIN LEVEL_INFO USING (PRODUCT_LEVEL)
+     WHERE PRODUCT_NO 
+        IN (
+           SELECT PRODUCT_NO
+             FROM (
+           SELECT
+                  PRODUCT_NO
+                , COUNT(USER_NO) AS "좋아요_수"
+            FROM PRODUCT_LIKE
+           GROUP BY
+                 PRODUCT_NO
+           ORDER BY
+                 좋아요_수 DESC)))
+ JOIN USER_INFO U ON ( CATEGORY_TYPE = U.INTEREST_MOVIE)
+ WHERE USER_NO = ?
+ AND ROWNUM <3 ;
+ 
+ -- 유저 전시카테고리 추천 2개 쿼리
+ SELECT PRODUCT_NO
+     , CATEGORY_NAME
+     , PRODUCT_TITLE
+     , LOCAL_TITLE
+     , ADDRESS
+     , START_PERIOD
+     , END_PERIOD
+     , LEVEL_NAME
+     , RUN_TIME
+     , PRICE
+ FROM (
+    SELECT *
+      FROM PRODUCT P
+      JOIN CATEGORY_INFO USING(CATEGORY_TYPE)
+      JOIN LOCAL_INFO USING (LOCAL_NO)
+      JOIN LEVEL_INFO USING (PRODUCT_LEVEL)
+     WHERE PRODUCT_NO 
+        IN (
+           SELECT PRODUCT_NO
+             FROM (
+           SELECT
+                  PRODUCT_NO
+                , COUNT(USER_NO) AS "좋아요_수"
+            FROM PRODUCT_LIKE
+           GROUP BY
+                 PRODUCT_NO
+           ORDER BY
+                 좋아요_수 DESC)))
+ JOIN USER_INFO U ON ( CATEGORY_TYPE = U.INTEREST_DISPLAY)
+ WHERE USER_NO = ?
+ AND ROWNUM <3 ;
+ 
+ -- 유저 공연카테고리 추천 2개 쿼리
+ SELECT PRODUCT_NO
+     , CATEGORY_NAME
+     , PRODUCT_TITLE
+     , LOCAL_TITLE
+     , ADDRESS
+     , START_PERIOD
+     , END_PERIOD
+     , LEVEL_NAME
+     , RUN_TIME
+     , PRICE
+ FROM (
+    SELECT *
+      FROM PRODUCT P
+      JOIN CATEGORY_INFO USING(CATEGORY_TYPE)
+      JOIN LOCAL_INFO USING (LOCAL_NO)
+      JOIN LEVEL_INFO USING (PRODUCT_LEVEL)
+     WHERE PRODUCT_NO 
+        IN (
+           SELECT PRODUCT_NO
+             FROM (
+           SELECT
+                  PRODUCT_NO
+                , COUNT(USER_NO) AS "좋아요_수"
+            FROM PRODUCT_LIKE
+           GROUP BY
+                 PRODUCT_NO
+           ORDER BY
+                 좋아요_수 DESC)))
+ JOIN USER_INFO U ON ( CATEGORY_TYPE = U.INTEREST_SHOW)
+ WHERE USER_NO = ?
+ AND ROWNUM <3 ;
+ 
+ 
