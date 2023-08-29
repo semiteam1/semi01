@@ -1,3 +1,34 @@
+--랭킹쿼리
+
+SELECT 
+       PRODUCT_NO
+     , CATEGORY_TYPE
+     , PRODUCT_TITLE
+     , LOCAL_NO
+     , ADDRESS
+     , START_PERIOD
+     , END_PERIOD
+     , PRODUCT_LEVEL
+     , RUN_TIME
+     , PRICE
+  FROM PRODUCT
+ WHERE PRODUCT_NO 
+    IN (
+       SELECT PRODUCT_NO
+         FROM (
+       SELECT
+              PRODUCT_NO
+            , COUNT(USER_NO) AS "좋아요_수"
+        FROM
+             PRODUCT_LIKE
+       GROUP BY
+             PRODUCT_NO
+       ORDER BY
+             좋아요_수 DESC))
+--AND ROWNUM = 1
+;
+
+
 -- 상품 검색
 -- 제목, 장소, 기간, 가격, 포스터이미지(POSTER_NAME)
 SELECT 
@@ -8,6 +39,7 @@ SELECT
      , END_PERIOD
      , PRICE
      , POSTER_PATH
+     , POSTER_NAME
   FROM PRODUCT
   JOIN PRODUCT_IMG USING(PRODUCT_NO)
  WHERE PRODUCT_TITLE LIKE ?;
