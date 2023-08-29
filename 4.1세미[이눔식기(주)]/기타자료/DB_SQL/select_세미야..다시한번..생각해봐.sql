@@ -33,3 +33,50 @@ SELECT
    
    
 ;
+
+-- 랭킹
+SELECT 
+       PRODUCT_NO
+     , CATEGORY_NAME
+     , PRODUCT_TITLE
+     , LOCAL_TITLE
+     , PRODUCT_PLACE
+     , START_PERIOD
+     , END_PERIOD
+     , LEVEL_NAME
+     , RUN_TIME
+     , PRICE
+  FROM PRODUCT P
+  JOIN CATEGORY_INFO USING(CATEGORY_TYPE)
+  JOIN LOCAL_INFO USING (LOCAL_NO)
+  JOIN LEVEL_INFO USING (PRODUCT_LEVEL)
+ WHERE PRODUCT_NO 
+    IN (
+       SELECT PRODUCT_NO
+         FROM (
+       SELECT
+              PRODUCT_NO
+            , COUNT(USER_NO) AS "좋아요_수"
+        FROM PRODUCT_LIKE
+       GROUP BY
+             PRODUCT_NO
+       ORDER BY
+             좋아요_수 DESC))
+-- AND ROWNUM = 1
+;
+  
+  
+  
+  
+SELECT PRODUCT_NO
+  FROM (
+        SELECT
+               PRODUCT_NO
+             , COUNT(USER_NO) AS "좋아요_수"
+         FROM
+            PRODUCT_LIKE
+        GROUP BY
+            PRODUCT_NO
+        ORDER BY
+            좋아요_수 DESC
+      );
