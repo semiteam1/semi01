@@ -21,17 +21,7 @@ INSERT INTO CATEGORY_INFO VALUES (12, '콘서트(공연)');
 
 -- 유저 관리자 등록
 INSERT INTO USER_INFO VALUES (SEQ_UNO.NEXTVAL, 'admin', '1234', '관리자', '990101', 2, 6, 11, null, '010-1234-5678', 5,'Y');
---INSERT INTO USER_INFO VALUES (SEQ_UNO.NEXTVAL, 'ID', '1234', '이지은', '930412', 1, 5, 12, null, '010-1234-5678', 5,'Y');
---INSERT INTO USER_INFO VALUES (SEQ_UNO.NEXTVAL, 'SUZI', '1234', '숯지', '940505', 3, 8, 10, null, '010-1234-5678', 5,'Y');
---INSERT INTO USER_INFO VALUES (SEQ_UNO.NEXTVAL, 'KW', '1234', '콰누', '950105', 1, 5, 9, null, '010-1234-5678', 3,'Y');
---INSERT INTO USER_INFO VALUES (SEQ_UNO.NEXTVAL, 'HY', '1234', '효옌', '980501', 2, 6, 10, null, '010-1234-5678', 2,'Y');
---INSERT INTO USER_INFO VALUES (SEQ_UNO.NEXTVAL, 'ZW', '1234', '지완', '940505', 3, 7, 11, null, '010-1234-5678', 1,'Y');
---INSERT INTO USER_INFO VALUES (SEQ_UNO.NEXTVAL, 'YD', '1234', '윤딱', '900305', 4, 8, 12, null, '010-1234-5678', 4,'Y');
---INSERT INTO USER_INFO VALUES (SEQ_UNO.NEXTVAL, 'SY', '1234', '시욘', '910305', 4, 7, 11, null, '010-1234-5678', 3,'Y');
---INSERT INTO USER_INFO VALUES (SEQ_UNO.NEXTVAL, 'YF', '1234', '유퐈', '920305', 3, 6, 9, null, '010-1234-5678', 2,'Y');
---INSERT INTO USER_INFO VALUES (SEQ_UNO.NEXTVAL, 'DB', '1234', '대박', '930305', 2, 5, 10, null, '010-1234-5678', 5,'Y');
---INSERT INTO USER_INFO VALUES (SEQ_UNO.NEXTVAL, 'JP', '1234', '조펜', '940305', 1, 4, 11, null, '010-1234-5678', 1,'Y');
---INSERT INTO USER_INFO VALUES (SEQ_UNO.NEXTVAL, 'ER', '1234', '응급', '950305', 2, 8, 12, null, '010-1234-5678', 4,'Y');
+
 
 -- 관람등급 등록
 INSERT INTO LEVEL_INFO VALUES (1, '전체 관람가');
@@ -63,6 +53,19 @@ INSERT INTO LOCAL_INFO VALUES (6,'제주');
 --INSERT INTO PRODUCT VALUES (SEQ_PNO.NEXTVAL, 10, '윤딱대의 딱대',4, '설악산 딱대좌', '23/02/15', '23/07/07', 4, 100, 20000);
 --INSERT INTO PRODUCT VALUES (SEQ_PNO.NEXTVAL, 11, '용석아 밥묵자',5, '석이네 집밥', '23/09/15', '23/11/09', 5, 120, 120000);
 
+
+
+
+-- 공지사항 등록
+INSERT INTO NOTICE VALUES(seq_nno.nextval,'티켓딱대 오픈기념 행사안내','드디어 고대하던 티켓딱대가 오픈을 하게 되었습니다. 여러분의 기대에 부응할 수 있도록 하겠습니다. 특별 이벤트로 황금티켓을 잡아라 이벤트가 진행중이오니 많은 이용 바랍니다.',DEFAULT,DEFAULT,DEFAULT );
+
+-- QNA 등록
+INSERT INTO QNA VALUES(seq_qno.nextval,1,'티켓딱대 김시연선생님 뵙고싶어요..','평소에 티켓딱대 운영진들 너무 좋아합니다. 특히 김시연 선생님 만나뵙고 싶어요.','죄송합니다. 해당 개인정보는 공개가 불가합니다. 딱대라..',DEFAULT,DEFAULT);
+
+
+ commit;
+-- 더미자료
+
 -- 상영정보 등록
 --INSERT INTO screening_info VALUES (1,'23/08/16','Y','N',50,DEFAULT);
 --INSERT INTO screening_info VALUES (1,'23/08/16','Y','Y',50,50);
@@ -75,69 +78,57 @@ INSERT INTO LOCAL_INFO VALUES (6,'제주');
 --INSERT INTO BOOKED_INFO VALUES(seq_dno.nextval, 3,1,'23/08/16', '23/08/17',DEFAULT);
 
 
+-- 유저등록
+INSERT INTO USER_INFO VALUES (SEQ_UNO.NEXTVAL, 'ID', '1234', '이지은', '930412', 1, 5, 12, null, '010-1234-5678', 5,'Y');
+INSERT INTO USER_INFO VALUES (SEQ_UNO.NEXTVAL, 'SUZI', '1234', '숯지', '940505', 3, 8, 10, null, '010-1234-5678', 5,'Y');
+INSERT INTO USER_INFO VALUES (SEQ_UNO.NEXTVAL, 'KW', '1234', '콰누', '950105', 1, 5, 9, null, '010-1234-5678', 3,'Y');
+INSERT INTO USER_INFO VALUES (SEQ_UNO.NEXTVAL, 'HY', '1234', '효옌', '980501', 2, 6, 10, null, '010-1234-5678', 2,'Y');
+INSERT INTO USER_INFO VALUES (SEQ_UNO.NEXTVAL, 'ZW', '1234', '지완', '940505', 3, 7, 11, null, '010-1234-5678', 1,'Y');
+INSERT INTO USER_INFO VALUES (SEQ_UNO.NEXTVAL, 'YD', '1234', '윤딱', '900305', 4, 8, 12, null, '010-1234-5678', 4,'Y');
+INSERT INTO USER_INFO VALUES (SEQ_UNO.NEXTVAL, 'SY', '1234', '시욘', '910305', 4, 7, 11, null, '010-1234-5678', 3,'Y');
+INSERT INTO USER_INFO VALUES (SEQ_UNO.NEXTVAL, 'YF', '1234', '유퐈', '920305', 3, 6, 9, null, '010-1234-5678', 2,'Y');
+INSERT INTO USER_INFO VALUES (SEQ_UNO.NEXTVAL, 'DB', '1234', '대박', '930305', 2, 5, 10, null, '010-1234-5678', 5,'Y');
+INSERT INTO USER_INFO VALUES (SEQ_UNO.NEXTVAL, 'JP', '1234', '조펜', '940305', 1, 4, 11, null, '010-1234-5678', 1,'Y');
+INSERT INTO USER_INFO VALUES (SEQ_UNO.NEXTVAL, 'ER', '1234', '응급', '950305', 2, 8, 12, null, '010-1234-5678', 4,'Y');
 
--- 공지사항 등록
-INSERT INTO NOTICE VALUES(seq_nno.nextval,'티켓딱대 오픈기념 행사안내','드디어 고대하던 티켓딱대가 오픈을 하게 되었습니다. 여러분의 기대에 부응할 수 있도록 하겠습니다. 특별 이벤트로 황금티켓을 잡아라 이벤트가 진행중이오니 많은 이용 바랍니다.',DEFAULT,DEFAULT,DEFAULT );
-
--- QNA 등록
-INSERT INTO QNA VALUES(seq_qno.nextval,1,'티켓딱대 김시연선생님 뵙고싶어요..','평소에 티켓딱대 운영진들 너무 좋아합니다. 특히 김시연 선생님 만나뵙고 싶어요.','죄송합니다. 해당 개인정보는 공개가 불가합니다. 딱대라..',DEFAULT,DEFAULT);
 
 -- 리뷰 등록
 --INSERT INTO review_info VALUES ( seq_rno.nextval,2,'숨겨둔 아들과 다녀왔는데 너무 재미있었어요.',2,DEFAULT,DEFAULT);
 --INSERT INTO review_info VALUES ( seq_rno.nextval,1,'인생영화 저도 이런 사랑 하고싶어요..',3,SYSDATE,DEFAULT);
 
+
+
 -- 좋아요 등록
---
---INSERT INTO product_like VALUES ( 3,2);
---INSERT INTO product_like VALUES ( 3,3);
---INSERT INTO product_like VALUES ( 3,1);
---INSERT INTO product_like VALUES ( 8,3);
---INSERT INTO product_like VALUES ( 12,1);
---INSERT INTO product_like VALUES ( 7,2);
---INSERT INTO product_like VALUES ( 11,2);
---INSERT INTO product_like VALUES ( 1,1);
---INSERT INTO product_like VALUES ( 9,2);
---INSERT INTO product_like VALUES ( 11,2);
---INSERT INTO product_like VALUES ( 8,1);
---INSERT INTO product_like VALUES ( 1,3);
---INSERT INTO product_like VALUES ( 12,3);
---INSERT INTO product_like VALUES ( 1,4);
---INSERT INTO product_like VALUES ( 6,7);
---INSERT INTO product_like VALUES ( 5,1);
---INSERT INTO product_like VALUES ( 5,3);
---INSERT INTO product_like VALUES ( 11,7);
---INSERT INTO product_like VALUES ( 1,2);
---INSERT INTO product_like VALUES ( 11,9);
---INSERT INTO product_like VALUES ( 8,12);
---INSERT INTO product_like VALUES ( 9,7);
---INSERT INTO product_like VALUES ( 8,11);
---INSERT INTO product_like VALUES ( 9,2);
---INSERT INTO product_like VALUES ( 3,2);
---INSERT INTO product_like VALUES ( 3,3);
---INSERT INTO product_like VALUES ( 3,1);
---INSERT INTO product_like VALUES ( 8,3);
---INSERT INTO product_like VALUES ( 12,1);
---INSERT INTO product_like VALUES ( 7,2);
---INSERT INTO product_like VALUES ( 11,2);
---INSERT INTO product_like VALUES ( 1,1);
---INSERT INTO product_like VALUES ( 9,2);
---INSERT INTO product_like VALUES ( 11,2);
---INSERT INTO product_like VALUES ( 8,1);
---INSERT INTO product_like VALUES ( 1,3);
---INSERT INTO product_like VALUES ( 12,3);
---INSERT INTO product_like VALUES ( 11,4);
---INSERT INTO product_like VALUES ( 10,7);
---INSERT INTO product_like VALUES ( 9,1);
---INSERT INTO product_like VALUES ( 8,3);
---INSERT INTO product_like VALUES ( 7,7);
---INSERT INTO product_like VALUES ( 6,2);
---INSERT INTO product_like VALUES ( 5,9);
---INSERT INTO product_like VALUES ( 4,12);
---INSERT INTO product_like VALUES ( 3,7);
---INSERT INTO product_like VALUES ( 2,11);
---INSERT INTO product_like VALUES ( 1,2);
+INSERT INTO product_like VALUES ( 3,1);
+INSERT INTO product_like VALUES ( 3,2);
+INSERT INTO product_like VALUES ( 3,3);
+INSERT INTO product_like VALUES ( 3,4);
+INSERT INTO product_like VALUES ( 2,5);
+INSERT INTO product_like VALUES ( 3,6);
+INSERT INTO product_like VALUES ( 3,7);
+INSERT INTO product_like VALUES ( 3,8);
+INSERT INTO product_like VALUES ( 3,9);
+INSERT INTO product_like VALUES ( 3,10);
+INSERT INTO product_like VALUES ( 3,11);
+INSERT INTO product_like VALUES ( 3,12);
+
+INSERT INTO product_like VALUES ( 1,1);
+INSERT INTO product_like VALUES ( 1,2);
+INSERT INTO product_like VALUES ( 2,3);
+INSERT INTO product_like VALUES ( 2,4);
+INSERT INTO product_like VALUES ( 2,5);
+INSERT INTO product_like VALUES ( 5,6);
+INSERT INTO product_like VALUES ( 10,7);
+INSERT INTO product_like VALUES ( 11,8);
+INSERT INTO product_like VALUES ( 11,9);
+INSERT INTO product_like VALUES ( 20,10);
+INSERT INTO product_like VALUES ( 20,11);
+INSERT INTO product_like VALUES ( 20,12);
 
 
 
-COMMIT;
+
+
+
+--COMMIT;
 
