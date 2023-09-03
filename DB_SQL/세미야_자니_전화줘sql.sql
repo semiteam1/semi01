@@ -84,9 +84,9 @@ INSERT INTO CARD VALUES (26, '삼성카드');
 
 
 -- 예매정보 등록
-INSERT INTO BOOKED_INFO VALUES(seq_dno.nextval, 1, 1, 1, 10, 10, '23/08/15', '23/09/16',DEFAULT);
-INSERT INTO BOOKED_INFO VALUES(seq_dno.nextval, 1, 2, 2, 10, 10, '23/08/21', '23/08/31',DEFAULT);
-INSERT INTO BOOKED_INFO VALUES(seq_dno.nextval, 1, 3, 1, 10, 10, '23/08/30', '23/09/15',DEFAULT);
+INSERT INTO BOOKED_INFO VALUES(seq_dno.nextval, 1, 1, 1, 10, 10, '23/08/15', '23/09/16','11:00',DEFAULT);
+INSERT INTO BOOKED_INFO VALUES(seq_dno.nextval, 1, 2, 2, 10, 10, '23/08/21', '23/08/31','18:00',DEFAULT);
+INSERT INTO BOOKED_INFO VALUES(seq_dno.nextval, 1, 3, 1, 10, 10, '23/08/30', '23/09/15','11:00',DEFAULT);
 
 INSERT INTO PRODUCT_IMG VALUES (1, '액션영화_포스터_슬램덩크.jpg', '액션영화_상세1_슬램덩크.jpg', '액션영화_상세2_슬램덩크.jpg', '액션영화_상세3_슬램덩크.jpg', NULL, NULL, 'resource/product-upfiles');
 INSERT INTO PRODUCT_IMG VALUES (2, '그림전시_포스터_미구엘 슈발리에 디지털 뷰티 SEASON2.jpg', '그림전시_상세1_미구엘 슈발리에 디지털 뷰티 SEASON2.jpg', NULL, NULL, NULL, NULL, 'resource/product-upfiles');
