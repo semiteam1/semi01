@@ -99,18 +99,18 @@ INSERT INTO USER_INFO VALUES (SEQ_UNO.NEXTVAL, 'ER', '1234', '응급', '950305', 2
 
 
 -- 좋아요 등록
-INSERT INTO product_like VALUES ( 3,1);
-INSERT INTO product_like VALUES ( 3,2);
-INSERT INTO product_like VALUES ( 3,3);
-INSERT INTO product_like VALUES ( 3,4);
-INSERT INTO product_like VALUES ( 2,5);
-INSERT INTO product_like VALUES ( 3,6);
-INSERT INTO product_like VALUES ( 3,7);
-INSERT INTO product_like VALUES ( 3,8);
-INSERT INTO product_like VALUES ( 3,9);
-INSERT INTO product_like VALUES ( 3,10);
-INSERT INTO product_like VALUES ( 3,11);
-INSERT INTO product_like VALUES ( 3,12);
+INSERT INTO product_like VALUES ( 97,1);
+INSERT INTO product_like VALUES ( 97,2);
+INSERT INTO product_like VALUES ( 97,3);
+INSERT INTO product_like VALUES ( 102,4);
+INSERT INTO product_like VALUES ( 102,5);
+INSERT INTO product_like VALUES ( 102,6);
+INSERT INTO product_like VALUES ( 102,7);
+INSERT INTO product_like VALUES ( 132,8);
+INSERT INTO product_like VALUES ( 132,9);
+INSERT INTO product_like VALUES ( 132,10);
+INSERT INTO product_like VALUES ( 132,11);
+INSERT INTO product_like VALUES ( 132,12);
 
 INSERT INTO product_like VALUES ( 1,1);
 INSERT INTO product_like VALUES ( 1,2);
