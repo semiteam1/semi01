@@ -20,8 +20,14 @@ INSERT INTO CATEGORY_INFO VALUES (11, '클래식(공연)');
 INSERT INTO CATEGORY_INFO VALUES (12, '콘서트(공연)');
 
 -- 유저 관리자 등록
+<<<<<<< Updated upstream
 INSERT INTO USER_INFO VALUES (SEQ_UNO.NEXTVAL, 'admin', '1234', '관리자', '990101', 2, 6, 11, null, '010-1234-5678', 5,'Y');
 
+=======
+INSERT INTO USER_INFO VALUES (SEQ_UNO.NEXTVAL, 'admin', '1234', '관리자', '990101', 2, 6, 11, 'admin@gmail.com', '010-1234-5678', 5,'Y');
+INSERT INTO USER_INFO VALUES (SEQ_UNO.NEXTVAL, 'iu', '1234', '이지은', '930505', 1, 5, 12, null, '010-7894-6523', 5,'Y');
+INSERT INTO USER_INFO VALUES (SEQ_UNO.NEXTVAL, 'suzi', '1234', '수지', '950808', 3, 8, 10, 'suzi95@naver.com', '010-4459-6682', 5,'Y');
+>>>>>>> Stashed changes
 
 -- 관람등급 등록
 INSERT INTO LEVEL_INFO VALUES (1, '전체 관람가');
@@ -53,8 +59,22 @@ INSERT INTO LOCAL_INFO VALUES (6,'제주');
 --INSERT INTO PRODUCT VALUES (SEQ_PNO.NEXTVAL, 10, '윤딱대의 딱대',4, '설악산 딱대좌', '23/02/15', '23/07/07', 4, 100, 20000);
 --INSERT INTO PRODUCT VALUES (SEQ_PNO.NEXTVAL, 11, '용석아 밥묵자',5, '석이네 집밥', '23/09/15', '23/11/09', 5, 120, 120000);
 
+<<<<<<< Updated upstream
 
 
+=======
+-- 상영정보 등록
+INSERT INTO screening_info VALUES (1,'23/08/16','Y','N',50,DEFAULT);
+INSERT INTO screening_info VALUES (1,'23/08/16','Y','Y',50,50);
+INSERT INTO screening_info VALUES (2,'23/05/05','Y','N',200,DEFAULT);
+INSERT INTO screening_info VALUES (3,'23/09/15','Y','Y',2000,2000);
+
+-- 예매정보 등록
+INSERT INTO BOOKED_INFO VALUES(seq_dno.nextval, 1,3,'23/08/16', '23/08/17');
+INSERT INTO BOOKED_INFO VALUES(seq_dno.nextval, 2,2,'23/08/16', '23/08/17');
+INSERT INTO BOOKED_INFO VALUES(seq_dno.nextval, 3,1,'23/08/16', '23/08/17');
+INSERT INTO BOOKED_INFO VALUES(seq_dno.nextval, 1,2,DEFAULT, '23/09/09');
+>>>>>>> Stashed changes
 
 -- 공지사항 등록
 INSERT INTO NOTICE VALUES(seq_nno.nextval,'티켓딱대 오픈기념 행사안내','드디어 고대하던 티켓딱대가 오픈을 하게 되었습니다. 여러분의 기대에 부응할 수 있도록 하겠습니다. 특별 이벤트로 황금티켓을 잡아라 이벤트가 진행중이오니 많은 이용 바랍니다.',DEFAULT,DEFAULT,DEFAULT );
@@ -93,10 +113,17 @@ INSERT INTO USER_INFO VALUES (SEQ_UNO.NEXTVAL, 'ER', '1234', '응급', '950305', 2
 
 
 -- 리뷰 등록
+<<<<<<< Updated upstream
 --INSERT INTO review_info VALUES ( seq_rno.nextval,2,'숨겨둔 아들과 다녀왔는데 너무 재미있었어요.',2,DEFAULT,DEFAULT);
 --INSERT INTO review_info VALUES ( seq_rno.nextval,1,'인생영화 저도 이런 사랑 하고싶어요..',3,SYSDATE,DEFAULT);
 
 
+=======
+INSERT INTO review_info VALUES ( seq_rno.nextval,2,'숨겨둔 아들과 다녀왔는데 너무 재미있었어요.',2,DEFAULT);
+INSERT INTO review_info VALUES ( seq_rno.nextval,1,'인생영화 저도 이런 사랑 하고싶어요..',3,SYSDATE);
+INSERT INTO review_info VALUES ( seq_rno.nextval,2,'인생작 만났다,, 여름이었다,,',3, DEFAULT);
+INSERT INTO review_info VALUES ( seq_rno.nextval,3,'성식이형 쫌 치네',3,'23/07/24');
+>>>>>>> Stashed changes
 
 -- 좋아요 등록
 INSERT INTO product_like VALUES ( 97,1);
