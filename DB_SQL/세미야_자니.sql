@@ -45,7 +45,6 @@ DROP SEQUENCE SEQ_NNO;
 -- Q&A 시퀀스
 DROP SEQUENCE SEQ_QNO;
 
-
      
 -- 등급테이블 생성
 CREATE TABLE GRADE
